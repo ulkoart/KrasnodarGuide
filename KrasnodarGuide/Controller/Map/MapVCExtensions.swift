@@ -25,22 +25,30 @@ extension MapVC: MKMapViewDelegate {
         print(center)
     }
     
-    /* метод для работы с анотицией, заменен на mapView.register
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         guard
-            let annotation = annotation as? Sight else { return nil }
+            let annotation = view as? SightAnnotationView,
+            let sight = annotation.sight
+        else { return }
         
-        let identifier = "sight"
-        var pinView: SightMarkerView
-        
-        if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? SightMarkerView {
-            dequeuedView.annotation = annotation
-            pinView = dequeuedView
-        } else {
-            pinView = SightMarkerView(annotation: annotation, reuseIdentifier: identifier)
-        }
-        return pinView
     }
-    */
+    
+    /* метод для работы с анотицией, заменен на mapView.register
+     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+     
+     guard
+     let annotation = annotation as? Sight else { return nil }
+     
+     let identifier = "sight"
+     var pinView: SightMarkerView
+     
+     if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? SightMarkerView {
+     dequeuedView.annotation = annotation
+     pinView = dequeuedView
+     } else {
+     pinView = SightMarkerView(annotation: annotation, reuseIdentifier: identifier)
+     }
+     return pinView
+     }
+     */
 }

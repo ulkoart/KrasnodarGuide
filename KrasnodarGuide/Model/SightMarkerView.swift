@@ -25,11 +25,14 @@ final class SightMarkerView: MKMarkerAnnotationView {
 }
 
 final class SightAnnotationView: MKAnnotationView {
+    weak var sight: Sight?
+    
     override var annotation: MKAnnotation? {
         willSet {
             guard let sight = newValue as? Sight else { return }
-            tintColor = sight.markerTintColor
+            self.sight = sight
             image = sight.markerImage
+            rightCalloutAccessoryView = UIButton(type: .infoLight)
         }
     }
 }
