@@ -10,10 +10,16 @@ import MapKit
 
 final class Sight: NSObject, Codable {
     //  почему не struct ? NSObject ?
+    // ToDO перенести MKAnnotation в отдельный метод
     let name: String
     let lat: Float
     let lon: Float
+    let category: Category
     
+    enum Category: String, Codable {
+        case architectural
+        case historical
+    }
 }
 
 extension Sight: MKAnnotation {
@@ -41,6 +47,22 @@ extension Sight {
         } catch { return [] }
     }
     
-    var markerTintColor: UIColor  { return .red }
+    var markerTintColor: UIColor  {
+        switch category {
+        case .architectural:
+            return .red
+        case .historical:
+            return .blue
+        }
+    }
+    
+    var markerImage: UIImage {
+        switch category {
+        case .architectural:
+            return #imageLiteral(resourceName: "architectural")
+        case .historical:
+            return #imageLiteral(resourceName: "historical")
+        }
+    }
 }
 

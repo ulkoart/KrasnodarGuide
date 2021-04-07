@@ -27,7 +27,9 @@ final class SightMarkerView: MKMarkerAnnotationView {
 final class SightAnnotationView: MKAnnotationView {
     override var annotation: MKAnnotation? {
         willSet {
-            image = UIImage(systemName: "heart.fill")
+            guard let sight = newValue as? Sight else { return }
+            tintColor = sight.markerTintColor
+            image = sight.markerImage
         }
     }
 }

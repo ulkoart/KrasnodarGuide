@@ -25,6 +25,7 @@ extension MapVC: MKMapViewDelegate {
         print(center)
     }
     
+    /* метод для работы с анотицией, заменен на mapView.register
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
         guard
@@ -41,4 +42,5 @@ extension MapVC: MKMapViewDelegate {
         }
         return pinView
     }
+    */
 }
