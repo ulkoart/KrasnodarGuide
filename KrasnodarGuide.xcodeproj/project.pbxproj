@@ -9,21 +9,33 @@
 /* Begin PBXBuildFile section */
 		CEAC31E3260CBFE0003C9EC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC31E2260CBFE0003C9EC2 /* AppDelegate.swift */; };
 		CEAC31E5260CBFE0003C9EC2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC31E4260CBFE0003C9EC2 /* SceneDelegate.swift */; };
-		CEAC31E7260CBFE0003C9EC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC31E6260CBFE0003C9EC2 /* ViewController.swift */; };
+		CEAC31E7260CBFE0003C9EC2 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC31E6260CBFE0003C9EC2 /* MainVC.swift */; };
 		CEAC31EA260CBFE0003C9EC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAC31E8260CBFE0003C9EC2 /* Main.storyboard */; };
 		CEAC31EC260CBFE1003C9EC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEAC31EB260CBFE1003C9EC2 /* Assets.xcassets */; };
 		CEAC31EF260CBFE1003C9EC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAC31ED260CBFE1003C9EC2 /* LaunchScreen.storyboard */; };
+		CEAC3202260CCADA003C9EC2 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC3201260CCADA003C9EC2 /* MapVC.swift */; };
+		CEAC3206260CE18C003C9EC2 /* MainVCExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC3205260CE18C003C9EC2 /* MainVCExtensions.swift */; };
+		CEF81F0E261896230084211B /* MapVCExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF81F0D261896230084211B /* MapVCExtensions.swift */; };
+		CEF81F152618B9410084211B /* Sight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF81F142618B9410084211B /* Sight.swift */; };
+		CEF81F182618B98F0084211B /* sights.json in Resources */ = {isa = PBXBuildFile; fileRef = CEF81F172618B98F0084211B /* sights.json */; };
+		CEF81F1D2619049B0084211B /* SightMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF81F1C2619049B0084211B /* SightMarkerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CEAC31DF260CBFE0003C9EC2 /* KrasnodarGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KrasnodarGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAC31E2260CBFE0003C9EC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEAC31E4260CBFE0003C9EC2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CEAC31E6260CBFE0003C9EC2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CEAC31E6260CBFE0003C9EC2 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		CEAC31E9260CBFE0003C9EC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEAC31EB260CBFE1003C9EC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEAC31EE260CBFE1003C9EC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEAC31F0260CBFE1003C9EC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEAC3201260CCADA003C9EC2 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		CEAC3205260CE18C003C9EC2 /* MainVCExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCExtensions.swift; sourceTree = "<group>"; };
+		CEF81F0D261896230084211B /* MapVCExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVCExtensions.swift; sourceTree = "<group>"; };
+		CEF81F142618B9410084211B /* Sight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sight.swift; sourceTree = "<group>"; };
+		CEF81F172618B98F0084211B /* sights.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sights.json; sourceTree = "<group>"; };
+		CEF81F1C2619049B0084211B /* SightMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightMarkerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +68,69 @@
 		CEAC31E1260CBFE0003C9EC2 /* KrasnodarGuide */ = {
 			isa = PBXGroup;
 			children = (
-				CEAC31E2260CBFE0003C9EC2 /* AppDelegate.swift */,
-				CEAC31E4260CBFE0003C9EC2 /* SceneDelegate.swift */,
-				CEAC31E6260CBFE0003C9EC2 /* ViewController.swift */,
-				CEAC31E8260CBFE0003C9EC2 /* Main.storyboard */,
-				CEAC31EB260CBFE1003C9EC2 /* Assets.xcassets */,
-				CEAC31ED260CBFE1003C9EC2 /* LaunchScreen.storyboard */,
+				CEAC31FB260CC279003C9EC2 /* Model */,
+				CEAC31FC260CC282003C9EC2 /* View */,
+				CEAC31FD260CC289003C9EC2 /* Controller */,
+				CEAC31F8260CC217003C9EC2 /* Supporting Files */,
 				CEAC31F0260CBFE1003C9EC2 /* Info.plist */,
 			);
 			path = KrasnodarGuide;
+			sourceTree = "<group>";
+		};
+		CEAC31F8260CC217003C9EC2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CEAC31EB260CBFE1003C9EC2 /* Assets.xcassets */,
+				CEAC31ED260CBFE1003C9EC2 /* LaunchScreen.storyboard */,
+				CEAC31E2260CBFE0003C9EC2 /* AppDelegate.swift */,
+				CEAC31E4260CBFE0003C9EC2 /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CEAC31FB260CC279003C9EC2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEF81F172618B98F0084211B /* sights.json */,
+				CEF81F142618B9410084211B /* Sight.swift */,
+				CEF81F1C2619049B0084211B /* SightMarkerView.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CEAC31FC260CC282003C9EC2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEAC31E8260CBFE0003C9EC2 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CEAC31FD260CC289003C9EC2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CEAC3204260CE167003C9EC2 /* Main */,
+				CEF81F0B261895FA0084211B /* Map */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CEAC3204260CE167003C9EC2 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CEAC31E6260CBFE0003C9EC2 /* MainVC.swift */,
+				CEAC3205260CE18C003C9EC2 /* MainVCExtensions.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CEF81F0B261895FA0084211B /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				CEAC3201260CCADA003C9EC2 /* MapVC.swift */,
+				CEF81F0D261896230084211B /* MapVCExtensions.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEAC31EF260CBFE1003C9EC2 /* LaunchScreen.storyboard in Resources */,
+				CEF81F182618B98F0084211B /* sights.json in Resources */,
 				CEAC31EC260CBFE1003C9EC2 /* Assets.xcassets in Resources */,
 				CEAC31EA260CBFE0003C9EC2 /* Main.storyboard in Resources */,
 			);
@@ -137,8 +204,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEAC31E7260CBFE0003C9EC2 /* ViewController.swift in Sources */,
+				CEAC31E7260CBFE0003C9EC2 /* MainVC.swift in Sources */,
+				CEAC3202260CCADA003C9EC2 /* MapVC.swift in Sources */,
 				CEAC31E3260CBFE0003C9EC2 /* AppDelegate.swift in Sources */,
+				CEF81F0E261896230084211B /* MapVCExtensions.swift in Sources */,
+				CEF81F1D2619049B0084211B /* SightMarkerView.swift in Sources */,
+				CEF81F152618B9410084211B /* Sight.swift in Sources */,
+				CEAC3206260CE18C003C9EC2 /* MainVCExtensions.swift in Sources */,
 				CEAC31E5260CBFE0003C9EC2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +361,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PQNZ2TUC3;
 				INFOPLIST_FILE = KrasnodarGuide/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +369,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ulkoart.KrasnodarGuide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -308,6 +381,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PQNZ2TUC3;
 				INFOPLIST_FILE = KrasnodarGuide/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +389,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ulkoart.KrasnodarGuide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
