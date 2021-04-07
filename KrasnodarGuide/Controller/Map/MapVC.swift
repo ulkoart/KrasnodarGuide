@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class MapVC: UIViewController {
+final class MapVC: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     
     private var sights: [Sight] = []

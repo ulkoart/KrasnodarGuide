@@ -8,7 +8,7 @@
 import Foundation
 import MapKit
 
-class Sight: NSObject, Codable {
+final class Sight: NSObject, Codable {
     //  почему не struct ? NSObject ?
     let name: String
     let lat: Float

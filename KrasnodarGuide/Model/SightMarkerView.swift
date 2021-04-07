@@ -8,7 +8,7 @@
 import Foundation
 import MapKit
 
-class SightMarkerView: MKMarkerAnnotationView {
+final class SightMarkerView: MKMarkerAnnotationView {
     override var annotation: MKAnnotation? {
         willSet {
             guard let sight = newValue as? Sight else { return }
@@ -24,7 +24,7 @@ class SightMarkerView: MKMarkerAnnotationView {
     }
 }
 
-class SightAnnotationView: MKAnnotationView {
+final class SightAnnotationView: MKAnnotationView {
     override var annotation: MKAnnotation? {
         willSet {
             image = UIImage(systemName: "heart.fill")

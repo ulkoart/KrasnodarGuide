@@ -9,7 +9,12 @@
 
 import UIKit
 
-class MainVC: UIViewController {
+enum TabBarMenu: Int {
+    case Main
+    case Map
+}
+
+final class MainVC: UIViewController {
     @IBOutlet weak var titleView: UIView!
     
     override func viewDidLoad() {
@@ -17,12 +22,6 @@ class MainVC: UIViewController {
     }
     
     @IBAction func mapButtonPressed(_ sender: UIButton) {
-        print(TabBarMenu.Main.rawValue)
-        tabBarController?.selectedIndex = TabBarMenu.Map.rawValue // ну хз, странно
+        tabBarController?.selectedIndex = TabBarMenu.Map.rawValue
     }
-}
-
-enum TabBarMenu: Int {
-    case Main
-    case Map
 }
