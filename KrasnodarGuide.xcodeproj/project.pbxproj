@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CE2238D7261F2BF40045C287 /* MapDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2238D6261F2BF40045C287 /* MapDetailVC.swift */; };
+		CE2238DA261F3C2A0045C287 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2238D8261F3C2A0045C287 /* PhotoCell.swift */; };
+		CE2238DB261F3C2A0045C287 /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2238D9261F3C2A0045C287 /* PhotoCell.xib */; };
 		CEAC31E3260CBFE0003C9EC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC31E2260CBFE0003C9EC2 /* AppDelegate.swift */; };
 		CEAC31E7260CBFE0003C9EC2 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC31E6260CBFE0003C9EC2 /* MainVC.swift */; };
 		CEAC31EA260CBFE0003C9EC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAC31E8260CBFE0003C9EC2 /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		CE2238D6261F2BF40045C287 /* MapDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailVC.swift; sourceTree = "<group>"; };
+		CE2238D8261F3C2A0045C287 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		CE2238D9261F3C2A0045C287 /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
 		CEAC31DF260CBFE0003C9EC2 /* KrasnodarGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KrasnodarGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAC31E2260CBFE0003C9EC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEAC31E6260CBFE0003C9EC2 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 				CEAC3201260CCADA003C9EC2 /* MapVC.swift */,
 				CEF81F0D261896230084211B /* MapVCExtensions.swift */,
 				CE2238D6261F2BF40045C287 /* MapDetailVC.swift */,
+				CE2238D8261F3C2A0045C287 /* PhotoCell.swift */,
+				CE2238D9261F3C2A0045C287 /* PhotoCell.xib */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -194,6 +200,7 @@
 				CEF81F182618B98F0084211B /* sights.json in Resources */,
 				CEAC31EC260CBFE1003C9EC2 /* Assets.xcassets in Resources */,
 				CEAC31EA260CBFE0003C9EC2 /* Main.storyboard in Resources */,
+				CE2238DB261F3C2A0045C287 /* PhotoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEAC31E7260CBFE0003C9EC2 /* MainVC.swift in Sources */,
+				CE2238DA261F3C2A0045C287 /* PhotoCell.swift in Sources */,
 				CEAC3202260CCADA003C9EC2 /* MapVC.swift in Sources */,
 				CEAC31E3260CBFE0003C9EC2 /* AppDelegate.swift in Sources */,
 				CEF81F0E261896230084211B /* MapVCExtensions.swift in Sources */,

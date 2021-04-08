@@ -54,9 +54,63 @@
                     <view key="view" contentMode="scaleToFill" id="dCm-h6-vxJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kaf-mQ-qAL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="111"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название достопримечательности" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ia-cy-GjL">
+                                        <rect key="frame" x="5" y="0.0" width="370" height="111"/>
+                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="1ia-cy-GjL" firstAttribute="leading" secondItem="Kaf-mQ-qAL" secondAttribute="leading" constant="5" id="B2k-uk-GVU"/>
+                                    <constraint firstItem="1ia-cy-GjL" firstAttribute="top" secondItem="Kaf-mQ-qAL" secondAttribute="top" id="l6U-CB-HYw"/>
+                                    <constraint firstAttribute="trailing" secondItem="1ia-cy-GjL" secondAttribute="trailing" id="oY7-pZ-RwP"/>
+                                    <constraint firstAttribute="bottom" secondItem="1ia-cy-GjL" secondAttribute="bottom" id="pNY-Jr-FN2"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="s0i-az-JEh">
+                                <rect key="frame" x="0.0" y="111" width="375" height="167"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="N1r-fL-FSW">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="UNJ-M3-qdl">
+                                <rect key="frame" x="0.0" y="278" width="375" height="33.5"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="s0i-az-JEh" firstAttribute="leading" secondItem="nRo-yi-Lag" secondAttribute="leading" id="2rF-aT-rW8"/>
+                            <constraint firstItem="UNJ-M3-qdl" firstAttribute="height" secondItem="dCm-h6-vxJ" secondAttribute="height" multiplier="1/20" id="AcK-cL-DTU"/>
+                            <constraint firstItem="Kaf-mQ-qAL" firstAttribute="height" secondItem="dCm-h6-vxJ" secondAttribute="height" multiplier="1/6" id="IHX-Xc-qp3"/>
+                            <constraint firstItem="s0i-az-JEh" firstAttribute="top" secondItem="Kaf-mQ-qAL" secondAttribute="bottom" id="L3b-Lk-Uoa"/>
+                            <constraint firstItem="nRo-yi-Lag" firstAttribute="trailing" secondItem="Kaf-mQ-qAL" secondAttribute="trailing" id="YM0-Yy-r7g"/>
+                            <constraint firstItem="nRo-yi-Lag" firstAttribute="trailing" secondItem="UNJ-M3-qdl" secondAttribute="trailing" id="a4n-Ce-TCm"/>
+                            <constraint firstItem="s0i-az-JEh" firstAttribute="height" secondItem="dCm-h6-vxJ" secondAttribute="height" multiplier="1/4" id="bcS-so-XsJ"/>
+                            <constraint firstItem="UNJ-M3-qdl" firstAttribute="leading" secondItem="nRo-yi-Lag" secondAttribute="leading" id="bdI-8S-KY5"/>
+                            <constraint firstItem="nRo-yi-Lag" firstAttribute="trailing" secondItem="s0i-az-JEh" secondAttribute="trailing" id="huo-Kw-WMx"/>
+                            <constraint firstItem="Kaf-mQ-qAL" firstAttribute="top" secondItem="nRo-yi-Lag" secondAttribute="top" id="pA3-xK-yB1"/>
+                            <constraint firstItem="UNJ-M3-qdl" firstAttribute="top" secondItem="s0i-az-JEh" secondAttribute="bottom" id="x0O-9m-3Oz"/>
+                            <constraint firstItem="Kaf-mQ-qAL" firstAttribute="leading" secondItem="nRo-yi-Lag" secondAttribute="leading" id="yFC-wq-rXr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nRo-yi-Lag"/>
                     </view>
+                    <connections>
+                        <outlet property="photoCollectionLayout" destination="N1r-fL-FSW" id="foa-Qu-Lk2"/>
+                        <outlet property="photoCollectionPageControl" destination="UNJ-M3-qdl" id="vRY-qj-LP3"/>
+                        <outlet property="photoCollectionView" destination="s0i-az-JEh" id="LM0-dV-U1c"/>
+                        <outlet property="sightTitileLable" destination="1ia-cy-GjL" id="Knq-pI-gF4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r71-cL-o9N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

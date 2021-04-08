@@ -36,7 +36,7 @@ extension MapVC: MKMapViewDelegate {
                 return
         }
         
-        detailVC.setup(with: sight)
+        detailVC.sight = sight
         navigationController?.pushViewController(detailVC, animated: true)
     }
     
