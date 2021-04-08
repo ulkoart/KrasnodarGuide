@@ -29,8 +29,15 @@ extension MapVC: MKMapViewDelegate {
         guard
             let annotation = view as? SightAnnotationView,
             let sight = annotation.sight
-        else { return }
+            else { return }
         
+        guard let detailVC = UIStoryboard(name: "Main", bundle: nil)
+            .instantiateViewController(withIdentifier: "MapDetailVC") as? MapDetailVC else {
+                return
+        }
+        
+        detailVC.setup(with: sight)
+        navigationController?.pushViewController(detailVC, animated: true)
     }
     
     /* метод для работы с анотицией, заменен на mapView.register

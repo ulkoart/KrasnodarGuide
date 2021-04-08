@@ -19,12 +19,12 @@ final class MapVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: nil, action: nil)
+        
         mapView.delegate = self
         mapView.register(SightAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         setupMap()
         sights = Sight.getSights()
         mapView.addAnnotations(sights)
     }
-    
-
 }
