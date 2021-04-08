@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CEAC31E3260CBFE0003C9EC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC31E2260CBFE0003C9EC2 /* AppDelegate.swift */; };
-		CEAC31E5260CBFE0003C9EC2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC31E4260CBFE0003C9EC2 /* SceneDelegate.swift */; };
 		CEAC31E7260CBFE0003C9EC2 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC31E6260CBFE0003C9EC2 /* MainVC.swift */; };
 		CEAC31EA260CBFE0003C9EC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAC31E8260CBFE0003C9EC2 /* Main.storyboard */; };
 		CEAC31EC260CBFE1003C9EC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEAC31EB260CBFE1003C9EC2 /* Assets.xcassets */; };
@@ -24,7 +23,6 @@
 /* Begin PBXFileReference section */
 		CEAC31DF260CBFE0003C9EC2 /* KrasnodarGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KrasnodarGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAC31E2260CBFE0003C9EC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CEAC31E4260CBFE0003C9EC2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CEAC31E6260CBFE0003C9EC2 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		CEAC31E9260CBFE0003C9EC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEAC31EB260CBFE1003C9EC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,7 +81,6 @@
 				CEAC31EB260CBFE1003C9EC2 /* Assets.xcassets */,
 				CEAC31ED260CBFE1003C9EC2 /* LaunchScreen.storyboard */,
 				CEAC31E2260CBFE0003C9EC2 /* AppDelegate.swift */,
-				CEAC31E4260CBFE0003C9EC2 /* SceneDelegate.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -211,7 +208,6 @@
 				CEF81F1D2619049B0084211B /* SightMarkerView.swift in Sources */,
 				CEF81F152618B9410084211B /* Sight.swift in Sources */,
 				CEAC3206260CE18C003C9EC2 /* MainVCExtensions.swift in Sources */,
-				CEAC31E5260CBFE0003C9EC2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,7 +357,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PQNZ2TUC3;
 				INFOPLIST_FILE = KrasnodarGuide/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -381,7 +377,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PQNZ2TUC3;
 				INFOPLIST_FILE = KrasnodarGuide/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
