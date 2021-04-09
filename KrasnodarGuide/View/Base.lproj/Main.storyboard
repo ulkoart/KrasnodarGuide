@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MEc-Aa-UaY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MEc-Aa-UaY">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -27,7 +28,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="i0l-vz-7pu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="i0l-vz-7pu" firstAttribute="bottom" secondItem="sSQ-An-A0M" secondAttribute="bottom" constant="20" id="EqS-Td-Hf5"/>
                             <constraint firstItem="DNg-Zq-RGb" firstAttribute="top" secondItem="i0l-vz-7pu" secondAttribute="top" id="F7N-aC-yf1"/>
@@ -36,7 +38,6 @@
                             <constraint firstItem="i0l-vz-7pu" firstAttribute="trailing" secondItem="sSQ-An-A0M" secondAttribute="trailing" constant="20" id="epi-nP-kFI"/>
                             <constraint firstItem="DNg-Zq-RGb" firstAttribute="trailing" secondItem="i0l-vz-7pu" secondAttribute="trailing" id="pj3-Ej-qdg"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="i0l-vz-7pu"/>
                     </view>
                     <navigationItem key="navigationItem" title="Достопримечательности" id="Zgb-YG-6La"/>
                     <connections>
@@ -65,7 +66,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
                                     <constraint firstItem="1ia-cy-GjL" firstAttribute="leading" secondItem="Kaf-mQ-qAL" secondAttribute="leading" constant="5" id="B2k-uk-GVU"/>
                                     <constraint firstItem="1ia-cy-GjL" firstAttribute="top" secondItem="Kaf-mQ-qAL" secondAttribute="top" id="l6U-CB-HYw"/>
@@ -73,37 +74,51 @@
                                     <constraint firstAttribute="bottom" secondItem="1ia-cy-GjL" secondAttribute="bottom" id="pNY-Jr-FN2"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="s0i-az-JEh">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DjC-H5-DAl">
                                 <rect key="frame" x="0.0" y="111" width="375" height="167"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="N1r-fL-FSW">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                            </collectionView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="UNJ-M3-qdl">
-                                <rect key="frame" x="0.0" y="278" width="375" height="33.5"/>
-                            </pageControl>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="s0i-az-JEh">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="167"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="N1r-fL-FSW">
+                                            <size key="itemSize" width="50" height="50"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="UNJ-M3-qdl">
+                                        <rect key="frame" x="0.0" y="139.5" width="375" height="27.5"/>
+                                    </pageControl>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="UNJ-M3-qdl" secondAttribute="trailing" id="3kJ-mD-gRm"/>
+                                    <constraint firstAttribute="trailing" secondItem="s0i-az-JEh" secondAttribute="trailing" id="8Cx-JE-d3g"/>
+                                    <constraint firstItem="UNJ-M3-qdl" firstAttribute="leading" secondItem="DjC-H5-DAl" secondAttribute="leading" id="He2-YV-gvS"/>
+                                    <constraint firstAttribute="bottom" secondItem="s0i-az-JEh" secondAttribute="bottom" id="SP0-A1-jyD"/>
+                                    <constraint firstItem="s0i-az-JEh" firstAttribute="leading" secondItem="DjC-H5-DAl" secondAttribute="leading" id="cdg-KI-msJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="UNJ-M3-qdl" secondAttribute="bottom" id="fLv-pS-YUK"/>
+                                    <constraint firstItem="s0i-az-JEh" firstAttribute="top" secondItem="DjC-H5-DAl" secondAttribute="top" id="rKb-Gr-YUR"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="s0i-az-JEh" firstAttribute="leading" secondItem="nRo-yi-Lag" secondAttribute="leading" id="2rF-aT-rW8"/>
-                            <constraint firstItem="UNJ-M3-qdl" firstAttribute="height" secondItem="dCm-h6-vxJ" secondAttribute="height" multiplier="1/20" id="AcK-cL-DTU"/>
-                            <constraint firstItem="Kaf-mQ-qAL" firstAttribute="height" secondItem="dCm-h6-vxJ" secondAttribute="height" multiplier="1/6" id="IHX-Xc-qp3"/>
-                            <constraint firstItem="s0i-az-JEh" firstAttribute="top" secondItem="Kaf-mQ-qAL" secondAttribute="bottom" id="L3b-Lk-Uoa"/>
-                            <constraint firstItem="nRo-yi-Lag" firstAttribute="trailing" secondItem="Kaf-mQ-qAL" secondAttribute="trailing" id="YM0-Yy-r7g"/>
-                            <constraint firstItem="nRo-yi-Lag" firstAttribute="trailing" secondItem="UNJ-M3-qdl" secondAttribute="trailing" id="a4n-Ce-TCm"/>
-                            <constraint firstItem="s0i-az-JEh" firstAttribute="height" secondItem="dCm-h6-vxJ" secondAttribute="height" multiplier="1/4" id="bcS-so-XsJ"/>
-                            <constraint firstItem="UNJ-M3-qdl" firstAttribute="leading" secondItem="nRo-yi-Lag" secondAttribute="leading" id="bdI-8S-KY5"/>
-                            <constraint firstItem="nRo-yi-Lag" firstAttribute="trailing" secondItem="s0i-az-JEh" secondAttribute="trailing" id="huo-Kw-WMx"/>
-                            <constraint firstItem="Kaf-mQ-qAL" firstAttribute="top" secondItem="nRo-yi-Lag" secondAttribute="top" id="pA3-xK-yB1"/>
-                            <constraint firstItem="UNJ-M3-qdl" firstAttribute="top" secondItem="s0i-az-JEh" secondAttribute="bottom" id="x0O-9m-3Oz"/>
-                            <constraint firstItem="Kaf-mQ-qAL" firstAttribute="leading" secondItem="nRo-yi-Lag" secondAttribute="leading" id="yFC-wq-rXr"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nRo-yi-Lag"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DjC-H5-DAl" firstAttribute="leading" secondItem="nRo-yi-Lag" secondAttribute="leading" id="0rE-ml-FvY"/>
+                            <constraint firstItem="Kaf-mQ-qAL" firstAttribute="height" secondItem="dCm-h6-vxJ" secondAttribute="height" multiplier="1/6" id="IHX-Xc-qp3"/>
+                            <constraint firstItem="DjC-H5-DAl" firstAttribute="trailing" secondItem="nRo-yi-Lag" secondAttribute="trailing" id="VuH-ZA-ieH"/>
+                            <constraint firstItem="nRo-yi-Lag" firstAttribute="trailing" secondItem="Kaf-mQ-qAL" secondAttribute="trailing" id="YM0-Yy-r7g"/>
+                            <constraint firstItem="Kaf-mQ-qAL" firstAttribute="top" secondItem="nRo-yi-Lag" secondAttribute="top" id="pA3-xK-yB1"/>
+                            <constraint firstItem="DjC-H5-DAl" firstAttribute="top" secondItem="Kaf-mQ-qAL" secondAttribute="bottom" id="rgf-eg-bOP"/>
+                            <constraint firstItem="DjC-H5-DAl" firstAttribute="height" secondItem="dCm-h6-vxJ" secondAttribute="height" multiplier="1/4" id="wxv-pf-Ny9"/>
+                            <constraint firstItem="DjC-H5-DAl" firstAttribute="top" secondItem="Kaf-mQ-qAL" secondAttribute="bottom" id="y7H-BU-ukb"/>
+                            <constraint firstItem="Kaf-mQ-qAL" firstAttribute="leading" secondItem="nRo-yi-Lag" secondAttribute="leading" id="yFC-wq-rXr"/>
+                            <constraint firstItem="DjC-H5-DAl" firstAttribute="leading" secondItem="nRo-yi-Lag" secondAttribute="leading" id="ywb-HQ-P8i"/>
+                            <constraint firstItem="nRo-yi-Lag" firstAttribute="trailing" secondItem="DjC-H5-DAl" secondAttribute="trailing" id="z7x-eH-VWJ"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="photoCollectionLayout" destination="N1r-fL-FSW" id="foa-Qu-Lk2"/>
@@ -114,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r71-cL-o9N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3439" y="-322"/>
+            <point key="canvasLocation" x="3437.5999999999999" y="-322.48875562218893"/>
         </scene>
         <!--Краснодар-->
         <scene sceneID="tne-QT-ifu">
@@ -134,7 +149,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="z0Q-Pr-Ero" secondAttribute="trailing" id="NZR-LJ-Dxr"/>
                                     <constraint firstItem="z0Q-Pr-Ero" firstAttribute="top" secondItem="Y0r-sf-lRR" secondAttribute="top" id="TdZ-g4-a44"/>
@@ -154,7 +169,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Карта достопримечательностей" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovV-eK-T4d">
                                                 <rect key="frame" x="8" y="0.0" width="343" height="33.5"/>
                                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="14"/>
-                                                <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.turn.up.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gyD-SY-Yqq">
@@ -175,14 +190,14 @@
                                             <constraint firstItem="gyD-SY-Yqq" firstAttribute="centerY" secondItem="bV7-Zo-pf1" secondAttribute="centerY" id="klY-O9-XHh"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEC-2a-Qc7">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEC-2a-Qc7">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="133.5"/>
                                         <connections>
                                             <action selector="mapButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="idK-K8-owi"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
                                     <constraint firstItem="bV7-Zo-pf1" firstAttribute="leading" secondItem="u23-hf-nzB" secondAttribute="leading" id="6sj-Hr-dld"/>
                                     <constraint firstAttribute="trailing" secondItem="uEC-2a-Qc7" secondAttribute="trailing" id="6va-x0-tx6"/>
@@ -203,7 +218,8 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u23-hf-nzB" secondAttribute="trailing" constant="8" id="3zH-JJ-m9Z"/>
@@ -215,7 +231,6 @@
                             <constraint firstItem="Y0r-sf-lRR" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1/6" id="ksS-KP-egB"/>
                             <constraint firstItem="Y0r-sf-lRR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oiQ-vx-oj6"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Краснодар" id="Zvu-Hc-jUc"/>
                     <connections>
@@ -286,10 +301,22 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.turn.up.right" catalog="system" width="64" height="48"/>
-        <image name="house" catalog="system" width="64" height="54"/>
+        <image name="arrow.turn.up.right" catalog="system" width="128" height="99"/>
+        <image name="house" catalog="system" width="128" height="106"/>
         <image name="mainMap" width="1000" height="800"/>
-        <image name="map" catalog="system" width="64" height="56"/>
-        <image name="square.and.arrow.down" catalog="system" width="60" height="64"/>
+        <image name="map" catalog="system" width="128" height="110"/>
+        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

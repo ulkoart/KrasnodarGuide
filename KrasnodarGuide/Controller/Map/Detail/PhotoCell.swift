@@ -8,13 +8,14 @@
 import UIKit
 
 class PhotoCell: UICollectionViewCell {
+    @IBOutlet weak var photoSight: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    func setup(color: UIColor) {
-        backgroundColor = color
+    func setup(_ photo: UIImage) {
+        photoSight.image = photo
     }
     
 }

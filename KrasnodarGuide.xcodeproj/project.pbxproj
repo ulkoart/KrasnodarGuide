@@ -17,6 +17,7 @@
 		CEAC31EF260CBFE1003C9EC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAC31ED260CBFE1003C9EC2 /* LaunchScreen.storyboard */; };
 		CEAC3202260CCADA003C9EC2 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC3201260CCADA003C9EC2 /* MapVC.swift */; };
 		CEAC3206260CE18C003C9EC2 /* MainVCExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC3205260CE18C003C9EC2 /* MainVCExtensions.swift */; };
+		CEE8C477262092EC0043FCC9 /* MapDetailVCExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8C476262092EC0043FCC9 /* MapDetailVCExtensions.swift */; };
 		CEF81F0E261896230084211B /* MapVCExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF81F0D261896230084211B /* MapVCExtensions.swift */; };
 		CEF81F152618B9410084211B /* Sight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF81F142618B9410084211B /* Sight.swift */; };
 		CEF81F182618B98F0084211B /* sights.json in Resources */ = {isa = PBXBuildFile; fileRef = CEF81F172618B98F0084211B /* sights.json */; };
@@ -36,6 +37,7 @@
 		CEAC31F0260CBFE1003C9EC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEAC3201260CCADA003C9EC2 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		CEAC3205260CE18C003C9EC2 /* MainVCExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCExtensions.swift; sourceTree = "<group>"; };
+		CEE8C476262092EC0043FCC9 /* MapDetailVCExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailVCExtensions.swift; sourceTree = "<group>"; };
 		CEF81F0D261896230084211B /* MapVCExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVCExtensions.swift; sourceTree = "<group>"; };
 		CEF81F142618B9410084211B /* Sight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sight.swift; sourceTree = "<group>"; };
 		CEF81F172618B98F0084211B /* sights.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sights.json; sourceTree = "<group>"; };
@@ -127,14 +129,23 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		CEE8C474262092CF0043FCC9 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				CE2238D6261F2BF40045C287 /* MapDetailVC.swift */,
+				CEE8C476262092EC0043FCC9 /* MapDetailVCExtensions.swift */,
+				CE2238D8261F3C2A0045C287 /* PhotoCell.swift */,
+				CE2238D9261F3C2A0045C287 /* PhotoCell.xib */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		CEF81F0B261895FA0084211B /* Map */ = {
 			isa = PBXGroup;
 			children = (
 				CEAC3201260CCADA003C9EC2 /* MapVC.swift */,
 				CEF81F0D261896230084211B /* MapVCExtensions.swift */,
-				CE2238D6261F2BF40045C287 /* MapDetailVC.swift */,
-				CE2238D8261F3C2A0045C287 /* PhotoCell.swift */,
-				CE2238D9261F3C2A0045C287 /* PhotoCell.xib */,
+				CEE8C474262092CF0043FCC9 /* Detail */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -213,6 +224,7 @@
 			files = (
 				CEAC31E7260CBFE0003C9EC2 /* MainVC.swift in Sources */,
 				CE2238DA261F3C2A0045C287 /* PhotoCell.swift in Sources */,
+				CEE8C477262092EC0043FCC9 /* MapDetailVCExtensions.swift in Sources */,
 				CEAC3202260CCADA003C9EC2 /* MapVC.swift in Sources */,
 				CEAC31E3260CBFE0003C9EC2 /* AppDelegate.swift in Sources */,
 				CEF81F0E261896230084211B /* MapVCExtensions.swift in Sources */,
