@@ -14,6 +14,7 @@ class MapDetailVC: UIViewController {
     @IBOutlet weak var photoCollectionPageControl: UIPageControl!
     
     weak var sight: Sight!
+    
     let cellID = "PhotoCell"
         
     override func viewDidLoad() {
@@ -25,10 +26,20 @@ class MapDetailVC: UIViewController {
         sightTitileLable.text = sight.name
         photoCollectionPageControl.isUserInteractionEnabled = false
         photoCollectionView.isPagingEnabled = true
-        
         photoCollectionView.delegate = self
         photoCollectionView.dataSource = self
         photoCollectionView.showsHorizontalScrollIndicator = false
         photoCollectionView.register(UINib(nibName: cellID, bundle: nil), forCellWithReuseIdentifier: cellID)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showPhoto" {
+            guard
+                let photoVC = segue.destination as? ShowPhotoVC,
+                let photoName = sender as? String,
+                let photoImage = UIImage(named: photoName)
+            else { return }
+            photoVC.image = photoImage
+        }
     }
 }

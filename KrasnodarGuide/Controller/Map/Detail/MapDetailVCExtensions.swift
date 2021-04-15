@@ -14,21 +14,26 @@ extension MapDetailVC: UICollectionViewDelegate {
         let roundedIndex = round(index)
         self.photoCollectionPageControl?.currentPage = Int(roundedIndex)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let index = indexPath.item
+        let photoName: String = sight.photos[index]
+        performSegue(withIdentifier: "showPhoto", sender: photoName)
+    }
 }
 
 extension MapDetailVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        photoCollectionPageControl.numberOfPages = 3
-        return 3
+        photoCollectionPageControl.numberOfPages = sight.photos.count
+        return sight.photos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as? PhotoCell else { return UICollectionViewCell() }
         
         let index = indexPath.item
-        
-        
-        guard let photo = UIImage(named: "arka_\(index+1)") else {
+
+        guard let photo = UIImage(named: sight.photos[index]) else {
             return cell
         }
         

@@ -16,6 +16,7 @@ final class Sight: NSObject, Codable {
     let lat: Float
     let lon: Float
     let category: Category
+    let photos: [String]
     
     enum Category: String, Codable {
         case architectural
