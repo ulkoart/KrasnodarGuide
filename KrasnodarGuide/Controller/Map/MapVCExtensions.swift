@@ -18,12 +18,12 @@ extension MapVC {
 }
 
 extension MapVC: MKMapViewDelegate {
-    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-        let mapLatitude = mapView.centerCoordinate.latitude
-        let mapLongitude = mapView.centerCoordinate.longitude
-        let center = "Latitude: \(mapLatitude) Longitude: \(mapLongitude)"
-        print(center)
-    }
+//    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+//        let mapLatitude = mapView.centerCoordinate.latitude
+//        let mapLongitude = mapView.centerCoordinate.longitude
+//        let center = "Latitude: \(mapLatitude) Longitude: \(mapLongitude)"
+//        print(center)
+//    }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         guard
@@ -58,4 +58,50 @@ extension MapVC: MKMapViewDelegate {
      return pinView
      }
      */
+}
+
+extension MapVC: CLLocationManagerDelegate {
+    
+    func checkLocationAuthorization() {
+        
+        if CLLocationManager.locationServicesEnabled() {
+            let status = CLLocationManager.authorizationStatus()
+            switch status {
+                
+            case .notDetermined:
+                locationManager.requestWhenInUseAuthorization()
+            case .restricted:
+                break
+            case .denied:
+                self.showAlert(
+                    title: "Ваше местонахождение не определено",
+                    message: "Для включения: Настройки -> Краснодар -> Location"
+                )
+            case .authorizedAlways:
+                break
+            case .authorizedWhenInUse:
+                mapView.showsUserLocation = true
+                break
+            @unknown default:
+                fatalError("CLLocationManager error")
+            }
+        } else {
+            self.showAlert(
+                title: "Геосервис выключен",
+                message: "Для включения: Настройки -> Приватность -> Геосервис включить"
+            )
+        }
+    }
+    
+}
+
+
+extension MapVC {
+    func showAlert(title: String, message: String) -> Void {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true)
+    }
 }
