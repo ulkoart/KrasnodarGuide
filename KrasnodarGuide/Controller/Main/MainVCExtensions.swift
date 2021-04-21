@@ -15,11 +15,11 @@ extension MainVC {
     }
     
     func setupUI() {
-        mapViewCell.layer.cornerRadius = 15
-        mapViewCell.layer.masksToBounds = true
-        mapViewCell.layer.borderWidth = 2.0
-        let borderColor: UIColor = .systemGray
-        mapViewCell.layer.borderColor = borderColor.cgColor
+//        mapViewCell.layer.cornerRadius = 15
+//        mapViewCell.layer.masksToBounds = true
+//        mapViewCell.layer.borderWidth = 2.0
+//        let borderColor: UIColor = .systemGray
+//        mapViewCell.layer.borderColor = borderColor.cgColor
         
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = titleView.bounds
@@ -30,7 +30,8 @@ extension MainVC {
         gradientLayer.startPoint = CGPoint(x: 0.75, y: 0.75)
         gradientLayer.endPoint = CGPoint(x: 0, y: 1)
         titleView.layer.insertSublayer(gradientLayer, at: 0)
-
+        
+//        self.navigationController?.isNavigationBarHidden = true
 //        self.navigationItem.title = "Краснодар"
 //        self.navigationController?.navigationBar.prefersLargeTitles = true
 //        let button = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass.circle") , style: .plain, target: nil, action: nil)

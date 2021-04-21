@@ -18,7 +18,7 @@ enum TabBarMenu: Int {
 
 final class MainVC: UIViewController {
     @IBOutlet weak var titleView: UIView!
-    @IBOutlet weak var mapViewCell: UIView!
+    @IBOutlet weak var mapViewCell: MainScreenCellView!
         
     override func viewDidLoad() {
         super.viewDidLoad()
