@@ -20,7 +20,6 @@ extension MainVC {
         mapViewCell.layer.borderWidth = 2.0
         let borderColor: UIColor = .systemGray
         mapViewCell.layer.borderColor = borderColor.cgColor
-//        navigationController?.navigationBar.prefersLargeTitles = true
         
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = titleView.bounds
