@@ -20,6 +20,10 @@ final class MapVC: UIViewController {
         setupMap()
     }
     
+    @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
+         tabBarController?.selectedIndex = TabBarMenu.Main.rawValue
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: nil, action: nil)
