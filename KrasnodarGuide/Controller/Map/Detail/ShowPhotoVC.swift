@@ -10,10 +10,15 @@ import UIKit
 class ShowPhotoVC: UIViewController {
     @IBOutlet weak var photo: UIImageView!
     
-    var image: UIImage?
+    var image: UIImage!
+    var sight: Sight!
     
     @IBAction func shareButtonPressed(_ sender: UIButton) {
-        let shareController = UIActivityViewController(activityItems: [image!], applicationActivities: nil)
+        guard let title = sight.title,
+              let image = image else { return }
+        
+        let share: [Any] = [title , image]
+        let shareController = UIActivityViewController(activityItems: share, applicationActivities: nil)
         shareController.completionWithItemsHandler = {_, bool, _, _ in
             if bool {
                 print ("Done")
@@ -26,6 +31,9 @@ class ShowPhotoVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         photo.image = image
+        print(sight.photos)
+        
+        // передавать тольк sight
     }
 
 }

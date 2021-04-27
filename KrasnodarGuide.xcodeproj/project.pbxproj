@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE0635632630A84000777F83 /* MainScreenCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0635622630A84000777F83 /* MainScreenCellView.swift */; };
 		CE2238D7261F2BF40045C287 /* MapDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2238D6261F2BF40045C287 /* MapDetailVC.swift */; };
 		CE2238DA261F3C2A0045C287 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2238D8261F3C2A0045C287 /* PhotoCell.swift */; };
 		CE2238DB261F3C2A0045C287 /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2238D9261F3C2A0045C287 /* PhotoCell.xib */; };
@@ -27,7 +26,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CE0635622630A84000777F83 /* MainScreenCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCellView.swift; sourceTree = "<group>"; };
 		CE2238D6261F2BF40045C287 /* MapDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailVC.swift; sourceTree = "<group>"; };
 		CE2238D8261F3C2A0045C287 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		CE2238D9261F3C2A0045C287 /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
@@ -138,7 +136,6 @@
 			children = (
 				CEAC31E6260CBFE0003C9EC2 /* MainVC.swift */,
 				CEAC3205260CE18C003C9EC2 /* MainVCExtensions.swift */,
-				CE0635622630A84000777F83 /* MainScreenCellView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -243,7 +240,6 @@
 				CEAC31E3260CBFE0003C9EC2 /* AppDelegate.swift in Sources */,
 				CEF81F0E261896230084211B /* MapVCExtensions.swift in Sources */,
 				CE9CBC4426283740006B1412 /* ShowPhotoVC.swift in Sources */,
-				CE0635632630A84000777F83 /* MainScreenCellView.swift in Sources */,
 				CEF81F1D2619049B0084211B /* SightMarkerView.swift in Sources */,
 				CEF81F152618B9410084211B /* Sight.swift in Sources */,
 				CE2238D7261F2BF40045C287 /* MapDetailVC.swift in Sources */,

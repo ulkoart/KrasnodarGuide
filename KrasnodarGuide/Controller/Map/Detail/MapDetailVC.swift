@@ -40,6 +40,7 @@ class MapDetailVC: UIViewController {
                 let photoImage = UIImage(named: photoName)
             else { return }
             photoVC.image = photoImage
+            photoVC.sight = sight
         }
     }
 }

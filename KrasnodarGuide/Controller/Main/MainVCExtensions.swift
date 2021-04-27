@@ -31,7 +31,7 @@ extension MainVC {
         gradientLayer.endPoint = CGPoint(x: 0, y: 1)
         titleView.layer.insertSublayer(gradientLayer, at: 0)
         
-//        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.isNavigationBarHidden = true
 //        self.navigationItem.title = "Краснодар"
 //        self.navigationController?.navigationBar.prefersLargeTitles = true
 //        let button = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass.circle") , style: .plain, target: nil, action: nil)
@@ -39,3 +39,19 @@ extension MainVC {
         
     }
 }
+
+@IBDesignable class MainViewCell: UIView {}
+
+extension MainViewCell {
+    @IBInspectable
+    var cornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            layer.cornerRadius = newValue
+            layer.masksToBounds = newValue > 0
+        }
+    }
+}
+
