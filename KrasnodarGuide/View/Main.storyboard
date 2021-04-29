@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MEc-Aa-UaY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MEc-Aa-UaY">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -28,8 +27,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="i0l-vz-7pu"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="i0l-vz-7pu" firstAttribute="bottom" secondItem="sSQ-An-A0M" secondAttribute="bottom" constant="20" id="EqS-Td-Hf5"/>
                             <constraint firstItem="DNg-Zq-RGb" firstAttribute="top" secondItem="i0l-vz-7pu" secondAttribute="top" id="F7N-aC-yf1"/>
@@ -38,6 +36,7 @@
                             <constraint firstItem="i0l-vz-7pu" firstAttribute="trailing" secondItem="sSQ-An-A0M" secondAttribute="trailing" constant="20" id="epi-nP-kFI"/>
                             <constraint firstItem="DNg-Zq-RGb" firstAttribute="trailing" secondItem="i0l-vz-7pu" secondAttribute="trailing" id="pj3-Ej-qdg"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="i0l-vz-7pu"/>
                     </view>
                     <navigationItem key="navigationItem" title="Достопримечательности" id="Zgb-YG-6La">
                         <barButtonItem key="leftBarButtonItem" systemItem="reply" id="zpK-cZ-FYF">
@@ -78,7 +77,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="1ia-cy-GjL" secondAttribute="bottom" id="N3t-nO-6DK"/>
                                                     <constraint firstItem="1ia-cy-GjL" firstAttribute="leading" secondItem="Kaf-mQ-qAL" secondAttribute="leading" constant="5" id="NFa-Cn-NWq"/>
@@ -104,7 +103,7 @@
                                                         <rect key="frame" x="0.0" y="139" width="375" height="28"/>
                                                     </pageControl>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstItem="UNJ-M3-qdl" firstAttribute="height" secondItem="DjC-H5-DAl" secondAttribute="height" multiplier="1/6" id="5Ad-aD-XGa"/>
                                                     <constraint firstAttribute="trailing" secondItem="UNJ-M3-qdl" secondAttribute="trailing" id="81j-gp-Tlg"/>
@@ -124,7 +123,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="BBk-3r-GrU" secondAttribute="trailing" constant="16" id="57A-5I-M6g"/>
                                             <constraint firstItem="DjC-H5-DAl" firstAttribute="top" secondItem="Kaf-mQ-qAL" secondAttribute="bottom" id="GVM-NH-WO6"/>
@@ -147,8 +146,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="nRo-yi-Lag"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="7cv-du-PSR" firstAttribute="trailing" secondItem="nRo-yi-Lag" secondAttribute="trailing" id="3rR-wZ-LbD"/>
                             <constraint firstItem="4Nc-rY-YLH" firstAttribute="width" secondItem="dCm-h6-vxJ" secondAttribute="width" id="GHA-ht-69e"/>
@@ -159,6 +157,7 @@
                             <constraint firstItem="Kaf-mQ-qAL" firstAttribute="height" secondItem="dCm-h6-vxJ" secondAttribute="height" multiplier="1/6" id="rd8-mt-goh"/>
                             <constraint firstItem="7cv-du-PSR" firstAttribute="top" secondItem="nRo-yi-Lag" secondAttribute="top" id="uEj-rI-tb2"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="nRo-yi-Lag"/>
                     </view>
                     <connections>
                         <outlet property="photoCollectionLayout" destination="N1r-fL-FSW" id="foa-Qu-Lk2"/>
@@ -192,8 +191,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="4wt-Yp-88e"/>
-                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="NJ7-0G-bvG" firstAttribute="leading" secondItem="4wt-Yp-88e" secondAttribute="leading" id="5dT-mL-Sir"/>
                             <constraint firstItem="NJ7-0G-bvG" firstAttribute="top" secondItem="4wt-Yp-88e" secondAttribute="top" id="8Qe-ab-Ojr"/>
@@ -203,6 +201,7 @@
                             <constraint firstItem="NJ7-0G-bvG" firstAttribute="bottom" secondItem="4wt-Yp-88e" secondAttribute="bottom" id="OXQ-5R-PdM"/>
                             <constraint firstItem="NJ7-0G-bvG" firstAttribute="trailing" secondItem="4wt-Yp-88e" secondAttribute="trailing" id="h3g-IO-FFM"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="4wt-Yp-88e"/>
                     </view>
                     <navigationItem key="navigationItem" id="QgM-LZ-6lu"/>
                     <connections>
@@ -213,7 +212,7 @@
             </objects>
             <point key="canvasLocation" x="4213.6000000000004" y="-322.48875562218893"/>
         </scene>
-        <!--Краснодар-->
+        <!--Гид Краснодара-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="KrasnodarGuide" customModuleProvider="target" sceneMemberID="viewController">
@@ -221,31 +220,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y0r-sf-lRR" customClass="MainViewCell" customModule="KrasnodarGuide" customModuleProvider="target">
-                                <rect key="frame" x="8" y="60" width="359" height="111"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="История и достопримечательности кубанской столицы" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0Q-Pr-Ero">
-                                        <rect key="frame" x="5" y="0.0" width="354" height="111"/>
-                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="22"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="z0Q-Pr-Ero" secondAttribute="trailing" id="NZR-LJ-Dxr"/>
-                                    <constraint firstItem="z0Q-Pr-Ero" firstAttribute="top" secondItem="Y0r-sf-lRR" secondAttribute="top" id="TdZ-g4-a44"/>
-                                    <constraint firstItem="z0Q-Pr-Ero" firstAttribute="leading" secondItem="Y0r-sf-lRR" secondAttribute="leading" constant="5" id="bOb-IB-mxX"/>
-                                    <constraint firstAttribute="bottom" secondItem="z0Q-Pr-Ero" secondAttribute="bottom" id="wdK-dy-Uke"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u23-hf-nzB" customClass="MainViewCell" customModule="KrasnodarGuide" customModuleProvider="target">
-                                <rect key="frame" x="8" y="179" width="359" height="133.5"/>
+                                <rect key="frame" x="8" y="112" width="359" height="133.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainMap" translatesAutoresizingMaskIntoConstraints="NO" id="NQe-Kz-Guh">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="133.5"/>
@@ -256,7 +232,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Карта достопримечательностей" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovV-eK-T4d">
                                                 <rect key="frame" x="8" y="0.0" width="343" height="33.5"/>
                                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="14"/>
-                                                <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                                <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -268,14 +244,14 @@
                                             <constraint firstItem="ovV-eK-T4d" firstAttribute="centerX" secondItem="bV7-Zo-pf1" secondAttribute="centerX" id="cd0-nX-IPJ"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEC-2a-Qc7">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEC-2a-Qc7">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="133.5"/>
                                         <connections>
                                             <action selector="mapButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="idK-K8-owi"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="bV7-Zo-pf1" firstAttribute="leading" secondItem="u23-hf-nzB" secondAttribute="leading" id="6sj-Hr-dld"/>
                                     <constraint firstAttribute="trailing" secondItem="uEC-2a-Qc7" secondAttribute="trailing" id="6va-x0-tx6"/>
@@ -301,24 +277,20 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="u23-hf-nzB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="1ns-AY-E0S"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u23-hf-nzB" secondAttribute="trailing" constant="8" id="3zH-JJ-m9Z"/>
                             <constraint firstItem="uEC-2a-Qc7" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1/5" id="6Hh-44-eQY"/>
-                            <constraint firstItem="Y0r-sf-lRR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="QMj-mh-fEQ"/>
-                            <constraint firstItem="u23-hf-nzB" firstAttribute="top" secondItem="Y0r-sf-lRR" secondAttribute="bottom" constant="8" id="abV-RG-FBc"/>
-                            <constraint firstItem="Y0r-sf-lRR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-8" id="cCX-Ft-Rne"/>
                             <constraint firstItem="u23-hf-nzB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="jck-is-nxB"/>
-                            <constraint firstItem="Y0r-sf-lRR" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1/6" id="ksS-KP-egB"/>
-                            <constraint firstItem="Y0r-sf-lRR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="oiQ-vx-oj6"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Краснодар" id="Zvu-Hc-jUc"/>
+                    <navigationItem key="navigationItem" title="Гид Краснодара" leftItemsSupplementBackButton="YES" id="Zvu-Hc-jUc"/>
                     <connections>
                         <outlet property="mapViewCell" destination="u23-hf-nzB" id="w21-Zc-ubj"/>
-                        <outlet property="titleView" destination="Y0r-sf-lRR" id="bc0-Hs-KIz"/>
+                        <outlet property="titleNavigationItem" destination="Zvu-Hc-jUc" id="bMV-Ey-rew"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -351,8 +323,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XKU-6a-gHw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="dA8-CY-UYh"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iVe-n3-JAd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="iVe-n3-JAd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -401,7 +373,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="fpk-tr-9PE" secondAttribute="trailing" id="WAN-u9-aaQ"/>
                                     <constraint firstAttribute="bottom" secondItem="fpk-tr-9PE" secondAttribute="bottom" id="h3l-Hh-fOc"/>
@@ -421,7 +393,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Карта достопримечательностей" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEN-zw-UUo">
                                                 <rect key="frame" x="8" y="0.0" width="343" height="33.5"/>
                                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="14"/>
-                                                <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                                <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -433,14 +405,14 @@
                                             <constraint firstAttribute="bottom" secondItem="WEN-zw-UUo" secondAttribute="bottom" id="qRK-b6-5Fq"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfB-xw-kfB">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfB-xw-kfB">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="133.5"/>
                                         <connections>
                                             <action selector="mapButtonPressed:" destination="Eqb-KW-eMK" eventType="touchUpInside" id="miC-Mp-cDQ"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="QPy-Rw-vtI" firstAttribute="leading" secondItem="5tY-4I-aX3" secondAttribute="leading" id="3Ef-Tk-DQy"/>
                                     <constraint firstItem="hyE-Fa-7ka" firstAttribute="top" secondItem="5tY-4I-aX3" secondAttribute="top" id="3JZ-lK-AA0"/>
@@ -466,8 +438,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="hVE-Q9-04M"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="8JK-ui-hVi" firstAttribute="trailing" secondItem="hVE-Q9-04M" secondAttribute="trailing" id="3Dj-sQ-C11"/>
@@ -479,6 +450,7 @@
                             <constraint firstItem="hVE-Q9-04M" firstAttribute="trailing" secondItem="5tY-4I-aX3" secondAttribute="trailing" constant="8" id="tQv-PJ-vEv"/>
                             <constraint firstItem="5tY-4I-aX3" firstAttribute="leading" secondItem="hVE-Q9-04M" secondAttribute="leading" constant="8" id="x01-E9-akC"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="hVE-Q9-04M"/>
                     </view>
                     <navigationItem key="navigationItem" title="Краснодар" id="rsA-0f-OUT"/>
                     <connections>
@@ -492,22 +464,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="house" catalog="system" width="64" height="54"/>
         <image name="mainMap" width="1000" height="800"/>
-        <image name="map" catalog="system" width="128" height="110"/>
+        <image name="map" catalog="system" width="64" height="56"/>
         <image name="share" width="32" height="32"/>
-        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
-        <systemColor name="secondarySystemGroupedBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="square.and.arrow.down" catalog="system" width="60" height="64"/>
     </resources>
 </document>

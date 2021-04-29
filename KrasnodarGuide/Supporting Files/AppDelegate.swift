@@ -11,8 +11,14 @@ import UIKit
 final class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
+        guard
+            let tabBarController = window?.rootViewController as? UITabBarController,
+            let mainNavigationController = tabBarController.viewControllers?[TabBarMenu.Main.rawValue] as? UINavigationController,
+            let _ = mainNavigationController.topViewController as? MainVC
+        else { fatalError() }
         
         return true
     }
