@@ -29,3 +29,26 @@ final class MainVC: UIViewController {
         tabBarController?.selectedIndex = TabBarMenu.Map.rawValue
     }
 }
+
+@IBDesignable class MainViewCell: UIView {}
+
+extension MainViewCell {
+    @IBInspectable
+    var cornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            self.layer.cornerRadius = newValue
+            self.layer.masksToBounds = newValue > 0
+            
+//            let shadowSize: CGFloat = 20
+//            let contactRect = CGRect(x: -shadowSize, y: self.bounds.size.height - (shadowSize * 0.4), width: self.bounds.size.width + shadowSize * 2, height: shadowSize)
+//            self.layer.shadowPath = UIBezierPath(ovalIn: contactRect).cgPath
+//            self.layer.shadowRadius = 5
+//            self.layer.shadowOpacity = 0.4
+        }
+    }
+}
+
+// ToDo сделать белый бордер и тень

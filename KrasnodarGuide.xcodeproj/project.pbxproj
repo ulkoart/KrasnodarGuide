@@ -17,7 +17,6 @@
 		CEAC31EC260CBFE1003C9EC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEAC31EB260CBFE1003C9EC2 /* Assets.xcassets */; };
 		CEAC31EF260CBFE1003C9EC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAC31ED260CBFE1003C9EC2 /* LaunchScreen.storyboard */; };
 		CEAC3202260CCADA003C9EC2 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC3201260CCADA003C9EC2 /* MapVC.swift */; };
-		CEAC3206260CE18C003C9EC2 /* MainVCExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC3205260CE18C003C9EC2 /* MainVCExtensions.swift */; };
 		CEE8C477262092EC0043FCC9 /* MapDetailVCExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8C476262092EC0043FCC9 /* MapDetailVCExtensions.swift */; };
 		CEF81F0E261896230084211B /* MapVCExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF81F0D261896230084211B /* MapVCExtensions.swift */; };
 		CEF81F152618B9410084211B /* Sight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF81F142618B9410084211B /* Sight.swift */; };
@@ -38,7 +37,6 @@
 		CEAC31EE260CBFE1003C9EC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEAC31F0260CBFE1003C9EC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEAC3201260CCADA003C9EC2 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
-		CEAC3205260CE18C003C9EC2 /* MainVCExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCExtensions.swift; sourceTree = "<group>"; };
 		CEE8C476262092EC0043FCC9 /* MapDetailVCExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailVCExtensions.swift; sourceTree = "<group>"; };
 		CEF81F0D261896230084211B /* MapVCExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVCExtensions.swift; sourceTree = "<group>"; };
 		CEF81F142618B9410084211B /* Sight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sight.swift; sourceTree = "<group>"; };
@@ -135,7 +133,6 @@
 			isa = PBXGroup;
 			children = (
 				CEAC31E6260CBFE0003C9EC2 /* MainVC.swift */,
-				CEAC3205260CE18C003C9EC2 /* MainVCExtensions.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -243,7 +240,6 @@
 				CEF81F1D2619049B0084211B /* SightMarkerView.swift in Sources */,
 				CEF81F152618B9410084211B /* Sight.swift in Sources */,
 				CE2238D7261F2BF40045C287 /* MapDetailVC.swift in Sources */,
-				CEAC3206260CE18C003C9EC2 /* MainVCExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
