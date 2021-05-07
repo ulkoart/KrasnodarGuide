@@ -7,9 +7,12 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 final class MapVC: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
+    
+    let locationManager: CLLocationManager = .init()
     
     private var sights: [Sight] = []
     
@@ -17,14 +20,26 @@ final class MapVC: UIViewController {
         setupMap()
     }
     
+    @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
+         tabBarController?.selectedIndex = TabBarMenu.Main.rawValue
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: nil, action: nil)
+        
+        locationManager.delegate = self
         
         mapView.delegate = self
         mapView.register(SightAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         setupMap()
         sights = Sight.getSights()
         mapView.addAnnotations(sights)
+        
+        
+        checkLocationAuthorization()
+        
+        
+
     }
 }
