@@ -8,12 +8,15 @@
 import UIKit
 
 class ShowPhotoVC: UIViewController {
-    @IBOutlet weak var photo: UIImageView!
+    
+    var imageScrollView: ImageScrollView!
     
     var image: UIImage!
     var sight: Sight!
     
+    @IBOutlet weak var shareButton: UIButton!
     @IBAction func shareButtonPressed(_ sender: UIButton) {
+        
         guard let title = sight.title,
               let image = image else { return }
         
@@ -21,7 +24,7 @@ class ShowPhotoVC: UIViewController {
         let shareController = UIActivityViewController(activityItems: share, applicationActivities: nil)
         shareController.completionWithItemsHandler = {_, bool, _, _ in
             if bool {
-                print ("Done")
+                print ("\(#function) - Done!")
             }
         }
         
@@ -30,10 +33,20 @@ class ShowPhotoVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        photo.image = image
-        print(sight.photos)
+        imageScrollView = ImageScrollView(frame: view.bounds)
+        view.addSubview(imageScrollView)
+        view.addSubview(shareButton)
+        setupImageScrollView()
+        self.imageScrollView.set(image: image)
+    }
+    
+    func setupImageScrollView() {
+        imageScrollView.translatesAutoresizingMaskIntoConstraints = false
         
-        // передавать тольк sight
+        imageScrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        imageScrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        imageScrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        imageScrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
     }
 
 }

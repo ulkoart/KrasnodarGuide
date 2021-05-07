@@ -10,6 +10,7 @@
 		CE2238D7261F2BF40045C287 /* MapDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2238D6261F2BF40045C287 /* MapDetailVC.swift */; };
 		CE2238DA261F3C2A0045C287 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2238D8261F3C2A0045C287 /* PhotoCell.swift */; };
 		CE2238DB261F3C2A0045C287 /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2238D9261F3C2A0045C287 /* PhotoCell.xib */; };
+		CE4ACF5426458581009648A9 /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4ACF5326458581009648A9 /* ImageScrollView.swift */; };
 		CE71E4FC263AD2A4001471CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE71E4FB263AD2A4001471CE /* Main.storyboard */; };
 		CE9CBC4426283740006B1412 /* ShowPhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9CBC4326283740006B1412 /* ShowPhotoVC.swift */; };
 		CEAC31E3260CBFE0003C9EC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC31E2260CBFE0003C9EC2 /* AppDelegate.swift */; };
@@ -28,6 +29,7 @@
 		CE2238D6261F2BF40045C287 /* MapDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailVC.swift; sourceTree = "<group>"; };
 		CE2238D8261F3C2A0045C287 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		CE2238D9261F3C2A0045C287 /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
+		CE4ACF5326458581009648A9 /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
 		CE71E4FB263AD2A4001471CE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CE9CBC4326283740006B1412 /* ShowPhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPhotoVC.swift; sourceTree = "<group>"; };
 		CEAC31DF260CBFE0003C9EC2 /* KrasnodarGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KrasnodarGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +145,7 @@
 				CE2238D6261F2BF40045C287 /* MapDetailVC.swift */,
 				CEE8C476262092EC0043FCC9 /* MapDetailVCExtensions.swift */,
 				CE9CBC4326283740006B1412 /* ShowPhotoVC.swift */,
+				CE4ACF5326458581009648A9 /* ImageScrollView.swift */,
 				CE9CBC42262832E8006B1412 /* Cell */,
 			);
 			path = Detail;
@@ -235,6 +238,7 @@
 				CEE8C477262092EC0043FCC9 /* MapDetailVCExtensions.swift in Sources */,
 				CEAC3202260CCADA003C9EC2 /* MapVC.swift in Sources */,
 				CEAC31E3260CBFE0003C9EC2 /* AppDelegate.swift in Sources */,
+				CE4ACF5426458581009648A9 /* ImageScrollView.swift in Sources */,
 				CEF81F0E261896230084211B /* MapVCExtensions.swift in Sources */,
 				CE9CBC4426283740006B1412 /* ShowPhotoVC.swift in Sources */,
 				CEF81F1D2619049B0084211B /* SightMarkerView.swift in Sources */,
