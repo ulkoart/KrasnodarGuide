@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MEc-Aa-UaY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MEc-Aa-UaY">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -28,8 +27,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="i0l-vz-7pu"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="i0l-vz-7pu" firstAttribute="bottom" secondItem="sSQ-An-A0M" secondAttribute="bottom" constant="20" id="EqS-Td-Hf5"/>
                             <constraint firstItem="DNg-Zq-RGb" firstAttribute="top" secondItem="i0l-vz-7pu" secondAttribute="top" id="F7N-aC-yf1"/>
@@ -38,6 +36,7 @@
                             <constraint firstItem="i0l-vz-7pu" firstAttribute="trailing" secondItem="sSQ-An-A0M" secondAttribute="trailing" constant="20" id="epi-nP-kFI"/>
                             <constraint firstItem="DNg-Zq-RGb" firstAttribute="trailing" secondItem="i0l-vz-7pu" secondAttribute="trailing" id="pj3-Ej-qdg"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="i0l-vz-7pu"/>
                     </view>
                     <navigationItem key="navigationItem" title="Достопримечательности" id="Zgb-YG-6La">
                         <barButtonItem key="leftBarButtonItem" systemItem="reply" id="zpK-cZ-FYF">
@@ -78,7 +77,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="1ia-cy-GjL" secondAttribute="bottom" id="N3t-nO-6DK"/>
                                                     <constraint firstItem="1ia-cy-GjL" firstAttribute="leading" secondItem="Kaf-mQ-qAL" secondAttribute="leading" constant="5" id="NFa-Cn-NWq"/>
@@ -104,7 +103,7 @@
                                                         <rect key="frame" x="0.0" y="139" width="375" height="28"/>
                                                     </pageControl>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstItem="UNJ-M3-qdl" firstAttribute="height" secondItem="DjC-H5-DAl" secondAttribute="height" multiplier="1/6" id="5Ad-aD-XGa"/>
                                                     <constraint firstAttribute="trailing" secondItem="UNJ-M3-qdl" secondAttribute="trailing" id="81j-gp-Tlg"/>
@@ -124,7 +123,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="BBk-3r-GrU" secondAttribute="trailing" constant="16" id="57A-5I-M6g"/>
                                             <constraint firstItem="DjC-H5-DAl" firstAttribute="top" secondItem="Kaf-mQ-qAL" secondAttribute="bottom" id="GVM-NH-WO6"/>
@@ -147,8 +146,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="nRo-yi-Lag"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="7cv-du-PSR" firstAttribute="trailing" secondItem="nRo-yi-Lag" secondAttribute="trailing" id="3rR-wZ-LbD"/>
                             <constraint firstItem="4Nc-rY-YLH" firstAttribute="width" secondItem="dCm-h6-vxJ" secondAttribute="width" id="GHA-ht-69e"/>
@@ -159,6 +157,7 @@
                             <constraint firstItem="Kaf-mQ-qAL" firstAttribute="height" secondItem="dCm-h6-vxJ" secondAttribute="height" multiplier="1/6" id="rd8-mt-goh"/>
                             <constraint firstItem="7cv-du-PSR" firstAttribute="top" secondItem="nRo-yi-Lag" secondAttribute="top" id="uEj-rI-tb2"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="nRo-yi-Lag"/>
                     </view>
                     <connections>
                         <outlet property="photoCollectionLayout" destination="N1r-fL-FSW" id="foa-Qu-Lk2"/>
@@ -189,13 +188,13 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="4wt-Yp-88e"/>
-                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wFq-L6-8Dj" firstAttribute="leading" secondItem="4wt-Yp-88e" secondAttribute="leading" constant="156" id="A2f-Fd-8Jm"/>
                             <constraint firstItem="4wt-Yp-88e" firstAttribute="trailing" secondItem="wFq-L6-8Dj" secondAttribute="trailing" constant="156" id="AxE-F5-XWB"/>
                             <constraint firstItem="4wt-Yp-88e" firstAttribute="bottom" secondItem="wFq-L6-8Dj" secondAttribute="bottom" constant="20" id="HcT-8F-C2n"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="4wt-Yp-88e"/>
                     </view>
                     <navigationItem key="navigationItem" id="QgM-LZ-6lu"/>
                     <connections>
@@ -226,7 +225,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Карта достопримечательностей" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovV-eK-T4d">
                                                 <rect key="frame" x="8" y="0.0" width="343" height="33.5"/>
                                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="14"/>
-                                                <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                                <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -238,14 +237,14 @@
                                             <constraint firstItem="ovV-eK-T4d" firstAttribute="centerX" secondItem="bV7-Zo-pf1" secondAttribute="centerX" id="cd0-nX-IPJ"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEC-2a-Qc7">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEC-2a-Qc7">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="133.5"/>
                                         <connections>
                                             <action selector="mapButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="idK-K8-owi"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="bV7-Zo-pf1" firstAttribute="leading" secondItem="u23-hf-nzB" secondAttribute="leading" id="6sj-Hr-dld"/>
                                     <constraint firstAttribute="trailing" secondItem="uEC-2a-Qc7" secondAttribute="trailing" id="6va-x0-tx6"/>
@@ -270,16 +269,73 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oUd-qT-u8J" customClass="MainViewCell" customModule="KrasnodarGuide" customModuleProvider="target">
+                                <rect key="frame" x="8" y="253.5" width="206.5" height="133.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="people" translatesAutoresizingMaskIntoConstraints="NO" id="EBP-G4-Nc3">
+                                        <rect key="frame" x="0.0" y="0.0" width="206.5" height="133.5"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jaS-nh-LUF">
+                                        <rect key="frame" x="0.0" y="100" width="206.5" height="33.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Исторические личности" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jA5-rf-y2n">
+                                                <rect key="frame" x="8" y="0.0" width="190.5" height="33.5"/>
+                                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="14"/>
+                                                <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.019607843137254902" green="0.1764705882352941" blue="0.43137254901960786" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="jA5-rf-y2n" firstAttribute="centerY" secondItem="jaS-nh-LUF" secondAttribute="centerY" id="5fc-jn-gsI"/>
+                                            <constraint firstAttribute="bottom" secondItem="jA5-rf-y2n" secondAttribute="bottom" id="BHd-rm-tuk"/>
+                                            <constraint firstItem="jA5-rf-y2n" firstAttribute="centerX" secondItem="jaS-nh-LUF" secondAttribute="centerX" id="WFG-Ke-0EL"/>
+                                            <constraint firstItem="jA5-rf-y2n" firstAttribute="leading" secondItem="jaS-nh-LUF" secondAttribute="leading" constant="8" id="gUw-Wg-fsN"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="EBP-G4-Nc3" secondAttribute="trailing" id="AWk-R4-Ak6"/>
+                                    <constraint firstItem="jaS-nh-LUF" firstAttribute="leading" secondItem="oUd-qT-u8J" secondAttribute="leading" id="C7m-XO-NxC"/>
+                                    <constraint firstAttribute="bottom" secondItem="jaS-nh-LUF" secondAttribute="bottom" id="TPl-Wc-MJ6"/>
+                                    <constraint firstItem="EBP-G4-Nc3" firstAttribute="leading" secondItem="oUd-qT-u8J" secondAttribute="leading" id="UhQ-Mt-vdR"/>
+                                    <constraint firstItem="jaS-nh-LUF" firstAttribute="height" secondItem="oUd-qT-u8J" secondAttribute="height" multiplier="1/4" id="VVG-qt-2KC"/>
+                                    <constraint firstAttribute="trailing" secondItem="jaS-nh-LUF" secondAttribute="trailing" id="VgL-b9-Jge"/>
+                                    <constraint firstItem="EBP-G4-Nc3" firstAttribute="top" secondItem="oUd-qT-u8J" secondAttribute="top" id="duu-i3-Btg"/>
+                                    <constraint firstAttribute="bottom" secondItem="EBP-G4-Nc3" secondAttribute="bottom" id="ld8-vZ-g4a"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idc-lE-JEq">
+                                <rect key="frame" x="8" y="395" width="359" height="215"/>
+                                <string key="text">30 июня 1792 года Черноморскому казачьему войску Екатериной II была выдана Жалованная Грамота, по которой казакам на вечное владение передавалась земля. Так и началась история города Краснодара.</string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="idc-lE-JEq" secondAttribute="bottom" constant="8" id="1aD-yA-ELY"/>
                             <constraint firstItem="u23-hf-nzB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="1ns-AY-E0S"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u23-hf-nzB" secondAttribute="trailing" constant="8" id="3zH-JJ-m9Z"/>
                             <constraint firstItem="uEC-2a-Qc7" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1/5" id="6Hh-44-eQY"/>
+                            <constraint firstItem="oUd-qT-u8J" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1/5" id="A5e-wF-EeU"/>
+                            <constraint firstItem="oUd-qT-u8J" firstAttribute="top" secondItem="u23-hf-nzB" secondAttribute="bottom" constant="8" id="Bop-Xb-QN8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="idc-lE-JEq" secondAttribute="trailing" constant="8" id="GbT-bW-CxA"/>
+                            <constraint firstItem="idc-lE-JEq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Q2l-wx-pHj"/>
+                            <constraint firstItem="idc-lE-JEq" firstAttribute="top" secondItem="oUd-qT-u8J" secondAttribute="bottom" constant="8" id="gNc-iu-amH"/>
+                            <constraint firstItem="oUd-qT-u8J" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="33/60" id="hnS-F1-ACq"/>
                             <constraint firstItem="u23-hf-nzB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="jck-is-nxB"/>
+                            <constraint firstItem="oUd-qT-u8J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="yqr-Id-ptf"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Гид Краснодара" leftItemsSupplementBackButton="YES" id="Zvu-Hc-jUc"/>
                     <connections>
@@ -305,6 +361,7 @@
                     <connections>
                         <segue destination="XKU-6a-gHw" kind="relationship" relationship="viewControllers" id="Fkj-F3-T2e"/>
                         <segue destination="Lch-XG-hlH" kind="relationship" relationship="viewControllers" id="byP-zq-h1V"/>
+                        <segue destination="fqA-Jp-1br" kind="relationship" relationship="viewControllers" id="E4G-jR-ex0"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zZI-lO-EhC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -329,6 +386,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kQO-9O-JOU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1812" y="337"/>
+        </scene>
+        <!--Знаменитости-->
+        <scene sceneID="pmm-S7-FBo">
+            <objects>
+                <viewController id="TbZ-xY-9Tm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NkM-1i-GSt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="HYd-xV-8Aq"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Знаменитости" id="6mE-yu-2CE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lHG-6Q-F38" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2636" y="-981"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2p6-cA-E79">
@@ -367,7 +440,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="fpk-tr-9PE" secondAttribute="trailing" id="WAN-u9-aaQ"/>
                                     <constraint firstAttribute="bottom" secondItem="fpk-tr-9PE" secondAttribute="bottom" id="h3l-Hh-fOc"/>
@@ -387,7 +460,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Карта достопримечательностей" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEN-zw-UUo">
                                                 <rect key="frame" x="8" y="0.0" width="343" height="33.5"/>
                                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="14"/>
-                                                <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                                <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -399,14 +472,14 @@
                                             <constraint firstAttribute="bottom" secondItem="WEN-zw-UUo" secondAttribute="bottom" id="qRK-b6-5Fq"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfB-xw-kfB">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfB-xw-kfB">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="133.5"/>
                                         <connections>
                                             <action selector="mapButtonPressed:" destination="Eqb-KW-eMK" eventType="touchUpInside" id="miC-Mp-cDQ"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="QPy-Rw-vtI" firstAttribute="leading" secondItem="5tY-4I-aX3" secondAttribute="leading" id="3Ef-Tk-DQy"/>
                                     <constraint firstItem="hyE-Fa-7ka" firstAttribute="top" secondItem="5tY-4I-aX3" secondAttribute="top" id="3JZ-lK-AA0"/>
@@ -432,8 +505,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="hVE-Q9-04M"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="8JK-ui-hVi" firstAttribute="trailing" secondItem="hVE-Q9-04M" secondAttribute="trailing" id="3Dj-sQ-C11"/>
@@ -445,6 +517,7 @@
                             <constraint firstItem="hVE-Q9-04M" firstAttribute="trailing" secondItem="5tY-4I-aX3" secondAttribute="trailing" constant="8" id="tQv-PJ-vEv"/>
                             <constraint firstItem="5tY-4I-aX3" firstAttribute="leading" secondItem="hVE-Q9-04M" secondAttribute="leading" constant="8" id="x01-E9-akC"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="hVE-Q9-04M"/>
                     </view>
                     <navigationItem key="navigationItem" title="Краснодар" id="rsA-0f-OUT"/>
                     <connections>
@@ -456,24 +529,33 @@
             </objects>
             <point key="canvasLocation" x="2636" y="1012"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="b5m-aj-5lN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fqA-Jp-1br" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="architectural" id="wF4-QH-mYO"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="5qk-Gg-XfD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TbZ-xY-9Tm" kind="relationship" relationship="rootViewController" id="och-nI-qqz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CLc-Jw-gjw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1812" y="-981"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="architectural" width="32" height="32"/>
+        <image name="house" catalog="system" width="128" height="110"/>
         <image name="mainMap" width="1000" height="800"/>
-        <image name="map" catalog="system" width="128" height="110"/>
+        <image name="map" catalog="system" width="128" height="113"/>
+        <image name="people" width="397" height="183.5"/>
         <image name="share" width="32" height="32"/>
         <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
-        <systemColor name="secondarySystemGroupedBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>
