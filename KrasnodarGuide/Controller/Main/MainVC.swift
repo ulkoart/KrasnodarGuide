@@ -14,6 +14,7 @@ import UIKit
 enum TabBarMenu: Int {
     case Main
     case Map
+    case Persons
 }
 
 final class MainVC: UIViewController {
@@ -28,6 +29,12 @@ final class MainVC: UIViewController {
     @IBAction func mapButtonPressed(_ sender: UIButton) {
         tabBarController?.selectedIndex = TabBarMenu.Map.rawValue
     }
+    
+    @IBAction func personButtonPressed(_ sender: UIButton) {
+        tabBarController?.selectedIndex = TabBarMenu.Persons.rawValue
+    }
+    
+    
 }
 
 @IBDesignable class MainViewCell: UIView {}
