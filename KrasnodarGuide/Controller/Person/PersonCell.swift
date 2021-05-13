@@ -8,18 +8,46 @@
 import UIKit
 
 final class PersonCell: UITableViewCell {
-    var personImage: UIImageView!
-    var nameLabel: UILabel!
-    var descriptionLabel: UILabel!
+    private var personImage: UIImageView  = UIImageView(image: UIImage())
+    private var nameLabel: UILabel = UILabel()
+    private var descriptionLabel: UILabel = UILabel()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
-        personImage = UIImageView(image: UIImage())
-        nameLabel = UILabel(frame: CGRect.init())
-        descriptionLabel = UILabel()
-        
+
+        contentView.addSubview(personImage)
         contentView.addSubview(nameLabel)
+        contentView.addSubview(descriptionLabel)
+        
+        // MARK: - personImage
+        personImage.translatesAutoresizingMaskIntoConstraints = false
+        personImage.contentMode = .scaleAspectFill
+        
+        personImage.widthAnchor.constraint(equalToConstant: 76).isActive = true
+        personImage.heightAnchor.constraint(equalToConstant: 92).isActive = true
+        personImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16).isActive = true
+        personImage.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 4).isActive = true
+        personImage.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -4).isActive = true
+        
+        // MARK: - nameLabel
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        nameLabel.numberOfLines = 2
+        nameLabel.font = UIFont.systemFont(ofSize: 17, weight: .light)
+        
+        nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8).isActive = true
+        nameLabel.leadingAnchor.constraint(equalTo: personImage.trailingAnchor, constant: 4).isActive = true
+        nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -4).isActive = true
+        nameLabel.heightAnchor.constraint(equalToConstant: 42).isActive = true
+        
+        // MARK: - nameLabel
+        descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
+        descriptionLabel.numberOfLines = 1
+        descriptionLabel.font = UIFont.systemFont(ofSize: 17, weight: .bold)
+        
+        descriptionLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 0).isActive = true
+        descriptionLabel.leadingAnchor.constraint(equalTo: personImage.trailingAnchor, constant: 4).isActive = true
+        descriptionLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -4).isActive = true
+        descriptionLabel.heightAnchor.constraint(equalToConstant: 21).isActive = true
     }
     
     required init?(coder: NSCoder) {
@@ -27,6 +55,8 @@ final class PersonCell: UITableViewCell {
     }
     
     func setup(with person: Person) {
+        self.selectionStyle = .none
+        
         self.personImage.image = UIImage(named: person.image)
         self.personImage.layer.cornerRadius = 15.0
         self.personImage.clipsToBounds = true

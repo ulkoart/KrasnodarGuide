@@ -22,7 +22,6 @@ final class PersonVC: UIViewController {
         tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.register(PersonCell.self, forCellReuseIdentifier: cellIdentifier)
-        
         self.loadPersons()
     }
     
@@ -48,5 +47,9 @@ extension PersonVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("TAP")
     }
 }
