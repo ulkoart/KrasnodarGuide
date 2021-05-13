@@ -27,7 +27,6 @@ class ShowPhotoVC: UIViewController {
                 print ("\(#function) - Done!")
             }
         }
-        
         present(shareController, animated: true, completion: nil)
     }
     
@@ -43,10 +42,9 @@ class ShowPhotoVC: UIViewController {
     func setupImageScrollView() {
         imageScrollView.translatesAutoresizingMaskIntoConstraints = false
         
-        imageScrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 10).isActive = true
+        imageScrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         imageScrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         imageScrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         imageScrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
     }
-
 }

@@ -34,7 +34,7 @@ final class PersonCell: UITableViewCell {
         nameLabel.numberOfLines = 2
         nameLabel.font = UIFont.systemFont(ofSize: 17, weight: .light)
         
-        nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8).isActive = true
+        nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16).isActive = true
         nameLabel.leadingAnchor.constraint(equalTo: personImage.trailingAnchor, constant: 4).isActive = true
         nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -4).isActive = true
         nameLabel.heightAnchor.constraint(equalToConstant: 42).isActive = true
