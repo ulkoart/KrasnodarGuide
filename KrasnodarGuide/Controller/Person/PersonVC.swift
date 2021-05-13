@@ -17,6 +17,7 @@ final class PersonVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // tableView.tableFooterView = UIView()
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -50,6 +51,13 @@ extension PersonVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("TAP")
+        guard
+            let viewController = UIStoryboard(name: "Main", bundle: nil)
+                .instantiateViewController(withIdentifier: "PersonDetail") as? PersonDetail
+        else { return }
+        let person: Person = self.persons[indexPath.row]
+        viewController.person = person
+        navigationController?.pushViewController(viewController, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
