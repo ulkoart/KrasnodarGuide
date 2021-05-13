@@ -19,7 +19,7 @@
 		CEAC31EC260CBFE1003C9EC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEAC31EB260CBFE1003C9EC2 /* Assets.xcassets */; };
 		CEAC31EF260CBFE1003C9EC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAC31ED260CBFE1003C9EC2 /* LaunchScreen.storyboard */; };
 		CEAC3202260CCADA003C9EC2 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC3201260CCADA003C9EC2 /* MapVC.swift */; };
-		CEAE8BF1264BD17500A47725 /* PersonTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE8BF0264BD17500A47725 /* PersonTVC.swift */; };
+		CEAE8BF1264BD17500A47725 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE8BF0264BD17500A47725 /* PersonCell.swift */; };
 		CEAE8BF3264BD25500A47725 /* persons.json in Resources */ = {isa = PBXBuildFile; fileRef = CEAE8BF2264BD25500A47725 /* persons.json */; };
 		CEAE8BF5264BD27200A47725 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE8BF4264BD27200A47725 /* Person.swift */; };
 		CEE8C477262092EC0043FCC9 /* MapDetailVCExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8C476262092EC0043FCC9 /* MapDetailVCExtensions.swift */; };
@@ -44,7 +44,7 @@
 		CEAC31EE260CBFE1003C9EC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEAC31F0260CBFE1003C9EC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEAC3201260CCADA003C9EC2 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
-		CEAE8BF0264BD17500A47725 /* PersonTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTVC.swift; sourceTree = "<group>"; };
+		CEAE8BF0264BD17500A47725 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		CEAE8BF2264BD25500A47725 /* persons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = persons.json; sourceTree = "<group>"; };
 		CEAE8BF4264BD27200A47725 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		CEE8C476262092EC0043FCC9 /* MapDetailVCExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailVCExtensions.swift; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				CE27C0D2264B166800CC8B98 /* PersonVC.swift */,
-				CEAE8BF0264BD17500A47725 /* PersonTVC.swift */,
+				CEAE8BF0264BD17500A47725 /* PersonCell.swift */,
 			);
 			path = Person;
 			sourceTree = "<group>";
@@ -262,7 +262,7 @@
 				CEAC31E3260CBFE0003C9EC2 /* AppDelegate.swift in Sources */,
 				CE27C0D3264B166800CC8B98 /* PersonVC.swift in Sources */,
 				CE4ACF5426458581009648A9 /* ImageScrollView.swift in Sources */,
-				CEAE8BF1264BD17500A47725 /* PersonTVC.swift in Sources */,
+				CEAE8BF1264BD17500A47725 /* PersonCell.swift in Sources */,
 				CEF81F0E261896230084211B /* MapVCExtensions.swift in Sources */,
 				CE9CBC4426283740006B1412 /* ShowPhotoVC.swift in Sources */,
 				CEF81F1D2619049B0084211B /* SightMarkerView.swift in Sources */,

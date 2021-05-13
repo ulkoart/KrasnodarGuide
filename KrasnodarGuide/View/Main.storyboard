@@ -409,67 +409,6 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="574"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="personCell" rowHeight="100" id="Wg3-ah-smz" customClass="PersonTVC" customModule="KrasnodarGuide" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wg3-ah-smz" id="qcc-jJ-ySw">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6P-0q-d3k">
-                                                    <rect key="frame" x="8" y="4" width="359" height="92"/>
-                                                    <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UUf-BE-xrc">
-                                                            <rect key="frame" x="0.0" y="0.0" width="76" height="92"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="76" id="8dX-w6-TgM"/>
-                                                                <constraint firstAttribute="height" constant="92" id="xV8-dF-Siu"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Rlg-4w-038">
-                                                            <rect key="frame" x="78" y="0.0" width="281" height="92"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Фамилия Имя" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FvF-1L-xTd">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="281" height="71.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Описание" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KiT-7b-VaQ">
-                                                                    <rect key="frame" x="0.0" y="71.5" width="281" height="20.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </stackView>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="UUf-BE-xrc" secondAttribute="bottom" id="4OZ-FF-G6N"/>
-                                                        <constraint firstItem="Rlg-4w-038" firstAttribute="leading" secondItem="UUf-BE-xrc" secondAttribute="trailing" constant="2" id="Dsq-8Z-yRI"/>
-                                                        <constraint firstAttribute="trailing" secondItem="Rlg-4w-038" secondAttribute="trailing" id="FDT-gw-n7Q"/>
-                                                        <constraint firstAttribute="bottom" secondItem="Rlg-4w-038" secondAttribute="bottom" id="S0L-Uq-uMv"/>
-                                                        <constraint firstItem="UUf-BE-xrc" firstAttribute="top" secondItem="b6P-0q-d3k" secondAttribute="top" id="Ugx-Qq-bhn"/>
-                                                        <constraint firstItem="Rlg-4w-038" firstAttribute="top" secondItem="b6P-0q-d3k" secondAttribute="top" id="mZB-2v-3Av"/>
-                                                        <constraint firstItem="UUf-BE-xrc" firstAttribute="leading" secondItem="b6P-0q-d3k" secondAttribute="leading" id="vbp-EK-Rmg"/>
-                                                    </constraints>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="b6P-0q-d3k" firstAttribute="top" secondItem="qcc-jJ-ySw" secondAttribute="top" constant="4" id="MlG-XN-Nh8"/>
-                                                <constraint firstAttribute="bottom" secondItem="b6P-0q-d3k" secondAttribute="bottom" constant="4" id="Oew-LO-jCP"/>
-                                                <constraint firstItem="b6P-0q-d3k" firstAttribute="leading" secondItem="qcc-jJ-ySw" secondAttribute="leading" constant="8" id="W8B-8K-QFM"/>
-                                                <constraint firstAttribute="trailing" secondItem="b6P-0q-d3k" secondAttribute="trailing" constant="8" id="ZME-Nw-Ng6"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="descriptionLabel" destination="KiT-7b-VaQ" id="oXE-mP-jjv"/>
-                                            <outlet property="nameLabel" destination="FvF-1L-xTd" id="H51-op-N2O"/>
-                                            <outlet property="personImage" destination="UUf-BE-xrc" id="C5S-Sf-gFp"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

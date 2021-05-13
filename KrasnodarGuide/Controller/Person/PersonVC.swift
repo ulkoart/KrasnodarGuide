@@ -16,11 +16,12 @@ final class PersonVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // tableView.tableFooterView = UIView()
         
         tableView.delegate = self
         tableView.dataSource = self
-        // tableView.tableFooterView = UIView()
         tableView.separatorStyle = .none
+        tableView.register(PersonCell.self, forCellReuseIdentifier: cellIdentifier)
         
         self.loadPersons()
     }
@@ -37,7 +38,7 @@ extension PersonVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? PersonTVC else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? PersonCell else {
             fatalError()
         }
         let person: Person = persons[indexPath.row]
