@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		CE21B745264D436000C06DC4 /* PersonDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE21B744264D436000C06DC4 /* PersonDetail.swift */; };
 		CE21B748264D54E000C06DC4 /* PersonDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE21B746264D54E000C06DC4 /* PersonDetailCell.swift */; };
-		CE21B749264D54E000C06DC4 /* PersonDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE21B747264D54E000C06DC4 /* PersonDetailCell.xib */; };
 		CE2238D7261F2BF40045C287 /* MapDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2238D6261F2BF40045C287 /* MapDetailVC.swift */; };
 		CE2238DA261F3C2A0045C287 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2238D8261F3C2A0045C287 /* PhotoCell.swift */; };
 		CE2238DB261F3C2A0045C287 /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2238D9261F3C2A0045C287 /* PhotoCell.xib */; };
@@ -35,7 +34,6 @@
 /* Begin PBXFileReference section */
 		CE21B744264D436000C06DC4 /* PersonDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetail.swift; sourceTree = "<group>"; };
 		CE21B746264D54E000C06DC4 /* PersonDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailCell.swift; sourceTree = "<group>"; };
-		CE21B747264D54E000C06DC4 /* PersonDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonDetailCell.xib; sourceTree = "<group>"; };
 		CE2238D6261F2BF40045C287 /* MapDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailVC.swift; sourceTree = "<group>"; };
 		CE2238D8261F3C2A0045C287 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		CE2238D9261F3C2A0045C287 /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
@@ -78,7 +76,6 @@
 				CEAE8BF0264BD17500A47725 /* PersonCell.swift */,
 				CE21B744264D436000C06DC4 /* PersonDetail.swift */,
 				CE21B746264D54E000C06DC4 /* PersonDetailCell.swift */,
-				CE21B747264D54E000C06DC4 /* PersonDetailCell.xib */,
 			);
 			path = Person;
 			sourceTree = "<group>";
@@ -253,7 +250,6 @@
 				CEF81F182618B98F0084211B /* sights.json in Resources */,
 				CEAC31EC260CBFE1003C9EC2 /* Assets.xcassets in Resources */,
 				CE2238DB261F3C2A0045C287 /* PhotoCell.xib in Resources */,
-				CE21B749264D54E000C06DC4 /* PersonDetailCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

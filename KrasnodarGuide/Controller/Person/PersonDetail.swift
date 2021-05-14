@@ -9,6 +9,7 @@ import UIKit
 
 class PersonDetail: UIViewController {
     
+    @IBOutlet weak var personPhotoCollection: UICollectionView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var personPhotoCollectionView: UICollectionView!
     
@@ -26,19 +27,31 @@ class PersonDetail: UIViewController {
         personPhotoCollectionView.delegate = self
         personPhotoCollectionView.dataSource = self
         personPhotoCollectionView.showsHorizontalScrollIndicator = false
-        personPhotoCollectionView.register(UINib(nibName: cellId, bundle: nil), forCellWithReuseIdentifier: cellId)
+        personPhotoCollectionView.register(PersonDetailCell.self, forCellWithReuseIdentifier: cellId)
     }
 }
 
 extension PersonDetail: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as? PersonDetailCell else { return UICollectionViewCell() }
+        cell.setup(with: person.image)
         return cell
     }
     
     
+}
+
+
+extension PersonDetail: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return personPhotoCollection.frame.size
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
 }
