@@ -18,6 +18,7 @@ extension MapVC {
 }
 
 extension MapVC: MKMapViewDelegate {
+    
 //    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
 //        let mapLatitude = mapView.centerCoordinate.latitude
 //        let mapLongitude = mapView.centerCoordinate.longitude

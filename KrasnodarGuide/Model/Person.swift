@@ -11,6 +11,7 @@ struct Person: Codable {
     let name: String
     let image: String
     let description: String
+    let photos: [String]
 }
 
 extension Person {

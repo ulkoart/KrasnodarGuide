@@ -1,4 +1,13 @@
-[
-    { "name": "Григорий Митрофанович Концевич", "image": "koncevich", "description": "музыкальный деятель"},
-    { "name": "Евгений Дмитриевич Фелицын", "image": "felicin", "description": "Выдающийся историк"}
+[{
+        "name": "Григорий Митрофанович Концевич",
+        "image": "koncevich",
+        "description": "музыкальный деятель",
+        "photos": ["koncevich"]
+    },
+    {
+        "name": "Евгений Дмитриевич Фелицын",
+        "image": "felicin",
+        "description": "Выдающийся историк",
+        "photos": ["felicin", "felicin2"]
+    }
 ]

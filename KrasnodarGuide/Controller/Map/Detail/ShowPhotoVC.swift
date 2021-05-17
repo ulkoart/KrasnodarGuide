@@ -12,12 +12,12 @@ class ShowPhotoVC: UIViewController {
     var imageScrollView: ImageScrollView!
     
     var image: UIImage!
-    var sight: Sight!
+    var photoTitle: String!
     
     @IBOutlet weak var shareButton: UIButton!
     @IBAction func shareButtonPressed(_ sender: UIButton) {
         
-        guard let title = sight.title,
+        guard let title = photoTitle,
               let image = image else { return }
         
         let share: [Any] = [title , image]

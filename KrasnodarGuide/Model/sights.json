@@ -1,7 +1,36 @@
-[
-  { "name": "Памятник «Собачкина столица»", "lat": 45.021607566255135, "lon": 38.96891326931533, "category": "architectural", "photos": ["sobachkina_stolica_1", "sobachkina_stolica_2", "sobachkina_stolica_3"]},
-  { "name": "Памятник Шурику и Лидочке", "lat":  45.04331775105477, "lon": 38.97715511371469, "category": "architectural", "photos": ["pamyatnik_shuriku_i_lidochke_1", "pamyatnik_shuriku_i_lidochke_2", "pamyatnik_shuriku_i_lidochke_3"]},
-  { "name": "Памятник Императрице Екатерине II", "lat": 45.015667725895796, "lon": 38.968414956042764, "category": "architectural", "photos": ["pamyatnik_imperatrice_ekaterine_ii_1", "pamyatnik_imperatrice_ekaterine_ii_2", "pamyatnik_imperatrice_ekaterine_ii_3"]},
-  { "name": "Триумфальная Арка", "lat": 45.0467993062905, "lon": 38.97823441186576, "category": "historical", "photos": ["arka_1", "arka_2", "arka_3"]},
-  { "name": "Шуховская башня", "lat": 45.03945920956372, "lon": 38.97276246768748, "category": "historical", "photos": ["shuhovskaya_bashnya_2", "shuhovskaya_bashnya_2", "shuhovskaya_bashnya_3"] },
+[{
+        "name": "Памятник «Собачкина столица»",
+        "lat": 45.021607566255135,
+        "lon": 38.96891326931533,
+        "category": "architectural",
+        "photos": ["sobachkina_stolica_1", "sobachkina_stolica_2", "sobachkina_stolica_3"]
+    },
+    {
+        "name": "Памятник Шурику и Лидочке",
+        "lat": 45.04331775105477,
+        "lon": 38.97715511371469,
+        "category": "architectural",
+        "photos": ["pamyatnik_shuriku_i_lidochke_1", "pamyatnik_shuriku_i_lidochke_2", "pamyatnik_shuriku_i_lidochke_3"]
+    },
+    {
+        "name": "Памятник Императрице Екатерине II",
+        "lat": 45.015667725895796,
+        "lon": 38.968414956042764,
+        "category": "architectural",
+        "photos": ["pamyatnik_imperatrice_ekaterine_ii_1", "pamyatnik_imperatrice_ekaterine_ii_2", "pamyatnik_imperatrice_ekaterine_ii_3"]
+    },
+    {
+        "name": "Триумфальная Арка",
+        "lat": 45.0467993062905,
+        "lon": 38.97823441186576,
+        "category": "historical",
+        "photos": ["arka_1", "arka_2", "arka_3"]
+    },
+    {
+        "name": "Шуховская башня",
+        "lat": 45.03945920956372,
+        "lon": 38.97276246768748,
+        "category": "historical",
+        "photos": ["shuhovskaya_bashnya_2", "shuhovskaya_bashnya_2", "shuhovskaya_bashnya_3"]
+    },
 ]

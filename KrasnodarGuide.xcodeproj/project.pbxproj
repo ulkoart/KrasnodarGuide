@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE0B43D226501FA20005C194 /* HistoricalEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B43D126501FA20005C194 /* HistoricalEvent.swift */; };
+		CE0B43D426501FF40005C194 /* historicalEvents.json in Resources */ = {isa = PBXBuildFile; fileRef = CE0B43D326501FF40005C194 /* historicalEvents.json */; };
+		CE0B43D72650227B0005C194 /* HistoricalEventsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B43D62650227B0005C194 /* HistoricalEventsVC.swift */; };
+		CE0B43D9265026FA0005C194 /* HistoricalEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B43D8265026FA0005C194 /* HistoricalEventCell.swift */; };
 		CE21B745264D436000C06DC4 /* PersonDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE21B744264D436000C06DC4 /* PersonDetail.swift */; };
 		CE21B748264D54E000C06DC4 /* PersonDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE21B746264D54E000C06DC4 /* PersonDetailCell.swift */; };
 		CE2238D7261F2BF40045C287 /* MapDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2238D6261F2BF40045C287 /* MapDetailVC.swift */; };
@@ -32,6 +36,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE0B43D126501FA20005C194 /* HistoricalEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalEvent.swift; sourceTree = "<group>"; };
+		CE0B43D326501FF40005C194 /* historicalEvents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = historicalEvents.json; sourceTree = "<group>"; };
+		CE0B43D62650227B0005C194 /* HistoricalEventsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalEventsVC.swift; sourceTree = "<group>"; };
+		CE0B43D8265026FA0005C194 /* HistoricalEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalEventCell.swift; sourceTree = "<group>"; };
 		CE21B744264D436000C06DC4 /* PersonDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetail.swift; sourceTree = "<group>"; };
 		CE21B746264D54E000C06DC4 /* PersonDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailCell.swift; sourceTree = "<group>"; };
 		CE2238D6261F2BF40045C287 /* MapDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailVC.swift; sourceTree = "<group>"; };
@@ -69,6 +77,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE0B43D5265022570005C194 /* HistoricalEvents */ = {
+			isa = PBXGroup;
+			children = (
+				CE0B43D62650227B0005C194 /* HistoricalEventsVC.swift */,
+				CE0B43D8265026FA0005C194 /* HistoricalEventCell.swift */,
+			);
+			path = HistoricalEvents;
+			sourceTree = "<group>";
+		};
 		CE27C0D4264B167100CC8B98 /* Person */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,9 +149,11 @@
 			children = (
 				CEAE8BF2264BD25500A47725 /* persons.json */,
 				CEF81F172618B98F0084211B /* sights.json */,
+				CE0B43D326501FF40005C194 /* historicalEvents.json */,
 				CEAE8BF4264BD27200A47725 /* Person.swift */,
 				CEF81F142618B9410084211B /* Sight.swift */,
 				CEF81F1C2619049B0084211B /* SightMarkerView.swift */,
+				CE0B43D126501FA20005C194 /* HistoricalEvent.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -150,6 +169,7 @@
 		CEAC31FD260CC289003C9EC2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CE0B43D5265022570005C194 /* HistoricalEvents */,
 				CE27C0D4264B167100CC8B98 /* Person */,
 				CEAC3204260CE167003C9EC2 /* Main */,
 				CEF81F0B261895FA0084211B /* Map */,
@@ -249,6 +269,7 @@
 				CEAE8BF3264BD25500A47725 /* persons.json in Resources */,
 				CEF81F182618B98F0084211B /* sights.json in Resources */,
 				CEAC31EC260CBFE1003C9EC2 /* Assets.xcassets in Resources */,
+				CE0B43D426501FF40005C194 /* historicalEvents.json in Resources */,
 				CE2238DB261F3C2A0045C287 /* PhotoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,6 +283,7 @@
 			files = (
 				CEAC31E7260CBFE0003C9EC2 /* MainVC.swift in Sources */,
 				CE2238DA261F3C2A0045C287 /* PhotoCell.swift in Sources */,
+				CE0B43D9265026FA0005C194 /* HistoricalEventCell.swift in Sources */,
 				CEE8C477262092EC0043FCC9 /* MapDetailVCExtensions.swift in Sources */,
 				CEAC3202260CCADA003C9EC2 /* MapVC.swift in Sources */,
 				CEAE8BF5264BD27200A47725 /* Person.swift in Sources */,
@@ -271,11 +293,13 @@
 				CEAE8BF1264BD17500A47725 /* PersonCell.swift in Sources */,
 				CEF81F0E261896230084211B /* MapVCExtensions.swift in Sources */,
 				CE9CBC4426283740006B1412 /* ShowPhotoVC.swift in Sources */,
+				CE0B43D72650227B0005C194 /* HistoricalEventsVC.swift in Sources */,
 				CE21B748264D54E000C06DC4 /* PersonDetailCell.swift in Sources */,
 				CEF81F1D2619049B0084211B /* SightMarkerView.swift in Sources */,
 				CEF81F152618B9410084211B /* Sight.swift in Sources */,
 				CE21B745264D436000C06DC4 /* PersonDetail.swift in Sources */,
 				CE2238D7261F2BF40045C287 /* MapDetailVC.swift in Sources */,
+				CE0B43D226501FA20005C194 /* HistoricalEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

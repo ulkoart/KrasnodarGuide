@@ -55,7 +55,7 @@ final class PersonCell: UITableViewCell {
     }
     
     func setup(with person: Person) {
-        self.selectionStyle = .none
+        // self.selectionStyle = .none
         
         self.personImage.image = UIImage(named: person.image)
         self.personImage.layer.cornerRadius = 15.0

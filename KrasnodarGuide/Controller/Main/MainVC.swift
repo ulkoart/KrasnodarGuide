@@ -15,11 +15,10 @@ enum TabBarMenu: Int {
     case Main
     case Map
     case Persons
+    case HistoricalEvent
 }
 
 final class MainVC: UIViewController {
-    @IBOutlet weak var titleView: MainViewCell!
-    @IBOutlet weak var mapViewCell: MainViewCell!
     @IBOutlet weak var titleNavigationItem: UINavigationItem!
     
     override func viewDidLoad() {
@@ -33,6 +32,11 @@ final class MainVC: UIViewController {
     @IBAction func personButtonPressed(_ sender: UIButton) {
         tabBarController?.selectedIndex = TabBarMenu.Persons.rawValue
     }
+    
+    @IBAction func HistoricalEventButtonPressed(_ sender: UIButton) {
+        tabBarController?.selectedIndex = TabBarMenu.HistoricalEvent.rawValue
+    }
+    
     
     
 }
