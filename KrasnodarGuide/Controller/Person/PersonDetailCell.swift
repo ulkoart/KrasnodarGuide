@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PersonDetailCell: UICollectionViewCell {
+final class PersonDetailCell: UICollectionViewCell {
     private var personPhoto: UIImageView  = UIImageView(image: UIImage())
     
     override init(frame: CGRect) {

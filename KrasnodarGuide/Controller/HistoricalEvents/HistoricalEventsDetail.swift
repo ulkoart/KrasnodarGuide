@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HistoricalEventsDetail: UIViewController {
+final class HistoricalEventsDetail: UIViewController {
 
 
     @IBOutlet weak var historicalEventsCollection: UICollectionView!
@@ -18,8 +18,7 @@ class HistoricalEventsDetail: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = historicalEvents.shortTitle
-        
+        title = historicalEvents.shortTitle
         pageControl.isUserInteractionEnabled = false
         historicalEventsCollection.isPagingEnabled = true
         historicalEventsCollection.delegate = self

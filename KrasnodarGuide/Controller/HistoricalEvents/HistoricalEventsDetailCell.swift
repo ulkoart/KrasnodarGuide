@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HistoricalEventsDetailCell: UICollectionViewCell {
+final class HistoricalEventsDetailCell: UICollectionViewCell {
     private var photo: UIImageView  = UIImageView(image: UIImage())
     
     override init(frame: CGRect) {

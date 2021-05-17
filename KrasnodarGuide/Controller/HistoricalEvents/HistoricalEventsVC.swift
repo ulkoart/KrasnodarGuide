@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HistoricalEventsVC: UIViewController{
+final class HistoricalEventsVC: UIViewController{
     @IBOutlet weak var tableView: UITableView!
     
     var historicalEvents = [HistoricalEvent]()

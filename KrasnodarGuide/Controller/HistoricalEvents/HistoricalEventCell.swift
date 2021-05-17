@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HistoricalEventCell: UITableViewCell {
+final class HistoricalEventCell: UITableViewCell {
     
     private var cellView: UIView = UIView()
     private var labelView: UIView = UIView()

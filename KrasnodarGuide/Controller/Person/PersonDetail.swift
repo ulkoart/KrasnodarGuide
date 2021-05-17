@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PersonDetail: UIViewController {
+final class PersonDetail: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var personPhotoCollectionView: UICollectionView!
