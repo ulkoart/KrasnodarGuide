@@ -9,6 +9,7 @@ import Foundation
 
 struct HistoricalEvent: Codable {
     let title: String
+    let shortTitle: String
     let dateString: String
     let image: String
     let description: String

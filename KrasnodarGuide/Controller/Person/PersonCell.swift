@@ -39,7 +39,7 @@ final class PersonCell: UITableViewCell {
         nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -4).isActive = true
         nameLabel.heightAnchor.constraint(equalToConstant: 42).isActive = true
         
-        // MARK: - nameLabel
+        // MARK: - descriptionLabel
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         descriptionLabel.numberOfLines = 1
         descriptionLabel.font = UIFont.systemFont(ofSize: 17, weight: .bold)

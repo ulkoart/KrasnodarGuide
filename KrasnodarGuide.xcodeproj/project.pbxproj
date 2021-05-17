@@ -17,6 +17,9 @@
 		CE2238DA261F3C2A0045C287 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2238D8261F3C2A0045C287 /* PhotoCell.swift */; };
 		CE2238DB261F3C2A0045C287 /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2238D9261F3C2A0045C287 /* PhotoCell.xib */; };
 		CE27C0D3264B166800CC8B98 /* PersonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27C0D2264B166800CC8B98 /* PersonVC.swift */; };
+		CE34B666265250F700AF2E64 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE34B665265250F700AF2E64 /* Extensions.swift */; };
+		CE34B66826525AE500AF2E64 /* HistoricalEventsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE34B66726525AE500AF2E64 /* HistoricalEventsDetail.swift */; };
+		CE34B66C26526A8900AF2E64 /* HistoricalEventsDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE34B66B26526A8900AF2E64 /* HistoricalEventsDetailCell.swift */; };
 		CE4ACF5426458581009648A9 /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4ACF5326458581009648A9 /* ImageScrollView.swift */; };
 		CE71E4FC263AD2A4001471CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE71E4FB263AD2A4001471CE /* Main.storyboard */; };
 		CE9CBC4426283740006B1412 /* ShowPhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9CBC4326283740006B1412 /* ShowPhotoVC.swift */; };
@@ -46,6 +49,9 @@
 		CE2238D8261F3C2A0045C287 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		CE2238D9261F3C2A0045C287 /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
 		CE27C0D2264B166800CC8B98 /* PersonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonVC.swift; sourceTree = "<group>"; };
+		CE34B665265250F700AF2E64 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CE34B66726525AE500AF2E64 /* HistoricalEventsDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalEventsDetail.swift; sourceTree = "<group>"; };
+		CE34B66B26526A8900AF2E64 /* HistoricalEventsDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalEventsDetailCell.swift; sourceTree = "<group>"; };
 		CE4ACF5326458581009648A9 /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
 		CE71E4FB263AD2A4001471CE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CE9CBC4326283740006B1412 /* ShowPhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPhotoVC.swift; sourceTree = "<group>"; };
@@ -82,6 +88,8 @@
 			children = (
 				CE0B43D62650227B0005C194 /* HistoricalEventsVC.swift */,
 				CE0B43D8265026FA0005C194 /* HistoricalEventCell.swift */,
+				CE34B66726525AE500AF2E64 /* HistoricalEventsDetail.swift */,
+				CE34B66B26526A8900AF2E64 /* HistoricalEventsDetailCell.swift */,
 			);
 			path = HistoricalEvents;
 			sourceTree = "<group>";
@@ -140,6 +148,7 @@
 				CEAC31EB260CBFE1003C9EC2 /* Assets.xcassets */,
 				CEAC31ED260CBFE1003C9EC2 /* LaunchScreen.storyboard */,
 				CEAC31E2260CBFE0003C9EC2 /* AppDelegate.swift */,
+				CE34B665265250F700AF2E64 /* Extensions.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -281,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE34B66826525AE500AF2E64 /* HistoricalEventsDetail.swift in Sources */,
 				CEAC31E7260CBFE0003C9EC2 /* MainVC.swift in Sources */,
 				CE2238DA261F3C2A0045C287 /* PhotoCell.swift in Sources */,
 				CE0B43D9265026FA0005C194 /* HistoricalEventCell.swift in Sources */,
@@ -288,6 +298,7 @@
 				CEAC3202260CCADA003C9EC2 /* MapVC.swift in Sources */,
 				CEAE8BF5264BD27200A47725 /* Person.swift in Sources */,
 				CEAC31E3260CBFE0003C9EC2 /* AppDelegate.swift in Sources */,
+				CE34B66C26526A8900AF2E64 /* HistoricalEventsDetailCell.swift in Sources */,
 				CE27C0D3264B166800CC8B98 /* PersonVC.swift in Sources */,
 				CE4ACF5426458581009648A9 /* ImageScrollView.swift in Sources */,
 				CEAE8BF1264BD17500A47725 /* PersonCell.swift in Sources */,
@@ -296,6 +307,7 @@
 				CE0B43D72650227B0005C194 /* HistoricalEventsVC.swift in Sources */,
 				CE21B748264D54E000C06DC4 /* PersonDetailCell.swift in Sources */,
 				CEF81F1D2619049B0084211B /* SightMarkerView.swift in Sources */,
+				CE34B666265250F700AF2E64 /* Extensions.swift in Sources */,
 				CEF81F152618B9410084211B /* Sight.swift in Sources */,
 				CE21B745264D436000C06DC4 /* PersonDetail.swift in Sources */,
 				CE2238D7261F2BF40045C287 /* MapDetailVC.swift in Sources */,

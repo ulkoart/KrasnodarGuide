@@ -19,10 +19,12 @@ enum TabBarMenu: Int {
 }
 
 final class MainVC: UIViewController {
-    @IBOutlet weak var titleNavigationItem: UINavigationItem!
+        
+    @IBOutlet weak var titleLabelView: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
     
     @IBAction func mapButtonPressed(_ sender: UIButton) {

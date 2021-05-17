@@ -27,7 +27,12 @@ class HistoricalEventsVC: UIViewController{
         self.historicalEvents = HistoricalEvent.getHistoricalEvents()
         self.tableView.reloadData()
     }
-
+    
+    
+    @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
+        tabBarController?.selectedIndex = TabBarMenu.Main.rawValue
+    }
+    
 }
 
 extension HistoricalEventsVC: UITableViewDelegate, UITableViewDataSource  {
@@ -43,12 +48,17 @@ extension HistoricalEventsVC: UITableViewDelegate, UITableViewDataSource  {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 130
+        return 120
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard
+            let viewController = UIStoryboard(name: "Main", bundle: nil)
+                .instantiateViewController(withIdentifier: "HistoricalEventsDetail") as? HistoricalEventsDetail
+        else { return }
+        
+        viewController.historicalEvents = historicalEvents[indexPath.row]
+        navigationController?.pushViewController(viewController, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
-    
 }

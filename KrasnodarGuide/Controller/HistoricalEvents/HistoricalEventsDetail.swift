@@ -1,34 +1,31 @@
 //
-//  PersonDetail.swift
+//  HistoricalEventsDetail.swift
 //  KrasnodarGuide
 //
-//  Created by user on 13/05/2021.
+//  Created by user on 17/05/2021.
 //
 
 import UIKit
 
-class PersonDetail: UIViewController {
-    
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var personPhotoCollectionView: UICollectionView!
+class HistoricalEventsDetail: UIViewController {
+
+
+    @IBOutlet weak var historicalEventsCollection: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     
-    var person: Person!
-    
-    let cellId: String = "PersonDetailCell"
+    var historicalEvents: HistoricalEvent!
+    let cellId: String = "HistoricalEventsDetailCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // navigationController?.navigationBar.prefersLargeTitles = false
-        navigationItem.largeTitleDisplayMode = .never
-        nameLabel.text = self.person.name
-    
+        self.title = historicalEvents.shortTitle
+        
         pageControl.isUserInteractionEnabled = false
-        personPhotoCollectionView.isPagingEnabled = true
-        personPhotoCollectionView.delegate = self
-        personPhotoCollectionView.dataSource = self
-        personPhotoCollectionView.showsHorizontalScrollIndicator = false
-        personPhotoCollectionView.register(PersonDetailCell.self, forCellWithReuseIdentifier: cellId)
+        historicalEventsCollection.isPagingEnabled = true
+        historicalEventsCollection.delegate = self
+        historicalEventsCollection.dataSource = self
+        historicalEventsCollection.showsHorizontalScrollIndicator = false
+        historicalEventsCollection.register(HistoricalEventsDetailCell.self, forCellWithReuseIdentifier: cellId)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -39,21 +36,20 @@ class PersonDetail: UIViewController {
                 let photoImage = UIImage(named: photoName)
             else { return }
             photoVC.image = photoImage
-            photoVC.photoTitle = person.name
+            photoVC.photoTitle = historicalEvents.title
         }
     }
 }
 
-extension PersonDetail: UICollectionViewDelegate, UICollectionViewDataSource {
-    
+extension HistoricalEventsDetail: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        pageControl.numberOfPages = person.photos.count
-        return person.photos.count
+        pageControl.numberOfPages = historicalEvents.photos.count
+        return historicalEvents.photos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as? PersonDetailCell else { return UICollectionViewCell() }
-        cell.setup(with: person.photos[indexPath.row])
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as? HistoricalEventsDetailCell else { return UICollectionViewCell() }
+        cell.setup(with: historicalEvents.photos[indexPath.row])
         return cell
     }
     
@@ -66,18 +62,17 @@ extension PersonDetail: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let index = indexPath.item
-        let photoName: String = person.photos[index]
+        let photoName: String = historicalEvents.photos[index]
         performSegue(withIdentifier: "showPhoto", sender: photoName)
     }
 }
 
-
-extension PersonDetail: UICollectionViewDelegateFlowLayout {
+extension HistoricalEventsDetail: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return personPhotoCollectionView.frame.size
+        return historicalEventsCollection.frame.size
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+    func HistoricalEventsDetail(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
 }

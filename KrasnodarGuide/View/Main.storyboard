@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MEc-Aa-UaY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MEc-Aa-UaY">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="574"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSQ-An-A0M">
-                                <rect key="frame" x="323" y="566" width="32" height="32"/>
+                                <rect key="frame" x="291" y="534" width="64" height="64"/>
                                 <state key="normal" image="diana"/>
                                 <connections>
                                     <action selector="toCenterButtonPressed:" destination="1GQ-7W-QKV" eventType="touchUpInside" id="zax-P1-bTx"/>
@@ -41,7 +41,7 @@
                     <navigationItem key="navigationItem" title="Достопримечательности" id="Zgb-YG-6La">
                         <barButtonItem key="leftBarButtonItem" systemItem="reply" id="zpK-cZ-FYF">
                             <connections>
-                                <action selector="backButtonPressed:" destination="1GQ-7W-QKV" id="huE-l8-gxJ"/>
+                                <action selector="backButtonPressed:" destination="N3A-sQ-P0P" id="Y81-d7-vZN"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -50,6 +50,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="grs-w6-4C6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="N3A-sQ-P0P" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2636" y="-322"/>
         </scene>
@@ -203,12 +204,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qEt-HN-ccC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4215" y="-1042"/>
+            <point key="canvasLocation" x="4241" y="-1042"/>
         </scene>
         <!--Гид Краснодара-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="KrasnodarGuide" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainVC" id="BYZ-38-t0r" customClass="MainVC" customModule="KrasnodarGuide" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -225,7 +226,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Карта достопримечательностей" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovV-eK-T4d">
                                                 <rect key="frame" x="8" y="0.0" width="343" height="33.5"/>
                                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="14"/>
-                                                <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -404,9 +405,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Гид Краснодара" leftItemsSupplementBackButton="YES" id="Zvu-Hc-jUc"/>
-                    <connections>
-                        <outlet property="titleNavigationItem" destination="Zvu-Hc-jUc" id="bMV-Ey-rew"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -434,7 +432,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wgt-rW-iDG"/>
                     </view>
-                    <navigationItem key="navigationItem" title="События" id="mcx-n3-Tcc"/>
+                    <navigationItem key="navigationItem" title="События" id="mcx-n3-Tcc">
+                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="5iD-Uw-99P">
+                            <connections>
+                                <action selector="backButtonPressed:" destination="PQn-DH-6TB" id="IwF-Nh-gAC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="0LF-SD-rNa" id="cOQ-GE-a5Y"/>
                     </connections>
@@ -442,6 +446,104 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rzg-HK-nHd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2636" y="-1757"/>
+        </scene>
+        <!--Historical Events Detail-->
+        <scene sceneID="VjV-Of-RHg">
+            <objects>
+                <viewController storyboardIdentifier="HistoricalEventsDetail" id="TDt-cj-XiN" customClass="HistoricalEventsDetail" customModule="KrasnodarGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vna-Ko-dNy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gPu-tt-imE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DZZ-A3-zGj">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="914"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9fe-Ma-Sm2">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="228.5"/>
+                                                <subviews>
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2fP-F5-sf6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="228.5"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hOr-gp-ugm">
+                                                            <size key="itemSize" width="50" height="50"/>
+                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        </collectionViewFlowLayout>
+                                                        <cells/>
+                                                    </collectionView>
+                                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="y4f-hy-2mo">
+                                                        <rect key="frame" x="0.0" y="190.5" width="375" height="38"/>
+                                                    </pageControl>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="2fP-F5-sf6" secondAttribute="bottom" id="3VQ-C2-F7b"/>
+                                                    <constraint firstItem="y4f-hy-2mo" firstAttribute="height" secondItem="9fe-Ma-Sm2" secondAttribute="height" multiplier="1/6" id="AQm-hu-44X"/>
+                                                    <constraint firstItem="2fP-F5-sf6" firstAttribute="leading" secondItem="9fe-Ma-Sm2" secondAttribute="leading" id="HLA-zM-IYU"/>
+                                                    <constraint firstAttribute="bottom" secondItem="y4f-hy-2mo" secondAttribute="bottom" id="I4s-Vf-IUg"/>
+                                                    <constraint firstItem="2fP-F5-sf6" firstAttribute="top" secondItem="9fe-Ma-Sm2" secondAttribute="top" id="TJ3-C4-4i4"/>
+                                                    <constraint firstAttribute="trailing" secondItem="y4f-hy-2mo" secondAttribute="trailing" id="XAS-0m-NoR"/>
+                                                    <constraint firstItem="y4f-hy-2mo" firstAttribute="leading" secondItem="9fe-Ma-Sm2" secondAttribute="leading" id="fqb-Ub-QXc"/>
+                                                    <constraint firstAttribute="trailing" secondItem="2fP-F5-sf6" secondAttribute="trailing" id="pWu-LA-PcM"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sgc-4u-4nU">
+                                                <rect key="frame" x="8" y="244.5" width="359" height="669.5"/>
+                                                <mutableString key="text">9 мая 1887 года. Проведено испытание только что построенного большого железного моста через р. Кубань, в двух верстах к югу от Екатеринодара по линии Новороссийской ветки железной дорога. Для своего времени мост являлся «грандиозным сооружением»: его длина составляла до 130 саженей, а железный корпус, сделанный на Брянском заводе, покоился на четырех массивных каменных устоях и имел три пролета шириной 30 саженей.
+
+Испытание проводилось при огромном стечении публики и заключалось в том, что на каждом пролете поочередно в продолжение двух часов сразу стояли шесть соединенных вместе локомотивов с тендерами (в общей сложности до 25 тысяч пудов тяжести). Затем по мосту с различной скоростью прошли поезда из трех локомотивов с тендерами и наконец, особый поезд «с публикой». На первом локомотиве пробного поезда находились строитель моста П.Ф. Рябошапка, главный инженер К.С. Комарницкий и его помощник С.И. Кербедз. Строительство моста обошлось почти в 800 тысяч рублей.
+
+Источник: Екатеринодар - Краснодар: Два века города в датах, событиях, воспоминаниях... Материалы к Летописи.—Краснодар: Кн. изд-во,1993.</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="9fe-Ma-Sm2" firstAttribute="top" secondItem="DZZ-A3-zGj" secondAttribute="top" id="5Yp-EI-tGT"/>
+                                            <constraint firstItem="Sgc-4u-4nU" firstAttribute="leading" secondItem="DZZ-A3-zGj" secondAttribute="leading" constant="8" id="HSb-lq-VIn"/>
+                                            <constraint firstAttribute="bottom" secondItem="Sgc-4u-4nU" secondAttribute="bottom" id="Lme-XT-tKi"/>
+                                            <constraint firstAttribute="trailing" secondItem="9fe-Ma-Sm2" secondAttribute="trailing" id="O8w-Qj-j4y"/>
+                                            <constraint firstItem="9fe-Ma-Sm2" firstAttribute="height" secondItem="DZZ-A3-zGj" secondAttribute="height" multiplier="1/4" id="bNC-BS-Ebf"/>
+                                            <constraint firstItem="9fe-Ma-Sm2" firstAttribute="leading" secondItem="DZZ-A3-zGj" secondAttribute="leading" id="d1i-81-tgG"/>
+                                            <constraint firstAttribute="trailing" secondItem="Sgc-4u-4nU" secondAttribute="trailing" constant="8" id="h7p-eV-KnP"/>
+                                            <constraint firstItem="Sgc-4u-4nU" firstAttribute="top" secondItem="9fe-Ma-Sm2" secondAttribute="bottom" constant="16" id="qJc-pt-2Nl"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="DZZ-A3-zGj" secondAttribute="trailing" id="3aC-Ia-arH"/>
+                                    <constraint firstAttribute="bottom" secondItem="DZZ-A3-zGj" secondAttribute="bottom" id="MI8-op-TUo"/>
+                                    <constraint firstItem="DZZ-A3-zGj" firstAttribute="leading" secondItem="gPu-tt-imE" secondAttribute="leading" id="cgo-Oh-15b"/>
+                                    <constraint firstItem="DZZ-A3-zGj" firstAttribute="top" secondItem="gPu-tt-imE" secondAttribute="top" id="pB3-2u-YCq"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="DZZ-A3-zGj" firstAttribute="width" secondItem="vna-Ko-dNy" secondAttribute="width" id="1IN-jd-POL"/>
+                            <constraint firstItem="gPu-tt-imE" firstAttribute="top" secondItem="oTi-yx-jcL" secondAttribute="top" id="3p2-0V-nbM"/>
+                            <constraint firstItem="gPu-tt-imE" firstAttribute="bottom" secondItem="oTi-yx-jcL" secondAttribute="bottom" id="PDn-3Z-4UG"/>
+                            <constraint firstItem="DZZ-A3-zGj" firstAttribute="height" secondItem="vna-Ko-dNy" secondAttribute="height" multiplier="1.27811" priority="250" id="cev-zj-wtk"/>
+                            <constraint firstItem="gPu-tt-imE" firstAttribute="trailing" secondItem="oTi-yx-jcL" secondAttribute="trailing" id="t52-v1-qkX"/>
+                            <constraint firstItem="gPu-tt-imE" firstAttribute="leading" secondItem="oTi-yx-jcL" secondAttribute="leading" id="wV4-I4-wlg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oTi-yx-jcL"/>
+                    </view>
+                    <connections>
+                        <outlet property="historicalEventsCollection" destination="2fP-F5-sf6" id="MfI-9n-Mw3"/>
+                        <outlet property="pageControl" destination="y4f-hy-2mo" id="QVG-6W-iHv"/>
+                        <segue destination="9Xo-Sl-bQ6" kind="presentation" identifier="showPhoto" id="HEU-UL-swt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A69-ce-70t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3437.5999999999999" y="-1757.2713643178413"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="von-hT-w5H">
@@ -506,7 +608,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HYd-xV-8Aq"/>
                     </view>
-                    <navigationItem key="navigationItem" title="История в лицах" id="6mE-yu-2CE"/>
+                    <navigationItem key="navigationItem" title="История в лицах" id="6mE-yu-2CE">
+                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="Ls6-xA-lhL">
+                            <connections>
+                                <action selector="backButtonPressed:" destination="TbZ-xY-9Tm" id="elv-ku-s0I"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="0u5-jS-YoH" id="GMb-YE-u48"/>
                     </connections>
@@ -625,7 +733,6 @@
                     <connections>
                         <outlet property="nameLabel" destination="VcC-gy-DHr" id="HEX-td-I8L"/>
                         <outlet property="pageControl" destination="qLG-gO-tcJ" id="kQc-PR-Gys"/>
-                        <outlet property="personPhotoCollection" destination="tbm-Du-46G" id="JM1-SH-2T3"/>
                         <outlet property="personPhotoCollectionView" destination="tbm-Du-46G" id="yqh-xm-tP2"/>
                         <segue destination="9Xo-Sl-bQ6" kind="presentation" identifier="showPhoto" id="a6Z-gz-Hfx"/>
                     </connections>
@@ -692,9 +799,6 @@
             <point key="canvasLocation" x="1812" y="-1757.2713643178413"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="UVr-AZ-f8x"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="diana" width="32" height="32"/>
         <image name="events" width="550" height="412"/>
@@ -706,4 +810,7 @@
         <image name="profile_custom" width="32" height="32"/>
         <image name="share2" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="HEU-UL-swt"/>
+    </inferredMetricsTieBreakers>
 </document>
