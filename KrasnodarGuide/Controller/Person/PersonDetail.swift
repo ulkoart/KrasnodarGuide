@@ -12,6 +12,7 @@ final class PersonDetail: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var personPhotoCollectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var textLabel: UILabel!
     
     var person: Person!
     
@@ -22,12 +23,14 @@ final class PersonDetail: UIViewController {
         // navigationController?.navigationBar.prefersLargeTitles = false
         navigationItem.largeTitleDisplayMode = .never
         nameLabel.text = self.person.name
+        textLabel.text = self.person.text
     
         pageControl.isUserInteractionEnabled = false
         personPhotoCollectionView.isPagingEnabled = true
         personPhotoCollectionView.delegate = self
         personPhotoCollectionView.dataSource = self
         personPhotoCollectionView.showsHorizontalScrollIndicator = false
+        personPhotoCollectionView.backgroundColor = .white
         personPhotoCollectionView.register(PersonDetailCell.self, forCellWithReuseIdentifier: cellId)
     }
     

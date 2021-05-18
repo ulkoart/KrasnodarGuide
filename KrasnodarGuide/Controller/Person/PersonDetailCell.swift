@@ -15,7 +15,7 @@ final class PersonDetailCell: UICollectionViewCell {
         
         contentView.addSubview(personPhoto)
         personPhoto.translatesAutoresizingMaskIntoConstraints = false
-        personPhoto.contentMode = .scaleAspectFill
+        personPhoto.contentMode = .scaleAspectFit
         
         personPhoto.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
         personPhoto.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true

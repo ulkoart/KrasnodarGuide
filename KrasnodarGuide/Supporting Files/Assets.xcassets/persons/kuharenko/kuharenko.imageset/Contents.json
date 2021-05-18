@@ -2,10 +2,10 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "kuharenko.jpg",
       "scale" : "1x"
     },
     {
-      "filename" : "koncevich.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
@@ -15,7 +15,7 @@
     }
   ],
   "info" : {
-    "author" : "xcode",
-    "version" : 1
+    "version" : 1,
+    "author" : "xcode"
   }
 }

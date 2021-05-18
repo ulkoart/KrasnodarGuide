@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="574"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSQ-An-A0M">
-                                <rect key="frame" x="291" y="534" width="64" height="64"/>
+                                <rect key="frame" x="323" y="566" width="32" height="32"/>
                                 <state key="normal" image="diana"/>
                                 <connections>
                                     <action selector="toCenterButtonPressed:" destination="1GQ-7W-QKV" eventType="touchUpInside" id="zax-P1-bTx"/>
@@ -493,11 +493,11 @@
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sgc-4u-4nU">
                                                 <rect key="frame" x="8" y="244.5" width="359" height="669.5"/>
-                                                <mutableString key="text">9 мая 1887 года. Проведено испытание только что построенного большого железного моста через р. Кубань, в двух верстах к югу от Екатеринодара по линии Новороссийской ветки железной дорога. Для своего времени мост являлся «грандиозным сооружением»: его длина составляла до 130 саженей, а железный корпус, сделанный на Брянском заводе, покоился на четырех массивных каменных устоях и имел три пролета шириной 30 саженей.
+                                                <string key="text">9 мая 1887 года. Проведено испытание только что построенного большого железного моста через р. Кубань, в двух верстах к югу от Екатеринодара по линии Новороссийской ветки железной дорога. Для своего времени мост являлся «грандиозным сооружением»: его длина составляла до 130 саженей, а железный корпус, сделанный на Брянском заводе, покоился на четырех массивных каменных устоях и имел три пролета шириной 30 саженей.
 
 Испытание проводилось при огромном стечении публики и заключалось в том, что на каждом пролете поочередно в продолжение двух часов сразу стояли шесть соединенных вместе локомотивов с тендерами (в общей сложности до 25 тысяч пудов тяжести). Затем по мосту с различной скоростью прошли поезда из трех локомотивов с тендерами и наконец, особый поезд «с публикой». На первом локомотиве пробного поезда находились строитель моста П.Ф. Рябошапка, главный инженер К.С. Комарницкий и его помощник С.И. Кербедз. Строительство моста обошлось почти в 800 тысяч рублей.
 
-Источник: Екатеринодар - Краснодар: Два века города в датах, событиях, воспоминаниях... Материалы к Летописи.—Краснодар: Кн. изд-во,1993.</mutableString>
+Источник: Екатеринодар - Краснодар: Два века города в датах, событиях, воспоминаниях... Материалы к Летописи.—Краснодар: Кн. изд-во,1993.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -734,6 +734,7 @@
                         <outlet property="nameLabel" destination="VcC-gy-DHr" id="HEX-td-I8L"/>
                         <outlet property="pageControl" destination="qLG-gO-tcJ" id="kQc-PR-Gys"/>
                         <outlet property="personPhotoCollectionView" destination="tbm-Du-46G" id="yqh-xm-tP2"/>
+                        <outlet property="textLabel" destination="auZ-xc-Mw0" id="RCA-IU-fYr"/>
                         <segue destination="9Xo-Sl-bQ6" kind="presentation" identifier="showPhoto" id="a6Z-gz-Hfx"/>
                     </connections>
                 </viewController>
@@ -811,6 +812,6 @@
         <image name="share2" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HEU-UL-swt"/>
+        <segue reference="a6Z-gz-Hfx"/>
     </inferredMetricsTieBreakers>
 </document>
