@@ -10,6 +10,7 @@ import UIKit
 final class PersonCell: UITableViewCell {
     private var personImage: UIImageView  = UIImageView(image: UIImage())
     private var nameLabel: UILabel = UILabel()
+    private var yearsLabel: UILabel = UILabel()
     private var descriptionLabel: UILabel = UILabel()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -17,6 +18,7 @@ final class PersonCell: UITableViewCell {
 
         contentView.addSubview(personImage)
         contentView.addSubview(nameLabel)
+        contentView.addSubview(yearsLabel)
         contentView.addSubview(descriptionLabel)
         
         // MARK: - personImage
@@ -32,22 +34,32 @@ final class PersonCell: UITableViewCell {
         // MARK: - nameLabel
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.numberOfLines = 2
-        nameLabel.font = UIFont.systemFont(ofSize: 17, weight: .light)
+        nameLabel.font = UIFont.systemFont(ofSize: 16, weight: .light)
         
-        nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16).isActive = true
+        nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 12).isActive = true
         nameLabel.leadingAnchor.constraint(equalTo: personImage.trailingAnchor, constant: 4).isActive = true
         nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -4).isActive = true
-        nameLabel.heightAnchor.constraint(equalToConstant: 42).isActive = true
+//        nameLabel.heightAnchor.constraint(equalToConstant: 32).isActive = true
+        
+        // MARK: - yearsLabel
+        yearsLabel.translatesAutoresizingMaskIntoConstraints = false
+        yearsLabel.numberOfLines = 1
+        yearsLabel.font = UIFont.systemFont(ofSize: 14, weight: .thin)
+        
+        yearsLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 4).isActive = true
+        yearsLabel.leadingAnchor.constraint(equalTo: personImage.trailingAnchor, constant: 4).isActive = true
+        yearsLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -4).isActive = true
+//        yearsLabel.heightAnchor.constraint(equalToConstant: 21).isActive = true
         
         // MARK: - descriptionLabel
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         descriptionLabel.numberOfLines = 1
-        descriptionLabel.font = UIFont.systemFont(ofSize: 17, weight: .bold)
-        
-        descriptionLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 0).isActive = true
+        descriptionLabel.font = UIFont.systemFont(ofSize: 15, weight: .bold)
+
+        descriptionLabel.topAnchor.constraint(equalTo: yearsLabel.bottomAnchor, constant: 4).isActive = true
         descriptionLabel.leadingAnchor.constraint(equalTo: personImage.trailingAnchor, constant: 4).isActive = true
         descriptionLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -4).isActive = true
-        descriptionLabel.heightAnchor.constraint(equalToConstant: 21).isActive = true
+//        descriptionLabel.heightAnchor.constraint(equalToConstant: 21).isActive = true
     }
     
     required init?(coder: NSCoder) {
@@ -64,6 +76,7 @@ final class PersonCell: UITableViewCell {
         self.personImage.layer.borderWidth = 1.0
         
         self.nameLabel.text = person.name
+        self.yearsLabel.text = person.years
         self.descriptionLabel.text = person.description
     }
 

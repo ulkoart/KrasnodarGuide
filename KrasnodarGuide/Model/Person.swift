@@ -9,6 +9,7 @@ import Foundation
 
 struct Person: Codable {
     let name: String
+    let years: String
     let image: String
     let description: String
     let text: String
