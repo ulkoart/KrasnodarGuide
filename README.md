@@ -4,13 +4,23 @@ A Krasnodar guide iOS app written in Swift.
 
 ## Features
 
-* Attractions on the map.
+* Points on the map.
 * Historical figures.
 * Historical events of the city.
 
+## Screenshots
+
+![Main](Resources/screenshot1.png)
+![Map](Resources/screenshot2.png)
+![Map Detail](Resources/screenshot3.png)
+![Person Detail](Resources/screenshot4.png)
+![Person List](Resources/screenshot5.png)
+![Events List](Resources/screenshot6.png)
+
+
 ## Requirements 
 
-- iOS 10.0+
+- iOS 12.2+
 - Xcode 11.3+
 - Swift 4.2+
 
