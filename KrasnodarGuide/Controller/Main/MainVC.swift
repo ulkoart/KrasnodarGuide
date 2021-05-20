@@ -46,6 +46,7 @@ final class MainVC: UIViewController {
 @IBDesignable class MainViewCell: UIView {}
 
 extension MainViewCell {
+
     @IBInspectable
     var cornerRadius: CGFloat {
         get {

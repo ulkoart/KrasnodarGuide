@@ -12,6 +12,7 @@ class MapDetailVC: UIViewController {
     @IBOutlet weak var photoCollectionView: UICollectionView!
     @IBOutlet weak var photoCollectionLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var photoCollectionPageControl: UIPageControl!
+    @IBOutlet weak var sightDescription: UILabel!
     
     weak var sight: Sight!
     
@@ -24,6 +25,7 @@ class MapDetailVC: UIViewController {
     
     func setup() {
         sightTitileLable.text = sight.name
+        sightDescription.text = sight.sightDescription
         photoCollectionPageControl.isUserInteractionEnabled = false
         photoCollectionView.isPagingEnabled = true
         photoCollectionView.delegate = self

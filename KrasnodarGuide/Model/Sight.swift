@@ -16,11 +16,13 @@ final class Sight: NSObject, Codable {
     let lat: Float
     let lon: Float
     let category: Category
+    let sightDescription: String
     let photos: [String]
     
     enum Category: String, Codable {
         case architectural
         case historical
+        case walk
     }
 }
 
@@ -41,12 +43,12 @@ extension Sight {
         guard
             let url = Bundle.main.url(forResource: "sights", withExtension: "json"),
             let data = try? Data(contentsOf: url)
-        else { return [] }
+        else { fatalError("load sights - failed") }
         
         do {
             let decoder = JSONDecoder()
             return try decoder.decode([Sight].self, from: data)
-        } catch { return [] }
+        } catch { fatalError("decode sights - failed") }
     }
     
     var markerTintColor: UIColor  {
@@ -55,6 +57,8 @@ extension Sight {
             return .red
         case .historical:
             return .blue
+        case .walk:
+            return .green
         }
     }
     
@@ -64,6 +68,8 @@ extension Sight {
             return #imageLiteral(resourceName: "architectural")
         case .historical:
             return #imageLiteral(resourceName: "historical")
+        case .walk:
+            return #imageLiteral(resourceName: "walk")
         }
     }
 }

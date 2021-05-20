@@ -164,6 +164,7 @@
                         <outlet property="photoCollectionLayout" destination="N1r-fL-FSW" id="foa-Qu-Lk2"/>
                         <outlet property="photoCollectionPageControl" destination="UNJ-M3-qdl" id="vRY-qj-LP3"/>
                         <outlet property="photoCollectionView" destination="s0i-az-JEh" id="LM0-dV-U1c"/>
+                        <outlet property="sightDescription" destination="BBk-3r-GrU" id="EhD-0x-Sq8"/>
                         <outlet property="sightTitileLable" destination="1ia-cy-GjL" id="Knq-pI-gF4"/>
                         <segue destination="9Xo-Sl-bQ6" kind="presentation" identifier="showPhoto" id="UVr-AZ-f8x"/>
                     </connections>
@@ -812,6 +813,6 @@
         <image name="share2" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="a6Z-gz-Hfx"/>
+        <segue reference="UVr-AZ-f8x"/>
     </inferredMetricsTieBreakers>
 </document>
