@@ -12,6 +12,7 @@ final class HistoricalEventsDetail: UIViewController {
 
     @IBOutlet weak var historicalEventsCollection: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var historicalEventText: UILabel!
     
     var historicalEvents: HistoricalEvent!
     let cellId: String = "HistoricalEventsDetailCell"
@@ -19,6 +20,7 @@ final class HistoricalEventsDetail: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = historicalEvents.shortTitle
+        historicalEventText.text = historicalEvents.description
         pageControl.isUserInteractionEnabled = false
         historicalEventsCollection.isPagingEnabled = true
         historicalEventsCollection.delegate = self
