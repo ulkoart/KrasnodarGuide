@@ -212,20 +212,20 @@
             <objects>
                 <viewController storyboardIdentifier="MainVC" id="BYZ-38-t0r" customClass="MainVC" customModule="KrasnodarGuide" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u23-hf-nzB" customClass="MainViewCell" customModule="KrasnodarGuide" customModuleProvider="target">
-                                <rect key="frame" x="8" y="112" width="359" height="133.5"/>
+                                <rect key="frame" x="8" y="156" width="398" height="179"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainMap" translatesAutoresizingMaskIntoConstraints="NO" id="NQe-Kz-Guh">
-                                        <rect key="frame" x="0.0" y="0.0" width="359" height="133.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="179"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bV7-Zo-pf1">
-                                        <rect key="frame" x="0.0" y="100" width="359" height="33.5"/>
+                                        <rect key="frame" x="0.0" y="134.5" width="398" height="44.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Карта достопримечательностей" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovV-eK-T4d">
-                                                <rect key="frame" x="8" y="0.0" width="343" height="33.5"/>
+                                                <rect key="frame" x="8" y="0.0" width="382" height="44.5"/>
                                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -240,7 +240,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEC-2a-Qc7">
-                                        <rect key="frame" x="0.0" y="0.0" width="359" height="133.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="179"/>
                                         <connections>
                                             <action selector="mapButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="idK-K8-owi"/>
                                         </connections>
@@ -272,16 +272,16 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oUd-qT-u8J" customClass="MainViewCell" customModule="KrasnodarGuide" customModuleProvider="target">
-                                <rect key="frame" x="8" y="253.5" width="206.5" height="133.5"/>
+                                <rect key="frame" x="8" y="343" width="227.5" height="179.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="people" translatesAutoresizingMaskIntoConstraints="NO" id="EBP-G4-Nc3">
-                                        <rect key="frame" x="0.0" y="0.0" width="206.5" height="133.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="227.5" height="179.5"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jaS-nh-LUF">
-                                        <rect key="frame" x="0.0" y="100" width="206.5" height="33.5"/>
+                                        <rect key="frame" x="0.0" y="134.5" width="227.5" height="45"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Исторические личности" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jA5-rf-y2n">
-                                                <rect key="frame" x="8" y="0.0" width="190.5" height="33.5"/>
+                                                <rect key="frame" x="8" y="0.0" width="211.5" height="45"/>
                                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="14"/>
                                                 <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -296,7 +296,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQY-K1-QYV">
-                                        <rect key="frame" x="0.0" y="0.0" width="206.5" height="133.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="227.5" height="179.5"/>
                                         <connections>
                                             <action selector="personButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="std-k5-uSM"/>
                                         </connections>
@@ -324,16 +324,16 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rvJ-xP-wqQ" customClass="MainViewCell" customModule="KrasnodarGuide" customModuleProvider="target">
-                                <rect key="frame" x="222.5" y="253.5" width="144.5" height="133.5"/>
+                                <rect key="frame" x="243.5" y="343" width="162.5" height="179.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="events" translatesAutoresizingMaskIntoConstraints="NO" id="TqF-0b-am4">
-                                        <rect key="frame" x="0.0" y="0.0" width="144.5" height="133.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="179.5"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rb9-Gm-pn7">
-                                        <rect key="frame" x="0.0" y="100" width="144.5" height="33.5"/>
+                                        <rect key="frame" x="0.0" y="134.5" width="162.5" height="45"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="События" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dq6-3A-FLX">
-                                                <rect key="frame" x="8" y="0.0" width="136.5" height="33.5"/>
+                                                <rect key="frame" x="8" y="0.0" width="154.5" height="45"/>
                                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="14"/>
                                                 <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -348,7 +348,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yi-0c-l5F">
-                                        <rect key="frame" x="0.0" y="0.0" width="144.5" height="133.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="179.5"/>
                                         <connections>
                                             <action selector="HistoricalEventButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="liL-Ux-rFS"/>
                                         </connections>
@@ -376,7 +376,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idc-lE-JEq">
-                                <rect key="frame" x="8" y="395" width="359" height="215"/>
+                                <rect key="frame" x="8" y="530.5" width="398" height="274.5"/>
                                 <string key="text">30 июня 1792 года Черноморскому казачьему войску Екатериной II была выдана Жалованная Грамота, по которой казакам на вечное владение передавалась земля. Так и началась история города Краснодара.</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
