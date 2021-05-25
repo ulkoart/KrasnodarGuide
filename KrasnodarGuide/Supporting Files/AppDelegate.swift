@@ -20,6 +20,13 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
             let _ = mainNavigationController.topViewController as? MainVC
         else { fatalError() }
         
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let containerViewController = MainContainerVC()
+        
+        window!.rootViewController = containerViewController
+        window!.makeKeyAndVisible()
+        
         return true
     }
 }

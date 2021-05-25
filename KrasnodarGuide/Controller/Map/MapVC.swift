@@ -21,7 +21,7 @@ final class MapVC: UIViewController {
     }
     
     @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
-         tabBarController?.selectedIndex = TabBarMenu.Main.rawValue
+        tabBarController?.selectedIndex = TabBarMenu.Main.rawValue
     }
     
     override func viewDidLoad() {
@@ -40,6 +40,6 @@ final class MapVC: UIViewController {
         checkLocationAuthorization()
         
         
-
+        
     }
 }

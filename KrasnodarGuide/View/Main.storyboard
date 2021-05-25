@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MEc-Aa-UaY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MEc-Aa-UaY">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSQ-An-A0M">
-                                <rect key="frame" x="362" y="761" width="32" height="32"/>
+                                <rect key="frame" x="330" y="729" width="64" height="64"/>
                                 <state key="normal" image="diana"/>
                                 <connections>
                                     <action selector="toCenterButtonPressed:" destination="1GQ-7W-QKV" eventType="touchUpInside" id="zax-P1-bTx"/>
@@ -41,7 +41,7 @@
                     <navigationItem key="navigationItem" title="Достопримечательности" id="Zgb-YG-6La">
                         <barButtonItem key="leftBarButtonItem" systemItem="reply" id="zpK-cZ-FYF">
                             <connections>
-                                <action selector="backButtonPressed:" destination="N3A-sQ-P0P" id="Y81-d7-vZN"/>
+                                <action selector="backButtonPressed:" destination="1GQ-7W-QKV" id="VGj-iW-uf6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -50,7 +50,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="grs-w6-4C6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="N3A-sQ-P0P" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2636" y="-322"/>
         </scene>
@@ -182,7 +181,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFq-L6-8Dj">
-                                <rect key="frame" x="156" y="756" width="102" height="32"/>
+                                <rect key="frame" x="156" y="724" width="102" height="64"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" image="share2"/>
                                 <connections>
@@ -405,7 +404,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Гид Краснодара" leftItemsSupplementBackButton="YES" id="Zvu-Hc-jUc"/>
+                    <navigationItem key="navigationItem" title="Гид Краснодара" leftItemsSupplementBackButton="YES" id="Zvu-Hc-jUc">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="bn1-T9-YHJ">
+                            <connections>
+                                <action selector="menuButtonPressed:" destination="BYZ-38-t0r" id="jvU-Lt-AgZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -494,7 +499,7 @@
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sgc-4u-4nU">
                                                 <rect key="frame" x="8" y="314.5" width="398" height="913"/>
-                                                <mutableString key="text">7 мая 1967 года в конце улицы Красной в Краснодаре открыта монументальная скульптурно-архитектурная композиция «Аврора», скульптор И.П. Шмагун, архитектор Лашук Евгений Герасимович. Скульптурная композиция — «олицетворение богини утренней зари» — «Аврора», высотой почти 17 метров «в шинели, с винтовкой за плечами, в высоко поднятой руке лучистая звезда». Автор скульптуры Иван Шмагун создал её бесплатно, в качестве подарка жителям Краснодара к 50-летию Октябрьской революции. На постаменте имеется надпись: «Власть — Советам, мир -народам». «Аврора» «символизирует молодую Советскую республику, выражает пафос революционного энтузиазма, с которым наш народ начал строительство нового мира, принёс миру новую утреннюю зарю». Со временем, эта скульптура, входящая вместе с одноимённым широкоформатным кинотеатром в архитектурный ансамбль «Аврора», стала одним из ярких символов краевого центра и в 1970-е — 1980-е годы являлась эмблемой Краснодарской крае-вой студии телевидения. Примечательно место, где были возведены скульптура и кинотеатр. Издревле здесь был курган, высотой более 4 метров, насыпанный, по оценкам археологов, более 3 500 лет назад. И, прежде чем начались строительные работы, курган исследовали археологи Краснодарского историко-краеведческого музея. Раскопав его, учёные обнаружили в материковой глине погребальную камеру — так называемую, катакомбу. Но… гробница оказалась пустой, лишь фаланга большого пальца ноги символизировала погребение… Такие захоронения археологи называют кенотафом: очевидно, покойный погиб где-то вдали от родных мест и родственники не смогли похоронить его тело. Но по верованиям древних, душа обретала успокоение только после совершения всех положенных ритуалов на родине. Оттого и был сооружён над пустой катакомбой курган, тайну которого раскрыли, благодаря строительству «Авроры».</mutableString>
+                                                <string key="text">7 мая 1967 года в конце улицы Красной в Краснодаре открыта монументальная скульптурно-архитектурная композиция «Аврора», скульптор И.П. Шмагун, архитектор Лашук Евгений Герасимович. Скульптурная композиция — «олицетворение богини утренней зари» — «Аврора», высотой почти 17 метров «в шинели, с винтовкой за плечами, в высоко поднятой руке лучистая звезда». Автор скульптуры Иван Шмагун создал её бесплатно, в качестве подарка жителям Краснодара к 50-летию Октябрьской революции. На постаменте имеется надпись: «Власть — Советам, мир -народам». «Аврора» «символизирует молодую Советскую республику, выражает пафос революционного энтузиазма, с которым наш народ начал строительство нового мира, принёс миру новую утреннюю зарю». Со временем, эта скульптура, входящая вместе с одноимённым широкоформатным кинотеатром в архитектурный ансамбль «Аврора», стала одним из ярких символов краевого центра и в 1970-е — 1980-е годы являлась эмблемой Краснодарской крае-вой студии телевидения. Примечательно место, где были возведены скульптура и кинотеатр. Издревле здесь был курган, высотой более 4 метров, насыпанный, по оценкам археологов, более 3 500 лет назад. И, прежде чем начались строительные работы, курган исследовали археологи Краснодарского историко-краеведческого музея. Раскопав его, учёные обнаружили в материковой глине погребальную камеру — так называемую, катакомбу. Но… гробница оказалась пустой, лишь фаланга большого пальца ноги символизировала погребение… Такие захоронения археологи называют кенотафом: очевидно, покойный погиб где-то вдали от родных мест и родственники не смогли похоронить его тело. Но по верованиям древних, душа обретала успокоение только после совершения всех положенных ритуалов на родине. Оттого и был сооружён над пустой катакомбой курган, тайну которого раскрыли, благодаря строительству «Авроры».</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -546,7 +551,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="von-hT-w5H">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="MEc-Aa-UaY" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="AppTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="MEc-Aa-UaY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Eec-s1-IO9"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="axF-Zd-sNn">
@@ -568,6 +573,7 @@
         <!--Navigation Controller-->
         <scene sceneID="taR-45-IDt">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kQO-9O-JOU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XKU-6a-gHw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="home_custom" id="dA8-CY-UYh"/>
                     <toolbarItems/>
@@ -580,7 +586,6 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Z3w-8S-f2N"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kQO-9O-JOU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1812" y="448"/>
         </scene>
@@ -798,9 +803,6 @@
             <point key="canvasLocation" x="1812" y="-1757.2713643178413"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="HEU-UL-swt"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="diana" width="32" height="32"/>
         <image name="events" width="550" height="412"/>
@@ -808,8 +810,12 @@
         <image name="home_custom" width="32" height="32"/>
         <image name="mainMap" width="1000" height="800"/>
         <image name="map_custom" width="32" height="32"/>
+        <image name="menu" width="32" height="32"/>
         <image name="people" width="397" height="183.5"/>
         <image name="profile_custom" width="32" height="32"/>
         <image name="share2" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="HEU-UL-swt"/>
+    </inferredMetricsTieBreakers>
 </document>

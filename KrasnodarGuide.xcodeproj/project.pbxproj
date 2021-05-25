@@ -21,6 +21,10 @@
 		CE34B66826525AE500AF2E64 /* HistoricalEventsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE34B66726525AE500AF2E64 /* HistoricalEventsDetail.swift */; };
 		CE34B66C26526A8900AF2E64 /* HistoricalEventsDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE34B66B26526A8900AF2E64 /* HistoricalEventsDetailCell.swift */; };
 		CE4ACF5426458581009648A9 /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4ACF5326458581009648A9 /* ImageScrollView.swift */; };
+		CE6E6A6A265CE1CD00438FF7 /* MainContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E6A69265CE1CD00438FF7 /* MainContainerVC.swift */; };
+		CE6E6A6C265CE61100438FF7 /* TabBarMenuItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E6A6B265CE61100438FF7 /* TabBarMenuItems.swift */; };
+		CE6E6A6E265D078400438FF7 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E6A6D265D078400438FF7 /* SideMenuVC.swift */; };
+		CE6E6A72265D20FB00438FF7 /* MenuTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E6A71265D20FB00438FF7 /* MenuTableCell.swift */; };
 		CE71E4FC263AD2A4001471CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE71E4FB263AD2A4001471CE /* Main.storyboard */; };
 		CE9CBC4426283740006B1412 /* ShowPhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9CBC4326283740006B1412 /* ShowPhotoVC.swift */; };
 		CE9E377526566ADA0012FECA /* screenshot1.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9E376F26566ADA0012FECA /* screenshot1.png */; };
@@ -60,6 +64,10 @@
 		CE34B66726525AE500AF2E64 /* HistoricalEventsDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalEventsDetail.swift; sourceTree = "<group>"; };
 		CE34B66B26526A8900AF2E64 /* HistoricalEventsDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalEventsDetailCell.swift; sourceTree = "<group>"; };
 		CE4ACF5326458581009648A9 /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
+		CE6E6A69265CE1CD00438FF7 /* MainContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContainerVC.swift; sourceTree = "<group>"; };
+		CE6E6A6B265CE61100438FF7 /* TabBarMenuItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarMenuItems.swift; sourceTree = "<group>"; };
+		CE6E6A6D265D078400438FF7 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		CE6E6A71265D20FB00438FF7 /* MenuTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableCell.swift; sourceTree = "<group>"; };
 		CE71E4FB263AD2A4001471CE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CE9CBC4326283740006B1412 /* ShowPhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPhotoVC.swift; sourceTree = "<group>"; };
 		CE9E376F26566ADA0012FECA /* screenshot1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot1.png; sourceTree = "<group>"; };
@@ -219,6 +227,10 @@
 			isa = PBXGroup;
 			children = (
 				CEAC31E6260CBFE0003C9EC2 /* MainVC.swift */,
+				CE6E6A69265CE1CD00438FF7 /* MainContainerVC.swift */,
+				CE6E6A6B265CE61100438FF7 /* TabBarMenuItems.swift */,
+				CE6E6A6D265D078400438FF7 /* SideMenuVC.swift */,
+				CE6E6A71265D20FB00438FF7 /* MenuTableCell.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -334,16 +346,20 @@
 				CEAC3202260CCADA003C9EC2 /* MapVC.swift in Sources */,
 				CEAE8BF5264BD27200A47725 /* Person.swift in Sources */,
 				CEAC31E3260CBFE0003C9EC2 /* AppDelegate.swift in Sources */,
+				CE6E6A6A265CE1CD00438FF7 /* MainContainerVC.swift in Sources */,
+				CE6E6A72265D20FB00438FF7 /* MenuTableCell.swift in Sources */,
 				CE34B66C26526A8900AF2E64 /* HistoricalEventsDetailCell.swift in Sources */,
 				CE27C0D3264B166800CC8B98 /* PersonVC.swift in Sources */,
 				CE4ACF5426458581009648A9 /* ImageScrollView.swift in Sources */,
 				CEAE8BF1264BD17500A47725 /* PersonCell.swift in Sources */,
+				CE6E6A6E265D078400438FF7 /* SideMenuVC.swift in Sources */,
 				CEF81F0E261896230084211B /* MapVCExtensions.swift in Sources */,
 				CE9CBC4426283740006B1412 /* ShowPhotoVC.swift in Sources */,
 				CE0B43D72650227B0005C194 /* HistoricalEventsVC.swift in Sources */,
 				CE21B748264D54E000C06DC4 /* PersonDetailCell.swift in Sources */,
 				CEF81F1D2619049B0084211B /* SightMarkerView.swift in Sources */,
 				CE34B666265250F700AF2E64 /* Extensions.swift in Sources */,
+				CE6E6A6C265CE61100438FF7 /* TabBarMenuItems.swift in Sources */,
 				CEF81F152618B9410084211B /* Sight.swift in Sources */,
 				CE21B745264D436000C06DC4 /* PersonDetail.swift in Sources */,
 				CE2238D7261F2BF40045C287 /* MapDetailVC.swift in Sources */,
