@@ -14,7 +14,7 @@ class MapDetailVC: UIViewController {
     @IBOutlet weak var photoCollectionPageControl: UIPageControl!
     @IBOutlet weak var sightDescription: UILabel!
     
-    weak var sight: Sight!
+    var sight: Sight! // если поменять на weak все ломается
     
     let cellID = "PhotoCell"
         
@@ -22,7 +22,7 @@ class MapDetailVC: UIViewController {
         super.viewDidLoad()
         setup()
     }
-    
+        
     func setup() {
         sightTitileLable.text = sight.name
         sightDescription.text = sight.sightDescription

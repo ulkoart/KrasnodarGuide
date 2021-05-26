@@ -215,7 +215,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u23-hf-nzB" customClass="MainViewCell" customModule="KrasnodarGuide" customModuleProvider="target">
-                                <rect key="frame" x="8" y="156" width="398" height="179"/>
+                                <rect key="frame" x="8" y="60" width="398" height="179"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainMap" translatesAutoresizingMaskIntoConstraints="NO" id="NQe-Kz-Guh">
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="179"/>
@@ -271,7 +271,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oUd-qT-u8J" customClass="MainViewCell" customModule="KrasnodarGuide" customModuleProvider="target">
-                                <rect key="frame" x="8" y="343" width="227.5" height="179.5"/>
+                                <rect key="frame" x="8" y="247" width="227.5" height="179.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="people" translatesAutoresizingMaskIntoConstraints="NO" id="EBP-G4-Nc3">
                                         <rect key="frame" x="0.0" y="0.0" width="227.5" height="179.5"/>
@@ -323,7 +323,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rvJ-xP-wqQ" customClass="MainViewCell" customModule="KrasnodarGuide" customModuleProvider="target">
-                                <rect key="frame" x="243.5" y="343" width="162.5" height="179.5"/>
+                                <rect key="frame" x="243.5" y="247" width="162.5" height="179.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="events" translatesAutoresizingMaskIntoConstraints="NO" id="TqF-0b-am4">
                                         <rect key="frame" x="0.0" y="0.0" width="162.5" height="179.5"/>
@@ -375,7 +375,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idc-lE-JEq">
-                                <rect key="frame" x="8" y="530.5" width="398" height="274.5"/>
+                                <rect key="frame" x="8" y="434.5" width="398" height="419.5"/>
                                 <string key="text">30 июня 1792 года Черноморскому казачьему войску Екатериной II была выдана Жалованная Грамота, по которой казакам на вечное владение передавалась земля. Так и началась история города Краснодара.</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
@@ -414,7 +414,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2636" y="447.52623688155927"/>
+            <point key="canvasLocation" x="1812" y="1151"/>
         </scene>
         <!--События-->
         <scene sceneID="0au-fW-v1b">
@@ -582,12 +582,28 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Z3w-8S-f2N"/>
+                        <segue destination="wlP-QC-8eS" kind="relationship" relationship="rootViewController" id="vZG-VY-7Jf"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kQO-9O-JOU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1812" y="448"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="Ybw-Xp-m0L">
+            <objects>
+                <viewController id="wlP-QC-8eS" customClass="MainViewController" customModule="KrasnodarGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vyo-9A-w2f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="cP7-AU-COl"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gRz-yP-Eme"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GGC-WG-Kj4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2610" y="448"/>
         </scene>
         <!--История в лицах-->
         <scene sceneID="pmm-S7-FBo">

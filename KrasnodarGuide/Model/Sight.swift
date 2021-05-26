@@ -9,7 +9,7 @@
 import Foundation
 import MapKit
 
-final class Sight: NSObject, Codable {
+final class Sight: NSObject, Codable, CollectionViewItemProtocol {
     //  почему не struct ? NSObject ?
     // ToDO перенести MKAnnotation в отдельный метод
     let name: String
@@ -18,6 +18,7 @@ final class Sight: NSObject, Codable {
     let category: Category
     let sightDescription: String
     let photos: [String]
+    let image: String
     
     enum Category: String, Codable {
         case architectural
