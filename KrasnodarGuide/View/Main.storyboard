@@ -41,7 +41,7 @@
                     <navigationItem key="navigationItem" title="Достопримечательности" id="Zgb-YG-6La">
                         <barButtonItem key="leftBarButtonItem" systemItem="reply" id="zpK-cZ-FYF">
                             <connections>
-                                <action selector="backButtonPressed:" destination="N3A-sQ-P0P" id="Y81-d7-vZN"/>
+                                <action selector="backButtonPressed:" destination="1GQ-7W-QKV" id="VGj-iW-uf6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -50,7 +50,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="grs-w6-4C6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="N3A-sQ-P0P" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2636" y="-322"/>
         </scene>
@@ -405,7 +404,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Гид Краснодара" leftItemsSupplementBackButton="YES" id="Zvu-Hc-jUc"/>
+                    <navigationItem key="navigationItem" title="Гид Краснодара" leftItemsSupplementBackButton="YES" id="Zvu-Hc-jUc">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="bn1-T9-YHJ">
+                            <connections>
+                                <action selector="menuButtonPressed:" destination="BYZ-38-t0r" id="jvU-Lt-AgZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -494,7 +499,7 @@
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sgc-4u-4nU">
                                                 <rect key="frame" x="8" y="314.5" width="398" height="913"/>
-                                                <mutableString key="text">7 мая 1967 года в конце улицы Красной в Краснодаре открыта монументальная скульптурно-архитектурная композиция «Аврора», скульптор И.П. Шмагун, архитектор Лашук Евгений Герасимович. Скульптурная композиция — «олицетворение богини утренней зари» — «Аврора», высотой почти 17 метров «в шинели, с винтовкой за плечами, в высоко поднятой руке лучистая звезда». Автор скульптуры Иван Шмагун создал её бесплатно, в качестве подарка жителям Краснодара к 50-летию Октябрьской революции. На постаменте имеется надпись: «Власть — Советам, мир -народам». «Аврора» «символизирует молодую Советскую республику, выражает пафос революционного энтузиазма, с которым наш народ начал строительство нового мира, принёс миру новую утреннюю зарю». Со временем, эта скульптура, входящая вместе с одноимённым широкоформатным кинотеатром в архитектурный ансамбль «Аврора», стала одним из ярких символов краевого центра и в 1970-е — 1980-е годы являлась эмблемой Краснодарской крае-вой студии телевидения. Примечательно место, где были возведены скульптура и кинотеатр. Издревле здесь был курган, высотой более 4 метров, насыпанный, по оценкам археологов, более 3 500 лет назад. И, прежде чем начались строительные работы, курган исследовали археологи Краснодарского историко-краеведческого музея. Раскопав его, учёные обнаружили в материковой глине погребальную камеру — так называемую, катакомбу. Но… гробница оказалась пустой, лишь фаланга большого пальца ноги символизировала погребение… Такие захоронения археологи называют кенотафом: очевидно, покойный погиб где-то вдали от родных мест и родственники не смогли похоронить его тело. Но по верованиям древних, душа обретала успокоение только после совершения всех положенных ритуалов на родине. Оттого и был сооружён над пустой катакомбой курган, тайну которого раскрыли, благодаря строительству «Авроры».</mutableString>
+                                                <string key="text">7 мая 1967 года в конце улицы Красной в Краснодаре открыта монументальная скульптурно-архитектурная композиция «Аврора», скульптор И.П. Шмагун, архитектор Лашук Евгений Герасимович. Скульптурная композиция — «олицетворение богини утренней зари» — «Аврора», высотой почти 17 метров «в шинели, с винтовкой за плечами, в высоко поднятой руке лучистая звезда». Автор скульптуры Иван Шмагун создал её бесплатно, в качестве подарка жителям Краснодара к 50-летию Октябрьской революции. На постаменте имеется надпись: «Власть — Советам, мир -народам». «Аврора» «символизирует молодую Советскую республику, выражает пафос революционного энтузиазма, с которым наш народ начал строительство нового мира, принёс миру новую утреннюю зарю». Со временем, эта скульптура, входящая вместе с одноимённым широкоформатным кинотеатром в архитектурный ансамбль «Аврора», стала одним из ярких символов краевого центра и в 1970-е — 1980-е годы являлась эмблемой Краснодарской крае-вой студии телевидения. Примечательно место, где были возведены скульптура и кинотеатр. Издревле здесь был курган, высотой более 4 метров, насыпанный, по оценкам археологов, более 3 500 лет назад. И, прежде чем начались строительные работы, курган исследовали археологи Краснодарского историко-краеведческого музея. Раскопав его, учёные обнаружили в материковой глине погребальную камеру — так называемую, катакомбу. Но… гробница оказалась пустой, лишь фаланга большого пальца ноги символизировала погребение… Такие захоронения археологи называют кенотафом: очевидно, покойный погиб где-то вдали от родных мест и родственники не смогли похоронить его тело. Но по верованиям древних, душа обретала успокоение только после совершения всех положенных ритуалов на родине. Оттого и был сооружён над пустой катакомбой курган, тайну которого раскрыли, благодаря строительству «Авроры».</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -546,7 +551,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="von-hT-w5H">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="MEc-Aa-UaY" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="AppTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="MEc-Aa-UaY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Eec-s1-IO9"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="axF-Zd-sNn">
@@ -639,14 +644,15 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="112"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фамилия имя" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VcC-gy-DHr">
-                                                        <rect key="frame" x="8" y="10" width="398" height="29"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                                        <rect key="frame" x="8" y="10" width="398" height="102"/>
+                                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="22"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="VcC-gy-DHr" secondAttribute="bottom" id="76I-qr-8Yz"/>
                                                     <constraint firstItem="VcC-gy-DHr" firstAttribute="leading" secondItem="PXr-Wf-2v8" secondAttribute="leading" constant="8" id="a4e-51-FRt"/>
                                                     <constraint firstItem="VcC-gy-DHr" firstAttribute="top" secondItem="PXr-Wf-2v8" secondAttribute="top" constant="10" id="s9g-Xh-TS5"/>
                                                     <constraint firstAttribute="trailing" secondItem="VcC-gy-DHr" secondAttribute="trailing" constant="8" id="ycQ-0s-wvy"/>
@@ -738,7 +744,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DgF-zU-mvW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3438" y="-1042"/>
+            <point key="canvasLocation" x="3437.68115942029" y="-1042.6339285714284"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2p6-cA-E79">
@@ -799,7 +805,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="HEU-UL-swt"/>
+        <segue reference="a6Z-gz-Hfx"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="diana" width="32" height="32"/>
@@ -808,6 +814,7 @@
         <image name="home_custom" width="32" height="32"/>
         <image name="mainMap" width="1000" height="800"/>
         <image name="map_custom" width="32" height="32"/>
+        <image name="menu" width="32" height="32"/>
         <image name="people" width="397" height="183.5"/>
         <image name="profile_custom" width="32" height="32"/>
         <image name="share2" width="32" height="32"/>

@@ -11,16 +11,20 @@
 
 import UIKit
 
-enum TabBarMenu: Int {
-    case Main
-    case Map
-    case Persons
-    case HistoricalEvent
+protocol MainVCDelegate {
+  func toggleLeftPanel()
+  func collapseSidePanels()
 }
 
 final class MainVC: UIViewController {
         
     @IBOutlet weak var titleLabelView: UILabel!
+    
+    @IBAction func menuButtonPressed(_ sender: UIBarButtonItem) {
+        delegate?.toggleLeftPanel()
+    }
+    
+    var delegate: MainVCDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,9 +42,6 @@ final class MainVC: UIViewController {
     @IBAction func HistoricalEventButtonPressed(_ sender: UIButton) {
         tabBarController?.selectedIndex = TabBarMenu.HistoricalEvent.rawValue
     }
-    
-    
-    
 }
 
 @IBDesignable class MainViewCell: UIView {}
@@ -55,14 +56,6 @@ extension MainViewCell {
         set {
             self.layer.cornerRadius = newValue
             self.layer.masksToBounds = newValue > 0
-            
-//            let shadowSize: CGFloat = 20
-//            let contactRect = CGRect(x: -shadowSize, y: self.bounds.size.height - (shadowSize * 0.4), width: self.bounds.size.width + shadowSize * 2, height: shadowSize)
-//            self.layer.shadowPath = UIBezierPath(ovalIn: contactRect).cgPath
-//            self.layer.shadowRadius = 5
-//            self.layer.shadowOpacity = 0.4
         }
     }
 }
-
-// ToDo сделать белый бордер и тень
