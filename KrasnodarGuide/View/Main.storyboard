@@ -644,14 +644,15 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="112"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фамилия имя" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VcC-gy-DHr">
-                                                        <rect key="frame" x="8" y="10" width="398" height="29"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                                        <rect key="frame" x="8" y="10" width="398" height="102"/>
+                                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="22"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="VcC-gy-DHr" secondAttribute="bottom" id="76I-qr-8Yz"/>
                                                     <constraint firstItem="VcC-gy-DHr" firstAttribute="leading" secondItem="PXr-Wf-2v8" secondAttribute="leading" constant="8" id="a4e-51-FRt"/>
                                                     <constraint firstItem="VcC-gy-DHr" firstAttribute="top" secondItem="PXr-Wf-2v8" secondAttribute="top" constant="10" id="s9g-Xh-TS5"/>
                                                     <constraint firstAttribute="trailing" secondItem="VcC-gy-DHr" secondAttribute="trailing" constant="8" id="ycQ-0s-wvy"/>
@@ -743,7 +744,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DgF-zU-mvW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3438" y="-1042"/>
+            <point key="canvasLocation" x="3437.68115942029" y="-1042.6339285714284"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2p6-cA-E79">
@@ -804,7 +805,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="HEU-UL-swt"/>
+        <segue reference="a6Z-gz-Hfx"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="diana" width="32" height="32"/>

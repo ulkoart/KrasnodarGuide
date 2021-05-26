@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainContainerVC: UIViewController {
+final class MainContainerVC: UIViewController {
     
     enum SlideOutState {
         case bothCollapsed
@@ -23,6 +23,7 @@ class MainContainerVC: UIViewController {
     }
     var leftViewController: SideMenuVC?
     let centerPanelExpandedOffset: CGFloat = 90
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -117,6 +118,13 @@ extension MainContainerVC: MainVCDelegate {
 extension MainContainerVC: MenuDelegate {
     func didSelect(menuItem: MenuModel) {
         print("\(#function) - \(menuItem)")
+        if let mainNavigationController = appTabBarController.viewControllers?[TabBarMenu.Main.rawValue] as? UINavigationController {
+            let vc = UIViewController()
+            vc.view.backgroundColor = .green
+            toggleLeftPanel()
+            mainNavigationController.pushViewController(vc, animated: true)
+        }
+        
     }
 }
 
