@@ -16,10 +16,10 @@ class MainContainerVC: UIViewController {
     
     var appTabBarController: UITabBarController!
     var currentState: SlideOutState = .bothCollapsed {
-      didSet {
-        let shouldShowShadow = currentState != .bothCollapsed
-        showShadowForCenterViewController(shouldShowShadow)
-      }
+        didSet {
+            let shouldShowShadow = currentState != .bothCollapsed
+            showShadowForCenterViewController(shouldShowShadow)
+        }
     }
     var leftViewController: SideMenuVC?
     let centerPanelExpandedOffset: CGFloat = 90
@@ -34,6 +34,9 @@ class MainContainerVC: UIViewController {
             let mainVC = mainNavigationController.topViewController as? MainVC
             else { fatalError() }
         
+        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture(_:)))
+        appTabBarController.view.addGestureRecognizer(panGestureRecognizer)
+        
         mainVC.delegate = self
         view.addSubview(appTabBarController.view)
         addChild(appTabBarController)
@@ -41,11 +44,11 @@ class MainContainerVC: UIViewController {
     }
     
     func showShadowForCenterViewController(_ shouldShowShadow: Bool) {
-      if shouldShowShadow {
-        appTabBarController.view.layer.shadowOpacity = 0.8
-      } else {
-        appTabBarController.view.layer.shadowOpacity = 0.0
-      }
+        if shouldShowShadow {
+            appTabBarController.view.layer.shadowOpacity = 0.8
+        } else {
+            appTabBarController.view.layer.shadowOpacity = 0.0
+        }
     }
 }
 
@@ -78,31 +81,31 @@ extension MainContainerVC: MainVCDelegate {
     }
     
     func animateLeftPanel(shouldExpand: Bool) {
-      if shouldExpand {
-        currentState = .leftPanelExpanded
-        animateCenterPanelXPosition(
-          targetPosition: appTabBarController.view.frame.width
-            - centerPanelExpandedOffset)
-      } else {
-        animateCenterPanelXPosition(targetPosition: 0) { _ in
-          self.currentState = .bothCollapsed
-          self.leftViewController?.view.removeFromSuperview()
-          self.leftViewController = nil
+        if shouldExpand {
+            currentState = .leftPanelExpanded
+            animateCenterPanelXPosition(
+                targetPosition: appTabBarController.view.frame.width
+                    - centerPanelExpandedOffset)
+        } else {
+            animateCenterPanelXPosition(targetPosition: 0) { _ in
+                self.currentState = .bothCollapsed
+                self.leftViewController?.view.removeFromSuperview()
+                self.leftViewController = nil
+            }
         }
-      }
     }
     
     func animateCenterPanelXPosition(targetPosition: CGFloat, completion: ((Bool) -> Void)? = nil) {
-      UIView.animate(
-        withDuration: 0.5,
-        delay: 0,
-        usingSpringWithDamping: 0.8,
-        initialSpringVelocity: 0,
-        options: .curveEaseInOut,
-        animations: {
-          self.appTabBarController.view.frame.origin.x = targetPosition
+        UIView.animate(
+            withDuration: 0.5,
+            delay: 0,
+            usingSpringWithDamping: 0.8,
+            initialSpringVelocity: 0,
+            options: .curveEaseInOut,
+            animations: {
+                self.appTabBarController.view.frame.origin.x = targetPosition
         },
-        completion: completion)
+            completion: completion)
     }
     
     func collapseSidePanels() {
@@ -114,6 +117,37 @@ extension MainContainerVC: MainVCDelegate {
 extension MainContainerVC: MenuDelegate {
     func didSelect(menuItem: MenuModel) {
         print("\(#function) - \(menuItem)")
+    }
+}
+
+// MARK: Gesture recognizer
+
+extension MainContainerVC: UIGestureRecognizerDelegate {
+    @objc func handlePanGesture(_ recognizer: UIPanGestureRecognizer) {
+        let gestureIsDraggingFromLeftToRight = (recognizer.velocity(in: view).x > 0)
+        
+        switch recognizer.state {
+            
+        case .began:
+            if currentState == .bothCollapsed && gestureIsDraggingFromLeftToRight {
+                addLeftPanelViewController()
+                showShadowForCenterViewController(true)
+            }
+        case .changed:
+            if let rview = recognizer.view {
+                if !(rview.center.x < view.bounds.size.width / 2) {
+                    rview.center.x = rview.center.x + recognizer.translation(in: view).x
+                    recognizer.setTranslation(CGPoint.zero, in: view)
+                }
+            }
+        case .ended:
+            if let rview = recognizer.view {
+                let hasMovedGreaterThanHalfway = rview.center.x > view.bounds.size.width
+                animateLeftPanel(shouldExpand: hasMovedGreaterThanHalfway)
+            }
+        default:
+            break
+        }
     }
 }
 
