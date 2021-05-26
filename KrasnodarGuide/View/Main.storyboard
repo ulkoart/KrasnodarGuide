@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MEc-Aa-UaY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MEc-Aa-UaY">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSQ-An-A0M">
-                                <rect key="frame" x="330" y="729" width="64" height="64"/>
+                                <rect key="frame" x="362" y="761" width="32" height="32"/>
                                 <state key="normal" image="diana"/>
                                 <connections>
                                     <action selector="toCenterButtonPressed:" destination="1GQ-7W-QKV" eventType="touchUpInside" id="zax-P1-bTx"/>
@@ -181,7 +181,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFq-L6-8Dj">
-                                <rect key="frame" x="156" y="724" width="102" height="64"/>
+                                <rect key="frame" x="156" y="756" width="102" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" image="share2"/>
                                 <connections>
@@ -573,7 +573,6 @@
         <!--Navigation Controller-->
         <scene sceneID="taR-45-IDt">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kQO-9O-JOU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XKU-6a-gHw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="home_custom" id="dA8-CY-UYh"/>
                     <toolbarItems/>
@@ -586,6 +585,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Z3w-8S-f2N"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kQO-9O-JOU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1812" y="448"/>
         </scene>
@@ -803,6 +803,9 @@
             <point key="canvasLocation" x="1812" y="-1757.2713643178413"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="HEU-UL-swt"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="diana" width="32" height="32"/>
         <image name="events" width="550" height="412"/>
@@ -815,7 +818,4 @@
         <image name="profile_custom" width="32" height="32"/>
         <image name="share2" width="32" height="32"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="HEU-UL-swt"/>
-    </inferredMetricsTieBreakers>
 </document>
