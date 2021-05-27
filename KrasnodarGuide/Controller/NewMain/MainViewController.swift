@@ -8,23 +8,10 @@
 import UIKit
 
 protocol MainViewControllerDelegate {
-    func didSelectItem()
+    func didSelectItem(withItemName:String)
 }
 
-final class MainViewController: UIViewController, MainViewControllerDelegate {
-    func didSelectItem() {
-        //        tabBarController?.selectedIndex = TabBarMenu.Map.rawValue
-        
-        let sights = Sight.getSights()
-        let sight = sights.randomElement()
-        
-        guard let detailVC = UIStoryboard(name: "Main", bundle: nil)
-            .instantiateViewController(withIdentifier: "MapDetailVC") as? MapDetailVC else {
-                return
-        }
-        detailVC.sight = sight
-        navigationController?.pushViewController(detailVC, animated: true)
-    }
+final class MainViewController: UIViewController {
     
     private let descriptionLabel: UILabel = {
         let label = UILabel()
@@ -40,6 +27,15 @@ final class MainViewController: UIViewController, MainViewControllerDelegate {
         let sightTitleLabel = UILabel()
         sightTitleLabel.translatesAutoresizingMaskIntoConstraints = false
         sightTitleLabel.text = "Достопримечательности"
+        sightTitleLabel.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 22)
+        sightTitleLabel.backgroundColor = .clear
+        return sightTitleLabel
+    }()
+    
+    private var historicalEventsTitleLabel: UILabel = {
+        let sightTitleLabel = UILabel()
+        sightTitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        sightTitleLabel.text = "Исторические события"
         sightTitleLabel.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 22)
         sightTitleLabel.backgroundColor = .clear
         return sightTitleLabel
@@ -103,5 +99,28 @@ final class MainViewController: UIViewController, MainViewControllerDelegate {
         galleryCollectionView.topAnchor.constraint(equalTo: sightTitleLabel.bottomAnchor).isActive = true
         galleryCollectionView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 1/3).isActive = true
         galleryCollectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+        
+        // MARK: historicalEventsTitleLabel
+        
+//        contentView.addSubview(historicalEventsTitleLabel)
+//        sightTitleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8).isActive = true
+//        sightTitleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8).isActive = true
+//        sightTitleLabel.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 16).isActive = true
     }
+}
+
+extension MainViewController: MainViewControllerDelegate {
+    func didSelectItem(withItemName itemName: String) {
+        
+        guard
+            let tabBarController = self.tabBarController,
+            let mainNavigationController = tabBarController.viewControllers?[TabBarMenu.Map.rawValue] as? UINavigationController,
+            let mapVC = mainNavigationController.topViewController as? MapVC
+        else { fatalError() }
+        
+        mapVC.forcePushItemName = itemName
+        tabBarController.selectedIndex = TabBarMenu.Map.rawValue
+
+    }
+    
 }

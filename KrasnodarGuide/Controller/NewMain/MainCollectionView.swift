@@ -64,7 +64,8 @@ extension MainCollectionView : UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.mainViewControllerDelegate?.didSelectItem()
+        let item = items[indexPath.item]
+        self.mainViewControllerDelegate?.didSelectItem(withItemName: item.name)
     }
 }
 
