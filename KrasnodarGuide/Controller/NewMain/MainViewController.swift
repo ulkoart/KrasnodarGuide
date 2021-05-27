@@ -7,8 +7,26 @@
 
 import UIKit
 
+enum ContentType {
+    case sight
+    case person
+    case historicalEvent
+    
+    var tabBarItem: Int {
+        switch self {
+            
+        case .sight:
+            return TabBarMenu.Map.rawValue
+        case .person:
+            return TabBarMenu.Persons.rawValue
+        case .historicalEvent:
+            return TabBarMenu.HistoricalEvent.rawValue
+        }
+    }
+}
+
 protocol MainViewControllerDelegate {
-    func didSelectItem(withItemName:String)
+    func didSelectItem(withItemName:String, withType: ContentType)
 }
 
 final class MainViewController: UIViewController {
@@ -41,19 +59,25 @@ final class MainViewController: UIViewController {
         return sightTitleLabel
     }()
     
-    private var galleryCollectionView = MainCollectionView()
+    private let sightsCollectionView = MainCollectionView()
+    private let historicalEventsCollectionView = MainCollectionView()
     private let scrollView = UIScrollView()
-    let contentView = UIView()
+    private let contentView = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        galleryCollectionView.mainViewControllerDelegate = self
         self.navigationItem.title = "Гид Краснодара"
         setupScrollView()
         
         // ToDo сделать фильтр по showOnMainScreen: Bool
-        let items: [Sight] = Sight.getSights()
-        galleryCollectionView.setup(items)
+        let sightsItems: [Sight] = Sight.getSights()
+        sightsCollectionView.mainViewControllerDelegate = self
+        sightsCollectionView.setup(withItems: sightsItems, typeOf: .sight)
+        
+        let historicalEventsItems: [HistoricalEvent] = HistoricalEvent.getHistoricalEvents()
+        historicalEventsCollectionView.mainViewControllerDelegate = self
+        historicalEventsCollectionView.setup(withItems: historicalEventsItems, typeOf: .historicalEvent)
+        
         self.setupUI()
         
     }
@@ -93,34 +117,60 @@ final class MainViewController: UIViewController {
         
         // MARK: galleryCollectionView
         
-        contentView.addSubview(galleryCollectionView)
-        galleryCollectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
-        galleryCollectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
-        galleryCollectionView.topAnchor.constraint(equalTo: sightTitleLabel.bottomAnchor).isActive = true
-        galleryCollectionView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 1/3).isActive = true
-        galleryCollectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+        contentView.addSubview(sightsCollectionView)
+        sightsCollectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+        sightsCollectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+        sightsCollectionView.topAnchor.constraint(equalTo: sightTitleLabel.bottomAnchor).isActive = true
+        sightsCollectionView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 1/3).isActive = true
         
         // MARK: historicalEventsTitleLabel
         
-//        contentView.addSubview(historicalEventsTitleLabel)
-//        sightTitleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8).isActive = true
-//        sightTitleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8).isActive = true
-//        sightTitleLabel.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 16).isActive = true
+        contentView.addSubview(historicalEventsTitleLabel)
+        historicalEventsTitleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8).isActive = true
+        historicalEventsTitleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8).isActive = true
+        historicalEventsTitleLabel.topAnchor.constraint(equalTo: sightsCollectionView.bottomAnchor).isActive = true
+        
+        // MARK: historicalEventsCollectionView
+        
+        contentView.addSubview(historicalEventsCollectionView)
+        historicalEventsCollectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+        historicalEventsCollectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+        historicalEventsCollectionView.topAnchor.constraint(equalTo: historicalEventsTitleLabel.bottomAnchor).isActive = true
+        historicalEventsCollectionView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 1/5).isActive = true
+        historicalEventsCollectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
     }
 }
 
 extension MainViewController: MainViewControllerDelegate {
-    func didSelectItem(withItemName itemName: String) {
+    func didSelectItem(withItemName itemName: String, withType itemType: ContentType) {
         
         guard
             let tabBarController = self.tabBarController,
-            let mainNavigationController = tabBarController.viewControllers?[TabBarMenu.Map.rawValue] as? UINavigationController,
-            let mapVC = mainNavigationController.topViewController as? MapVC
-        else { fatalError() }
+            let navigationController = tabBarController.viewControllers?[itemType.tabBarItem] as? UINavigationController
+            else { fatalError() }
         
-        mapVC.forcePushItemName = itemName
-        tabBarController.selectedIndex = TabBarMenu.Map.rawValue
-
+        switch itemType {
+        
+        case .sight:
+            guard let vc = UIStoryboard(
+                name: "Main",
+                bundle: nil
+            ).instantiateViewController(withIdentifier: TabBarMenu.Map.viewControlerIdentifier) as? MapVC else { return }
+            vc.forcePushItemName = itemName
+            navigationController.viewControllers = [vc]
+            tabBarController.selectedIndex = TabBarMenu.Map.rawValue
+        
+        case .person:
+            break
+        
+        case .historicalEvent:
+            guard let vc = UIStoryboard(
+                name: "Main",
+                bundle: nil
+            ).instantiateViewController(withIdentifier: TabBarMenu.HistoricalEvent.viewControlerIdentifier) as? HistoricalEventsVC else { return }
+            vc.forcePushItemName = itemName
+            navigationController.viewControllers = [vc]
+            tabBarController.selectedIndex = TabBarMenu.HistoricalEvent.rawValue
+        }
     }
-    
 }

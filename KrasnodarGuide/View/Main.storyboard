@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MEc-Aa-UaY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MEc-Aa-UaY">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSQ-An-A0M">
-                                <rect key="frame" x="362" y="761" width="32" height="32"/>
+                                <rect key="frame" x="330" y="729" width="64" height="64"/>
                                 <state key="normal" image="diana"/>
                                 <connections>
                                     <action selector="toCenterButtonPressed:" destination="1GQ-7W-QKV" eventType="touchUpInside" id="zax-P1-bTx"/>
@@ -181,7 +181,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFq-L6-8Dj">
-                                <rect key="frame" x="156" y="756" width="102" height="32"/>
+                                <rect key="frame" x="156" y="724" width="102" height="64"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" image="share2"/>
                                 <connections>
@@ -419,7 +419,7 @@
         <!--События-->
         <scene sceneID="0au-fW-v1b">
             <objects>
-                <viewController id="PQn-DH-6TB" customClass="HistoricalEventsVC" customModule="KrasnodarGuide" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HistoricalEventsVC" id="PQn-DH-6TB" customClass="HistoricalEventsVC" customModule="KrasnodarGuide" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UkI-RB-67e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -431,20 +431,14 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="0LF-SD-rNa" firstAttribute="top" secondItem="wgt-rW-iDG" secondAttribute="top" id="9JF-9h-Vlx"/>
-                            <constraint firstItem="wgt-rW-iDG" firstAttribute="trailing" secondItem="0LF-SD-rNa" secondAttribute="trailing" id="RFc-o2-xU6"/>
-                            <constraint firstItem="wgt-rW-iDG" firstAttribute="bottom" secondItem="0LF-SD-rNa" secondAttribute="bottom" id="YB8-Bd-xpg"/>
-                            <constraint firstItem="0LF-SD-rNa" firstAttribute="leading" secondItem="wgt-rW-iDG" secondAttribute="leading" id="yco-lK-2QK"/>
+                            <constraint firstItem="0LF-SD-rNa" firstAttribute="leading" secondItem="wgt-rW-iDG" secondAttribute="leading" id="275-eL-LZO"/>
+                            <constraint firstItem="0LF-SD-rNa" firstAttribute="top" secondItem="wgt-rW-iDG" secondAttribute="top" id="4kl-8e-sj4"/>
+                            <constraint firstItem="0LF-SD-rNa" firstAttribute="trailing" secondItem="wgt-rW-iDG" secondAttribute="trailing" id="DuD-La-hur"/>
+                            <constraint firstItem="0LF-SD-rNa" firstAttribute="bottom" secondItem="wgt-rW-iDG" secondAttribute="bottom" id="FOD-MD-DpO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wgt-rW-iDG"/>
                     </view>
-                    <navigationItem key="navigationItem" title="События" id="mcx-n3-Tcc">
-                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="5iD-Uw-99P">
-                            <connections>
-                                <action selector="backButtonPressed:" destination="PQn-DH-6TB" id="IwF-Nh-gAC"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="События" id="mcx-n3-Tcc"/>
                     <connections>
                         <outlet property="tableView" destination="0LF-SD-rNa" id="cOQ-GE-a5Y"/>
                     </connections>
@@ -608,7 +602,7 @@
         <!--История в лицах-->
         <scene sceneID="pmm-S7-FBo">
             <objects>
-                <viewController id="TbZ-xY-9Tm" customClass="PersonVC" customModule="KrasnodarGuide" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PersonVC" id="TbZ-xY-9Tm" customClass="PersonVC" customModule="KrasnodarGuide" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NkM-1i-GSt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -820,9 +814,6 @@
             <point key="canvasLocation" x="1812" y="-1757.2713643178413"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="a6Z-gz-Hfx"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="diana" width="32" height="32"/>
         <image name="events" width="550" height="412"/>
@@ -835,4 +826,7 @@
         <image name="profile_custom" width="32" height="32"/>
         <image name="share2" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="HEU-UL-swt"/>
+    </inferredMetricsTieBreakers>
 </document>

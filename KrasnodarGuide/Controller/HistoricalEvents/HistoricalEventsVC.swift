@@ -10,14 +10,14 @@ import UIKit
 final class HistoricalEventsVC: UIViewController{
     @IBOutlet weak var tableView: UITableView!
     
-    var historicalEvents = [HistoricalEvent]()
+    static let identifier: String = "HistoricalEventsVC"
     
+    var historicalEvents = [HistoricalEvent]()
     let cellIdentifier: String = "historicalEventCell"
+    var forcePushItemName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -28,9 +28,22 @@ final class HistoricalEventsVC: UIViewController{
         self.tableView.reloadData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guard let itemName = self.forcePushItemName else { return }
+        forcePush(itemName)
+    }
     
-    @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
-        tabBarController?.selectedIndex = TabBarMenu.Main.rawValue
+    private func forcePush(_ itemName: String) {
+        let historicalEvent = historicalEvents.filter{ $0.shortTitle == itemName }.first
+        guard let detailVC = UIStoryboard(name: "Main", bundle: nil)
+            .instantiateViewController(withIdentifier: "HistoricalEventsDetail") as? HistoricalEventsDetail else {
+                return
+        }
+        detailVC.historicalEvent = historicalEvent
+        self.forcePushItemName = nil
+        navigationController?.pushViewController(detailVC, animated: true)
+        
     }
     
 }
@@ -57,7 +70,7 @@ extension HistoricalEventsVC: UITableViewDelegate, UITableViewDataSource  {
                 .instantiateViewController(withIdentifier: "HistoricalEventsDetail") as? HistoricalEventsDetail
         else { return }
         
-        viewController.historicalEvents = historicalEvents[indexPath.row]
+        viewController.historicalEvent = historicalEvents[indexPath.row]
         navigationController?.pushViewController(viewController, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }

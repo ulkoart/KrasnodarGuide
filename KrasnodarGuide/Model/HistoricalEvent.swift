@@ -7,13 +7,16 @@
 
 import Foundation
 
-struct HistoricalEvent: Codable {
+struct HistoricalEvent: Codable, CollectionViewItemProtocol {
     let title: String
     let shortTitle: String
     let dateString: String
     let image: String
     let description: String
     let photos: [String]
+    var name: String {
+        return self.shortTitle
+    }
 }
 
 extension HistoricalEvent {

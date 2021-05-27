@@ -8,6 +8,7 @@
 import UIKit
 
 final class PersonVC: UIViewController {
+    static let identifier = "PersonVC"
     @IBOutlet weak var tableView: UITableView!
     
     private var persons = [Person]()

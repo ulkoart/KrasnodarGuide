@@ -235,7 +235,6 @@
 			children = (
 				CEAC31E6260CBFE0003C9EC2 /* MainVC.swift */,
 				CE6E6A69265CE1CD00438FF7 /* MainContainerVC.swift */,
-				CE6E6A6B265CE61100438FF7 /* TabBarMenuItems.swift */,
 				CE6E6A6D265D078400438FF7 /* SideMenuVC.swift */,
 				CE6E6A71265D20FB00438FF7 /* MenuTableCell.swift */,
 			);
@@ -257,6 +256,7 @@
 		CEF8154D265EABE300F3FE64 /* NewMain */ = {
 			isa = PBXGroup;
 			children = (
+				CE6E6A6B265CE61100438FF7 /* TabBarMenuItems.swift */,
 				CEF8154B265EA91C00F3FE64 /* MainViewController.swift */,
 				CECBDB6D265EBA30001532D1 /* MainCollectionView.swift */,
 				CECBDB6F265EBE5F001532D1 /* MainCollectionViewCell.swift */,

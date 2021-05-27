@@ -23,6 +23,8 @@ struct Constants {
 final class MainCollectionView: UICollectionView {
     
     var items = [CollectionViewItemProtocol]()
+    var type: ContentType!
+    var contentType: ContentType?
     var mainViewControllerDelegate: MainViewControllerDelegate?
     
     init() {
@@ -45,8 +47,9 @@ final class MainCollectionView: UICollectionView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setup(_ items: [CollectionViewItemProtocol]) {
+    func setup(withItems items: [CollectionViewItemProtocol], typeOf type: ContentType) {
         self.items = items
+        self.type = type
     }
     
 }
@@ -65,7 +68,7 @@ extension MainCollectionView : UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let item = items[indexPath.item]
-        self.mainViewControllerDelegate?.didSelectItem(withItemName: item.name)
+        self.mainViewControllerDelegate?.didSelectItem(withItemName: item.name, withType: self.type)
     }
 }
 

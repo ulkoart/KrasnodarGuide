@@ -10,6 +10,7 @@ import MapKit
 import CoreLocation
 
 final class MapVC: UIViewController {
+    static let identifier = "MapVC"
     @IBOutlet weak var mapView: MKMapView!
     
     let locationManager: CLLocationManager = .init()
