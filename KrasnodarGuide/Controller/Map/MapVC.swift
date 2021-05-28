@@ -22,10 +22,6 @@ final class MapVC: UIViewController {
         setupMap()
     }
     
-    @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
-        tabBarController?.selectedIndex = TabBarMenu.Main.rawValue
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         sights = Sight.getSights()
@@ -56,7 +52,7 @@ final class MapVC: UIViewController {
         }
         detailVC.sight = sight
         self.forcePushItemName = nil
-        navigationController?.pushViewController(detailVC, animated: true)
+        navigationController?.pushViewController(detailVC, animated: false)
         
     }
 }

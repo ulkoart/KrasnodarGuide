@@ -31,10 +31,7 @@ final class PersonVC: UIViewController {
         self.persons = Person.getPersons()
         self.tableView.reloadData()
     }
-    
-    @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
-        tabBarController?.selectedIndex = TabBarMenu.Main.rawValue
-    }
+
 }
 
 extension PersonVC: UITableViewDelegate, UITableViewDataSource {
