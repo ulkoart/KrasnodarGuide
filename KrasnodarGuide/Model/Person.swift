@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Person: Codable {
+struct Person: Codable, CollectionViewItemProtocol {
     let name: String
     let years: String
     let image: String

@@ -7,24 +7,6 @@
 
 import UIKit
 
-enum ContentType {
-    case sight
-    case person
-    case historicalEvent
-    
-    var tabBarItem: Int {
-        switch self {
-            
-        case .sight:
-            return TabBarMenu.Map.rawValue
-        case .person:
-            return TabBarMenu.Persons.rawValue
-        case .historicalEvent:
-            return TabBarMenu.HistoricalEvent.rawValue
-        }
-    }
-}
-
 protocol MainViewControllerDelegate {
     func didSelectItem(withItemName:String, withType: ContentType)
 }
@@ -51,16 +33,26 @@ final class MainViewController: UIViewController {
     }()
     
     private var historicalEventsTitleLabel: UILabel = {
-        let sightTitleLabel = UILabel()
-        sightTitleLabel.translatesAutoresizingMaskIntoConstraints = false
-        sightTitleLabel.text = "Исторические события"
-        sightTitleLabel.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 22)
-        sightTitleLabel.backgroundColor = .clear
-        return sightTitleLabel
+        let historicalEventsTitleLabel = UILabel()
+        historicalEventsTitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        historicalEventsTitleLabel.text = "Исторические события"
+        historicalEventsTitleLabel.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 22)
+        historicalEventsTitleLabel.backgroundColor = .clear
+        return historicalEventsTitleLabel
+    }()
+    
+    private var personTitleLabel: UILabel = {
+        let personTitleLabel = UILabel()
+        personTitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        personTitleLabel.text = "История в лицах"
+        personTitleLabel.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 22)
+        personTitleLabel.backgroundColor = .clear
+        return personTitleLabel
     }()
     
     private let sightsCollectionView = MainCollectionView()
     private let historicalEventsCollectionView = MainCollectionView()
+    private let personsCollectionView = MainCollectionView()
     private let scrollView = UIScrollView()
     private let contentView = UIView()
     
@@ -78,6 +70,10 @@ final class MainViewController: UIViewController {
         historicalEventsCollectionView.mainViewControllerDelegate = self
         historicalEventsCollectionView.setup(withItems: historicalEventsItems, typeOf: .historicalEvent)
         
+        let personsItems: [Person] = Person.getPersons()
+        personsCollectionView.mainViewControllerDelegate = self
+        personsCollectionView.setup(withItems: personsItems, typeOf: .person)
+        
         self.setupUI()
         
     }
@@ -88,8 +84,8 @@ final class MainViewController: UIViewController {
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         scrollView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-        scrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         
         scrollView.addSubview(contentView)
         contentView.translatesAutoresizingMaskIntoConstraints = false
@@ -97,7 +93,6 @@ final class MainViewController: UIViewController {
         contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
         contentView.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
         contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
-        
     }
     
     private func setupUI() {
@@ -137,7 +132,23 @@ final class MainViewController: UIViewController {
         historicalEventsCollectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
         historicalEventsCollectionView.topAnchor.constraint(equalTo: historicalEventsTitleLabel.bottomAnchor).isActive = true
         historicalEventsCollectionView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 1/5).isActive = true
-        historicalEventsCollectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+        
+        // MARK: personTitleLabel
+        
+        contentView.addSubview(personTitleLabel)
+        personTitleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8).isActive = true
+        personTitleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8).isActive = true
+        personTitleLabel.topAnchor.constraint(equalTo: historicalEventsCollectionView.bottomAnchor).isActive = true
+        
+        // MARK: personsCollectionView
+        
+        contentView.addSubview(personsCollectionView)
+        personsCollectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+        personsCollectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+        personsCollectionView.topAnchor.constraint(equalTo: personTitleLabel.bottomAnchor).isActive = true
+        personsCollectionView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 1/4).isActive = true
+        personsCollectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+        
     }
 }
 
@@ -150,7 +161,7 @@ extension MainViewController: MainViewControllerDelegate {
             else { fatalError() }
         
         switch itemType {
-        
+            
         case .sight:
             guard let vc = UIStoryboard(
                 name: "Main",
@@ -159,10 +170,17 @@ extension MainViewController: MainViewControllerDelegate {
             vc.forcePushItemName = itemName
             navigationController.viewControllers = [vc]
             tabBarController.selectedIndex = TabBarMenu.Map.rawValue
-        
+            
         case .person:
-            break
-        
+            guard let vc = UIStoryboard(
+                name: "Main",
+                bundle: nil
+            ).instantiateViewController(withIdentifier: TabBarMenu.Persons.viewControlerIdentifier) as? PersonVC else { return }
+            vc.forcePushItemName = itemName
+//            navigationController.viewControllers = [vc]
+            navigationController.setViewControllers([vc], animated: false)
+            tabBarController.selectedIndex = TabBarMenu.Persons.rawValue
+            
         case .historicalEvent:
             guard let vc = UIStoryboard(
                 name: "Main",

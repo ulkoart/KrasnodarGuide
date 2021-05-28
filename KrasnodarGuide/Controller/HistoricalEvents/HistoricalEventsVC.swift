@@ -42,7 +42,7 @@ final class HistoricalEventsVC: UIViewController{
         }
         detailVC.historicalEvent = historicalEvent
         self.forcePushItemName = nil
-        navigationController?.pushViewController(detailVC, animated: true)
+        navigationController?.pushViewController(detailVC, animated: false)
         
     }
     

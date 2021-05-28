@@ -42,6 +42,7 @@
 		CEAE8BF1264BD17500A47725 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE8BF0264BD17500A47725 /* PersonCell.swift */; };
 		CEAE8BF3264BD25500A47725 /* persons.json in Resources */ = {isa = PBXBuildFile; fileRef = CEAE8BF2264BD25500A47725 /* persons.json */; };
 		CEAE8BF5264BD27200A47725 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE8BF4264BD27200A47725 /* Person.swift */; };
+		CEB0F1CF2660CE2A007F68AF /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0F1CE2660CE2A007F68AF /* Helper.swift */; };
 		CECBDB6E265EBA30001532D1 /* MainCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECBDB6D265EBA30001532D1 /* MainCollectionView.swift */; };
 		CECBDB70265EBE5F001532D1 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECBDB6F265EBE5F001532D1 /* MainCollectionViewCell.swift */; };
 		CEE8C477262092EC0043FCC9 /* MapDetailVCExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8C476262092EC0043FCC9 /* MapDetailVCExtensions.swift */; };
@@ -90,6 +91,7 @@
 		CEAE8BF0264BD17500A47725 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		CEAE8BF2264BD25500A47725 /* persons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = persons.json; sourceTree = "<group>"; };
 		CEAE8BF4264BD27200A47725 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		CEB0F1CE2660CE2A007F68AF /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		CECBDB6D265EBA30001532D1 /* MainCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionView.swift; sourceTree = "<group>"; };
 		CECBDB6F265EBE5F001532D1 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		CEE8C476262092EC0043FCC9 /* MapDetailVCExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailVCExtensions.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				CEAC31ED260CBFE1003C9EC2 /* LaunchScreen.storyboard */,
 				CEAC31E2260CBFE0003C9EC2 /* AppDelegate.swift */,
 				CE34B665265250F700AF2E64 /* Extensions.swift */,
+				CEB0F1CE2660CE2A007F68AF /* Helper.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				CEAE8BF1264BD17500A47725 /* PersonCell.swift in Sources */,
 				CE6E6A6E265D078400438FF7 /* SideMenuVC.swift in Sources */,
 				CECBDB70265EBE5F001532D1 /* MainCollectionViewCell.swift in Sources */,
+				CEB0F1CF2660CE2A007F68AF /* Helper.swift in Sources */,
 				CEF81F0E261896230084211B /* MapVCExtensions.swift in Sources */,
 				CE9CBC4426283740006B1412 /* ShowPhotoVC.swift in Sources */,
 				CE0B43D72650227B0005C194 /* HistoricalEventsVC.swift in Sources */,

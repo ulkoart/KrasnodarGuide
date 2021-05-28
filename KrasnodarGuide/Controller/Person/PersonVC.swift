@@ -12,19 +12,36 @@ final class PersonVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private var persons = [Person]()
-    
+    var forcePushItemName: String?
     let cellIdentifier: String = "personCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // tableView.tableFooterView = UIView()
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.register(PersonCell.self, forCellReuseIdentifier: cellIdentifier)
         self.loadPersons()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guard let itemName = self.forcePushItemName else { return }
+        forcePush(itemName)
+    }
+    
+    private func forcePush(_ itemName: String) {
+        let person = persons.filter{ $0.name == itemName }.first
+        guard let detailVC = UIStoryboard(name: "Main", bundle: nil)
+            .instantiateViewController(withIdentifier: "PersonDetail") as? PersonDetail else {
+                return
+        }
+        detailVC.person = person
+        self.forcePushItemName = nil
+        navigationController?.pushViewController(detailVC, animated: false)
+        
     }
     
     private func loadPersons() {
