@@ -57,7 +57,7 @@ final class MainViewController: UIViewController {
     private let contentView = UIView()
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad() 
         self.navigationItem.title = "Гид Краснодара"
         setupScrollView()
         
@@ -81,6 +81,7 @@ final class MainViewController: UIViewController {
     private func setupScrollView() {
         view.addSubview(scrollView)
         
+        scrollView.showsVerticalScrollIndicator = false
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         scrollView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true

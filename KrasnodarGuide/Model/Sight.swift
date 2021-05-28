@@ -31,6 +31,7 @@ final class Sight: NSObject, Codable, CollectionViewItemProtocol {
     let sightDescription: String
     let photos: [String]
     let image: String
+    let showOnMainScreen: Bool
     
     enum Category: String, Codable {
         case architectural

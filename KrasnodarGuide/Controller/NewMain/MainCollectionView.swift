@@ -11,6 +11,7 @@ protocol CollectionViewItemProtocol {
     var image: String { get }
     var name: String { get }
     var subName: String? { get }
+    var showOnMainScreen: Bool { get }
 }
 
 struct Constants {
@@ -49,7 +50,10 @@ final class MainCollectionView: UICollectionView {
     }
     
     func setup(withItems items: [CollectionViewItemProtocol], typeOf type: ContentType) {
-        self.items = items
+        
+        
+        
+        self.items = items.filter {$0.showOnMainScreen}
         self.type = type
     }
     

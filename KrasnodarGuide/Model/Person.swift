@@ -15,6 +15,7 @@ struct Person: Codable, CollectionViewItemProtocol {
     let description: String
     let text: String
     let photos: [String]
+    let showOnMainScreen: Bool
 }
 
 extension Person {
