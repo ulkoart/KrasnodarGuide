@@ -320,7 +320,7 @@
                                 <rect key="frame" x="243.5" y="247" width="162.5" height="179.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="events" translatesAutoresizingMaskIntoConstraints="NO" id="TqF-0b-am4">
-                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="179.50000000000011"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="179.5"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rb9-Gm-pn7">
                                         <rect key="frame" x="0.0" y="134.5" width="162.5" height="45"/>
@@ -815,6 +815,6 @@
         <image name="share2" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="a6Z-gz-Hfx"/>
+        <segue reference="HEU-UL-swt"/>
     </inferredMetricsTieBreakers>
 </document>

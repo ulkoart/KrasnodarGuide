@@ -13,6 +13,18 @@ final class Sight: NSObject, Codable, CollectionViewItemProtocol {
     //  почему не struct ? NSObject ?
     // ToDO перенести MKAnnotation в отдельный метод
     let name: String
+    var subName: String? {
+        switch self.category {
+       
+        case .architectural:
+            return "Памятник"
+        case .historical:
+            return "Историческое место"
+        case .walk:
+            return "Место для прогулок"
+
+        }
+    }
     let lat: Float
     let lon: Float
     let category: Category

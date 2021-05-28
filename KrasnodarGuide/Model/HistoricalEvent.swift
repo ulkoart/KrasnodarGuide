@@ -14,6 +14,7 @@ struct HistoricalEvent: Codable, CollectionViewItemProtocol {
     let image: String
     let description: String
     let photos: [String]
+    let subName: String?
     var name: String {
         return self.shortTitle
     }

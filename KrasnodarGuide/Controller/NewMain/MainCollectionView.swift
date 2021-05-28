@@ -10,6 +10,7 @@ import UIKit
 protocol CollectionViewItemProtocol {
     var image: String { get }
     var name: String { get }
+    var subName: String? { get }
 }
 
 struct Constants {
@@ -17,7 +18,7 @@ struct Constants {
     static let leftDistanceToView: CGFloat = 10
     static let rightDistanceToView: CGFloat = 10
     static let galleryMinimumLineSpacing: CGFloat = 10
-    static let galleryItemWidth = (UIScreen.main.bounds.width - Constants.leftDistanceToView - Constants.rightDistanceToView - (Constants.galleryMinimumLineSpacing / 2)) / 2.6
+    static let galleryItemWidth = (UIScreen.main.bounds.width - Constants.leftDistanceToView - Constants.rightDistanceToView - (Constants.galleryMinimumLineSpacing / 2)) / 2.4
 }
 
 final class MainCollectionView: UICollectionView {

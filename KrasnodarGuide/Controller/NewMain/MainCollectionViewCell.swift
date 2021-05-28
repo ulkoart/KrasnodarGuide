@@ -58,6 +58,12 @@ class MainCollectionViewCell: UICollectionViewCell {
     func setup(_ item:CollectionViewItemProtocol) {
         self.image.image = UIImage(named: item.image)
         self.titleLabel.text = item.name
-        self.categoryLabel.text = "Тип"
+        
+        
+        if let subName = item.subName {
+            self.categoryLabel.text = subName
+        } else {
+            self.categoryLabel.isHidden = true
+        }
     }
 }
