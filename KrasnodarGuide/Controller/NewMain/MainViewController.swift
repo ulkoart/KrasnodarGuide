@@ -4,6 +4,10 @@
 //
 //  Created by user on 26.05.2021.
 //
+// color scheme https://colorscheme.ru/#0S61Tw0w0w0w0
+// uicolor.io -> Convert HEX & RGB colors to UIColor
+// https://icon-icons.com/
+// https://www.flaticon.com/
 
 import UIKit
 

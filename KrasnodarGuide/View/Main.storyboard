@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MEc-Aa-UaY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MEc-Aa-UaY">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -453,7 +453,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DZZ-A3-zGj">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1227.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1243.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9fe-Ma-Sm2">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="298.5"/>
@@ -495,7 +495,7 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="Sgc-4u-4nU" secondAttribute="bottom" id="3wR-bL-e7s"/>
+                                            <constraint firstAttribute="bottom" secondItem="Sgc-4u-4nU" secondAttribute="bottom" constant="16" id="3wR-bL-e7s"/>
                                             <constraint firstAttribute="trailing" secondItem="9fe-Ma-Sm2" secondAttribute="trailing" id="XOI-Xj-EqI"/>
                                             <constraint firstItem="9fe-Ma-Sm2" firstAttribute="top" secondItem="DZZ-A3-zGj" secondAttribute="top" id="gTn-E5-OIM"/>
                                             <constraint firstItem="Sgc-4u-4nU" firstAttribute="leading" secondItem="DZZ-A3-zGj" secondAttribute="leading" constant="8" id="qOT-Mb-1Ek"/>
@@ -636,7 +636,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHr-Qw-vwn">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="832.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="848.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PXr-Wf-2v8">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="112"/>
@@ -706,7 +706,7 @@
                                             <constraint firstItem="PXr-Wf-2v8" firstAttribute="leading" secondItem="dHr-Qw-vwn" secondAttribute="leading" id="l1p-l2-xDI"/>
                                             <constraint firstItem="auZ-xc-Mw0" firstAttribute="top" secondItem="OiL-Ul-Ksh" secondAttribute="bottom" constant="16" id="tLt-rz-OBz"/>
                                             <constraint firstItem="OiL-Ul-Ksh" firstAttribute="top" secondItem="PXr-Wf-2v8" secondAttribute="bottom" id="uJI-Sn-kSM"/>
-                                            <constraint firstAttribute="bottom" secondItem="auZ-xc-Mw0" secondAttribute="bottom" id="vag-BP-uz3"/>
+                                            <constraint firstAttribute="bottom" secondItem="auZ-xc-Mw0" secondAttribute="bottom" constant="16" id="vag-BP-uz3"/>
                                             <constraint firstAttribute="trailing" secondItem="PXr-Wf-2v8" secondAttribute="trailing" id="y6q-s1-8eA"/>
                                         </constraints>
                                     </view>
@@ -802,6 +802,9 @@
             <point key="canvasLocation" x="1812" y="-1757.2713643178413"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="HEU-UL-swt"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="diana" width="32" height="32"/>
         <image name="events" width="550" height="412"/>
@@ -814,7 +817,4 @@
         <image name="profile_custom" width="32" height="32"/>
         <image name="share2" width="32" height="32"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="HEU-UL-swt"/>
-    </inferredMetricsTieBreakers>
 </document>
