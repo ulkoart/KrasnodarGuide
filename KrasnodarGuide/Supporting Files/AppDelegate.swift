@@ -17,15 +17,15 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         guard
             let tabBarController = window?.rootViewController as? UITabBarController,
             let mainNavigationController = tabBarController.viewControllers?[TabBarMenu.Main.rawValue] as? UINavigationController,
-            let _ = mainNavigationController.topViewController as? MainVC
+            let _ = mainNavigationController.topViewController as? MainViewController
         else { fatalError() }
         
-        window = UIWindow(frame: UIScreen.main.bounds)
-        
-        let containerViewController = MainContainerVC()
-        
-        window!.rootViewController = containerViewController
-        window!.makeKeyAndVisible()
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        
+//        let containerViewController = MainContainerVC()
+//        
+//        window!.rootViewController = containerViewController
+//        window!.makeKeyAndVisible()
         
         return true
     }

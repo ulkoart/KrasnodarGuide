@@ -38,13 +38,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="i0l-vz-7pu"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Достопримечательности" id="Zgb-YG-6La">
-                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="zpK-cZ-FYF">
-                            <connections>
-                                <action selector="backButtonPressed:" destination="1GQ-7W-QKV" id="VGj-iW-uf6"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Достопримечательности" id="Zgb-YG-6La"/>
                     <connections>
                         <outlet property="mapView" destination="DNg-Zq-RGb" id="Jho-xU-a1a"/>
                     </connections>
@@ -215,7 +209,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u23-hf-nzB" customClass="MainViewCell" customModule="KrasnodarGuide" customModuleProvider="target">
-                                <rect key="frame" x="8" y="156" width="398" height="179"/>
+                                <rect key="frame" x="8" y="60" width="398" height="179"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainMap" translatesAutoresizingMaskIntoConstraints="NO" id="NQe-Kz-Guh">
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="179"/>
@@ -271,7 +265,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oUd-qT-u8J" customClass="MainViewCell" customModule="KrasnodarGuide" customModuleProvider="target">
-                                <rect key="frame" x="8" y="343" width="227.5" height="179.5"/>
+                                <rect key="frame" x="8" y="247" width="227.5" height="179.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="people" translatesAutoresizingMaskIntoConstraints="NO" id="EBP-G4-Nc3">
                                         <rect key="frame" x="0.0" y="0.0" width="227.5" height="179.5"/>
@@ -323,7 +317,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rvJ-xP-wqQ" customClass="MainViewCell" customModule="KrasnodarGuide" customModuleProvider="target">
-                                <rect key="frame" x="243.5" y="343" width="162.5" height="179.5"/>
+                                <rect key="frame" x="243.5" y="247" width="162.5" height="179.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="events" translatesAutoresizingMaskIntoConstraints="NO" id="TqF-0b-am4">
                                         <rect key="frame" x="0.0" y="0.0" width="162.5" height="179.5"/>
@@ -375,7 +369,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idc-lE-JEq">
-                                <rect key="frame" x="8" y="530.5" width="398" height="274.5"/>
+                                <rect key="frame" x="8" y="434.5" width="398" height="419.5"/>
                                 <string key="text">30 июня 1792 года Черноморскому казачьему войску Екатериной II была выдана Жалованная Грамота, по которой казакам на вечное владение передавалась земля. Так и началась история города Краснодара.</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
@@ -414,12 +408,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2636" y="447.52623688155927"/>
+            <point key="canvasLocation" x="1812" y="1151"/>
         </scene>
         <!--События-->
         <scene sceneID="0au-fW-v1b">
             <objects>
-                <viewController id="PQn-DH-6TB" customClass="HistoricalEventsVC" customModule="KrasnodarGuide" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HistoricalEventsVC" id="PQn-DH-6TB" customClass="HistoricalEventsVC" customModule="KrasnodarGuide" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UkI-RB-67e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -431,20 +425,14 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="0LF-SD-rNa" firstAttribute="top" secondItem="wgt-rW-iDG" secondAttribute="top" id="9JF-9h-Vlx"/>
-                            <constraint firstItem="wgt-rW-iDG" firstAttribute="trailing" secondItem="0LF-SD-rNa" secondAttribute="trailing" id="RFc-o2-xU6"/>
-                            <constraint firstItem="wgt-rW-iDG" firstAttribute="bottom" secondItem="0LF-SD-rNa" secondAttribute="bottom" id="YB8-Bd-xpg"/>
-                            <constraint firstItem="0LF-SD-rNa" firstAttribute="leading" secondItem="wgt-rW-iDG" secondAttribute="leading" id="yco-lK-2QK"/>
+                            <constraint firstItem="0LF-SD-rNa" firstAttribute="leading" secondItem="wgt-rW-iDG" secondAttribute="leading" id="275-eL-LZO"/>
+                            <constraint firstItem="0LF-SD-rNa" firstAttribute="top" secondItem="wgt-rW-iDG" secondAttribute="top" id="4kl-8e-sj4"/>
+                            <constraint firstItem="0LF-SD-rNa" firstAttribute="trailing" secondItem="wgt-rW-iDG" secondAttribute="trailing" id="DuD-La-hur"/>
+                            <constraint firstItem="0LF-SD-rNa" firstAttribute="bottom" secondItem="wgt-rW-iDG" secondAttribute="bottom" id="FOD-MD-DpO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wgt-rW-iDG"/>
                     </view>
-                    <navigationItem key="navigationItem" title="События" id="mcx-n3-Tcc">
-                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="5iD-Uw-99P">
-                            <connections>
-                                <action selector="backButtonPressed:" destination="PQn-DH-6TB" id="IwF-Nh-gAC"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="События" id="mcx-n3-Tcc"/>
                     <connections>
                         <outlet property="tableView" destination="0LF-SD-rNa" id="cOQ-GE-a5Y"/>
                     </connections>
@@ -465,7 +453,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DZZ-A3-zGj">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1227.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1243.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9fe-Ma-Sm2">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="298.5"/>
@@ -507,7 +495,7 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="Sgc-4u-4nU" secondAttribute="bottom" id="3wR-bL-e7s"/>
+                                            <constraint firstAttribute="bottom" secondItem="Sgc-4u-4nU" secondAttribute="bottom" constant="16" id="3wR-bL-e7s"/>
                                             <constraint firstAttribute="trailing" secondItem="9fe-Ma-Sm2" secondAttribute="trailing" id="XOI-Xj-EqI"/>
                                             <constraint firstItem="9fe-Ma-Sm2" firstAttribute="top" secondItem="DZZ-A3-zGj" secondAttribute="top" id="gTn-E5-OIM"/>
                                             <constraint firstItem="Sgc-4u-4nU" firstAttribute="leading" secondItem="DZZ-A3-zGj" secondAttribute="leading" constant="8" id="qOT-Mb-1Ek"/>
@@ -582,17 +570,33 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Z3w-8S-f2N"/>
+                        <segue destination="wlP-QC-8eS" kind="relationship" relationship="rootViewController" id="vZG-VY-7Jf"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kQO-9O-JOU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1812" y="448"/>
         </scene>
+        <!--Main View Controller-->
+        <scene sceneID="Ybw-Xp-m0L">
+            <objects>
+                <viewController id="wlP-QC-8eS" customClass="MainViewController" customModule="KrasnodarGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vyo-9A-w2f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="cP7-AU-COl"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gRz-yP-Eme"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GGC-WG-Kj4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2610" y="448"/>
+        </scene>
         <!--История в лицах-->
         <scene sceneID="pmm-S7-FBo">
             <objects>
-                <viewController id="TbZ-xY-9Tm" customClass="PersonVC" customModule="KrasnodarGuide" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PersonVC" id="TbZ-xY-9Tm" customClass="PersonVC" customModule="KrasnodarGuide" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NkM-1i-GSt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -611,13 +615,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HYd-xV-8Aq"/>
                     </view>
-                    <navigationItem key="navigationItem" title="История в лицах" id="6mE-yu-2CE">
-                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="Ls6-xA-lhL">
-                            <connections>
-                                <action selector="backButtonPressed:" destination="TbZ-xY-9Tm" id="elv-ku-s0I"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="История в лицах" id="6mE-yu-2CE"/>
                     <connections>
                         <outlet property="tableView" destination="0u5-jS-YoH" id="GMb-YE-u48"/>
                     </connections>
@@ -638,7 +636,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHr-Qw-vwn">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="832.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="848.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PXr-Wf-2v8">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="112"/>
@@ -708,7 +706,7 @@
                                             <constraint firstItem="PXr-Wf-2v8" firstAttribute="leading" secondItem="dHr-Qw-vwn" secondAttribute="leading" id="l1p-l2-xDI"/>
                                             <constraint firstItem="auZ-xc-Mw0" firstAttribute="top" secondItem="OiL-Ul-Ksh" secondAttribute="bottom" constant="16" id="tLt-rz-OBz"/>
                                             <constraint firstItem="OiL-Ul-Ksh" firstAttribute="top" secondItem="PXr-Wf-2v8" secondAttribute="bottom" id="uJI-Sn-kSM"/>
-                                            <constraint firstAttribute="bottom" secondItem="auZ-xc-Mw0" secondAttribute="bottom" id="vag-BP-uz3"/>
+                                            <constraint firstAttribute="bottom" secondItem="auZ-xc-Mw0" secondAttribute="bottom" constant="16" id="vag-BP-uz3"/>
                                             <constraint firstAttribute="trailing" secondItem="PXr-Wf-2v8" secondAttribute="trailing" id="y6q-s1-8eA"/>
                                         </constraints>
                                     </view>
@@ -805,7 +803,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="a6Z-gz-Hfx"/>
+        <segue reference="HEU-UL-swt"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="diana" width="32" height="32"/>

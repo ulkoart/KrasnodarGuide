@@ -9,20 +9,42 @@
 import Foundation
 import MapKit
 
-final class Sight: NSObject, Codable {
+final class Sight: NSObject, Codable, CollectionViewItemProtocol {
     //  почему не struct ? NSObject ?
     // ToDO перенести MKAnnotation в отдельный метод
     let name: String
+    var subName: String? {
+        switch self.category {
+            
+        case .architectural:
+            return "Памятник"
+        case .historical:
+            return "Историческое место"
+        case .walk:
+            return "Место для прогулок"
+        case .orthodoxy:
+            return "Православная церковь"
+        case .museum:
+            return "Музей"
+        case .zoo:
+            return "Зоопарк"
+        }
+    }
     let lat: Float
     let lon: Float
     let category: Category
     let sightDescription: String
     let photos: [String]
+    let image: String
+    let showOnMainScreen: Bool
     
     enum Category: String, Codable {
         case architectural
         case historical
         case walk
+        case orthodoxy
+        case museum
+        case zoo
     }
 }
 
@@ -43,7 +65,7 @@ extension Sight {
         guard
             let url = Bundle.main.url(forResource: "sights", withExtension: "json"),
             let data = try? Data(contentsOf: url)
-        else { fatalError("load sights - failed") }
+            else { fatalError("load sights - failed") }
         
         do {
             let decoder = JSONDecoder()
@@ -59,6 +81,12 @@ extension Sight {
             return .blue
         case .walk:
             return .green
+        case .orthodoxy:
+            return .white
+        case .museum:
+            return .black
+        case .zoo:
+            return .black
         }
     }
     
@@ -70,7 +98,12 @@ extension Sight {
             return #imageLiteral(resourceName: "historical")
         case .walk:
             return #imageLiteral(resourceName: "walk")
+        case .orthodoxy:
+            return UIImage(named: "orthodoxy")!
+        case .museum:
+            return UIImage(named: "museum")!
+        case .zoo:
+            return UIImage(named: "zoo")!
         }
     }
 }
-

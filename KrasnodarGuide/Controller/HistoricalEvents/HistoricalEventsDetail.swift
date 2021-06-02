@@ -14,13 +14,13 @@ final class HistoricalEventsDetail: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var historicalEventText: UILabel!
     
-    var historicalEvents: HistoricalEvent!
+    var historicalEvent: HistoricalEvent!
     let cellId: String = "HistoricalEventsDetailCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = historicalEvents.shortTitle
-        historicalEventText.text = historicalEvents.description
+        title = historicalEvent.shortTitle
+        historicalEventText.text = historicalEvent.description
         pageControl.isUserInteractionEnabled = false
         historicalEventsCollection.isPagingEnabled = true
         historicalEventsCollection.delegate = self
@@ -37,20 +37,20 @@ final class HistoricalEventsDetail: UIViewController {
                 let photoImage = UIImage(named: photoName)
             else { return }
             photoVC.image = photoImage
-            photoVC.photoTitle = historicalEvents.title
+            photoVC.photoTitle = historicalEvent.title
         }
     }
 }
 
 extension HistoricalEventsDetail: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        pageControl.numberOfPages = historicalEvents.photos.count
-        return historicalEvents.photos.count
+        pageControl.numberOfPages = historicalEvent.photos.count
+        return historicalEvent.photos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as? HistoricalEventsDetailCell else { return UICollectionViewCell() }
-        cell.setup(with: historicalEvents.photos[indexPath.row])
+        cell.setup(with: historicalEvent.photos[indexPath.row])
         return cell
     }
     
@@ -63,7 +63,7 @@ extension HistoricalEventsDetail: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let index = indexPath.item
-        let photoName: String = historicalEvents.photos[index]
+        let photoName: String = historicalEvent.photos[index]
         performSegue(withIdentifier: "showPhoto", sender: photoName)
     }
 }

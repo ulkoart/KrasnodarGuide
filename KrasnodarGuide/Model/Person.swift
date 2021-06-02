@@ -7,13 +7,15 @@
 
 import Foundation
 
-struct Person: Codable {
+struct Person: Codable, CollectionViewItemProtocol {
     let name: String
+    let subName: String?
     let years: String
     let image: String
     let description: String
     let text: String
     let photos: [String]
+    let showOnMainScreen: Bool
 }
 
 extension Person {

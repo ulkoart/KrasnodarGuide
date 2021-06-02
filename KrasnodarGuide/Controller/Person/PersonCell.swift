@@ -35,10 +35,9 @@ final class PersonCell: UITableViewCell {
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.numberOfLines = 2
         nameLabel.font = UIFont.systemFont(ofSize: 16, weight: .light)
-        
-        nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 12).isActive = true
-        nameLabel.leadingAnchor.constraint(equalTo: personImage.trailingAnchor, constant: 4).isActive = true
-        nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -4).isActive = true
+        nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0).isActive = true
+        nameLabel.leadingAnchor.constraint(equalTo: personImage.trailingAnchor, constant: 8).isActive = true
+        nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8).isActive = true
 //        nameLabel.heightAnchor.constraint(equalToConstant: 32).isActive = true
         
         // MARK: - yearsLabel
@@ -47,8 +46,8 @@ final class PersonCell: UITableViewCell {
         yearsLabel.font = UIFont.systemFont(ofSize: 14, weight: .thin)
         
         yearsLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 4).isActive = true
-        yearsLabel.leadingAnchor.constraint(equalTo: personImage.trailingAnchor, constant: 4).isActive = true
-        yearsLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -4).isActive = true
+        yearsLabel.leadingAnchor.constraint(equalTo: personImage.trailingAnchor, constant: 8).isActive = true
+        yearsLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8).isActive = true
 //        yearsLabel.heightAnchor.constraint(equalToConstant: 21).isActive = true
         
         // MARK: - descriptionLabel
@@ -57,8 +56,8 @@ final class PersonCell: UITableViewCell {
         descriptionLabel.font = UIFont.systemFont(ofSize: 15, weight: .bold)
 
         descriptionLabel.topAnchor.constraint(equalTo: yearsLabel.bottomAnchor, constant: 4).isActive = true
-        descriptionLabel.leadingAnchor.constraint(equalTo: personImage.trailingAnchor, constant: 4).isActive = true
-        descriptionLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -4).isActive = true
+        descriptionLabel.leadingAnchor.constraint(equalTo: personImage.trailingAnchor, constant: 8).isActive = true
+        descriptionLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8).isActive = true
 //        descriptionLabel.heightAnchor.constraint(equalToConstant: 21).isActive = true
     }
     

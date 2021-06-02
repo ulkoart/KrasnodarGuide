@@ -8,16 +8,16 @@
 import UIKit
 
 final class PersonVC: UIViewController {
+    static let identifier = "PersonVC"
     @IBOutlet weak var tableView: UITableView!
     
     private var persons = [Person]()
-    
+    var forcePushItemName: String?
     let cellIdentifier: String = "personCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // tableView.tableFooterView = UIView()
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -26,14 +26,29 @@ final class PersonVC: UIViewController {
         self.loadPersons()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guard let itemName = self.forcePushItemName else { return }
+        forcePush(itemName)
+    }
+    
+    private func forcePush(_ itemName: String) {
+        let person = persons.filter{ $0.name == itemName }.first
+        guard let detailVC = UIStoryboard(name: "Main", bundle: nil)
+            .instantiateViewController(withIdentifier: "PersonDetail") as? PersonDetail else {
+                return
+        }
+        detailVC.person = person
+        self.forcePushItemName = nil
+        navigationController?.pushViewController(detailVC, animated: false)
+        
+    }
+    
     private func loadPersons() {
         self.persons = Person.getPersons()
         self.tableView.reloadData()
     }
-    
-    @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
-        tabBarController?.selectedIndex = TabBarMenu.Main.rawValue
-    }
+
 }
 
 extension PersonVC: UITableViewDelegate, UITableViewDataSource {

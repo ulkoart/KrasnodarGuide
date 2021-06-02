@@ -5,8 +5,8 @@
       "scale" : "1x"
     },
     {
-      "filename" : "profile.png",
       "idiom" : "universal",
+      "filename" : "asian-masculine-user-with-star_icon-icons.com_54789.png",
       "scale" : "2x"
     },
     {
@@ -15,7 +15,7 @@
     }
   ],
   "info" : {
-    "author" : "xcode",
-    "version" : 1
+    "version" : 1,
+    "author" : "xcode"
   }
 }
