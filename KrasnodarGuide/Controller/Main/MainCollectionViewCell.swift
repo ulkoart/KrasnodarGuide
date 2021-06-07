@@ -35,7 +35,7 @@ class MainCollectionViewCell: UICollectionViewCell {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.numberOfLines = 2
         titleLabel.sizeToFit()
-        titleLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 14)
+        titleLabel.font = UIFont(name: "AvenirNext-Regular", size: 14)
         titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
         titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
         titleLabel.topAnchor.constraint(equalTo: image.bottomAnchor, constant: 2).isActive = true
@@ -45,7 +45,7 @@ class MainCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(categoryLabel)
         categoryLabel.translatesAutoresizingMaskIntoConstraints = false
         categoryLabel.numberOfLines = 1
-        categoryLabel.font = UIFont(name: "AppleSDGothicNeo-Light", size: 12)
+        categoryLabel.font = UIFont(name: "AvenirNext-UltraLight", size: 12)
         categoryLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
         categoryLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
         categoryLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor).isActive = true

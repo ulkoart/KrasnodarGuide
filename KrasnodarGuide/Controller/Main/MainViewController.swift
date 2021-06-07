@@ -22,7 +22,7 @@ final class MainViewController: UIViewController {
         label.text = "30 июня 1792 года Черноморскому казачьему войску Екатериной II была выдана Жалованная Грамота, по которой казакам на вечное владение передавалась земля. Так и началась история города Краснодара."
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
-        label.font = UIFont(name: "DINAlternate-Bold", size: 15)
+        label.font = UIFont(name: "AvenirNext-Regular", size: 14)
         label.textColor = UIColor.lightGray
         return label
     }()
@@ -31,7 +31,7 @@ final class MainViewController: UIViewController {
         let sightTitleLabel = UILabel()
         sightTitleLabel.translatesAutoresizingMaskIntoConstraints = false
         sightTitleLabel.text = "Достопримечательности"
-        sightTitleLabel.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 22)
+        sightTitleLabel.font = UIFont(name: "AvenirNext-Medium", size: 22)
         sightTitleLabel.backgroundColor = .clear
         return sightTitleLabel
     }()
@@ -40,7 +40,7 @@ final class MainViewController: UIViewController {
         let historicalEventsTitleLabel = UILabel()
         historicalEventsTitleLabel.translatesAutoresizingMaskIntoConstraints = false
         historicalEventsTitleLabel.text = "Исторические события"
-        historicalEventsTitleLabel.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 22)
+        historicalEventsTitleLabel.font = UIFont(name: "AvenirNext-Medium", size: 22)
         historicalEventsTitleLabel.backgroundColor = .clear
         return historicalEventsTitleLabel
     }()
@@ -49,7 +49,7 @@ final class MainViewController: UIViewController {
         let personTitleLabel = UILabel()
         personTitleLabel.translatesAutoresizingMaskIntoConstraints = false
         personTitleLabel.text = "История в лицах"
-        personTitleLabel.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 22)
+        personTitleLabel.font = UIFont(name: "AvenirNext-Medium", size: 22)
         personTitleLabel.backgroundColor = .clear
         return personTitleLabel
     }()

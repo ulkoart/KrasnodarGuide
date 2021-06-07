@@ -25,7 +25,7 @@ final class PersonCell: UITableViewCell {
         personImage.translatesAutoresizingMaskIntoConstraints = false
         personImage.contentMode = .scaleAspectFill
         
-        personImage.widthAnchor.constraint(equalToConstant: 76).isActive = true
+        personImage.widthAnchor.constraint(equalToConstant: 84).isActive = true
         personImage.heightAnchor.constraint(equalToConstant: 92).isActive = true
         personImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16).isActive = true
         personImage.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 4).isActive = true
@@ -35,7 +35,7 @@ final class PersonCell: UITableViewCell {
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.numberOfLines = 2
         nameLabel.font = UIFont.systemFont(ofSize: 16, weight: .light)
-        nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0).isActive = true
+        nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 4).isActive = true
         nameLabel.leadingAnchor.constraint(equalTo: personImage.trailingAnchor, constant: 8).isActive = true
         nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8).isActive = true
 //        nameLabel.heightAnchor.constraint(equalToConstant: 32).isActive = true
