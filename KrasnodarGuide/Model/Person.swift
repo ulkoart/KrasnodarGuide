@@ -9,6 +9,7 @@ import Foundation
 
 struct Person: Codable, CollectionViewItemProtocol {
     let name: String
+    let shortName: String
     let subName: String?
     let years: String
     let image: String

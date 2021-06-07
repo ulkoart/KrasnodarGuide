@@ -9,7 +9,6 @@ import UIKit
 
 final class PersonDetail: UIViewController {
     
-    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var personPhotoCollectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var textLabel: UILabel!
@@ -20,11 +19,9 @@ final class PersonDetail: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // navigationController?.navigationBar.prefersLargeTitles = false
-        navigationItem.largeTitleDisplayMode = .never
-        nameLabel.text = self.person.name
+        
+        self.title = self.person.shortName
         textLabel.text = self.person.text
-    
         pageControl.isUserInteractionEnabled = false
         personPhotoCollectionView.isPagingEnabled = true
         personPhotoCollectionView.delegate = self

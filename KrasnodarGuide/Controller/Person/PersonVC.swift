@@ -18,7 +18,7 @@ final class PersonVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // tableView.tableFooterView = UIView()
-        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
