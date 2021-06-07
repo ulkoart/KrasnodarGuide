@@ -26,7 +26,7 @@ final class MapVC: UIViewController {
         super.viewDidLoad()
         sights = Sight.getSights()
         
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
         locationManager.delegate = self
         

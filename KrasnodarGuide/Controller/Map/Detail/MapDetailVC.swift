@@ -8,7 +8,6 @@
 import UIKit
 
 class MapDetailVC: UIViewController {
-    @IBOutlet weak var sightTitileLable: UILabel!
     @IBOutlet weak var photoCollectionView: UICollectionView!
     @IBOutlet weak var photoCollectionLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var photoCollectionPageControl: UIPageControl!
@@ -24,7 +23,7 @@ class MapDetailVC: UIViewController {
     }
         
     func setup() {
-        sightTitileLable.text = sight.name
+        title = self.sight.title
         sightDescription.text = sight.sightDescription
         photoCollectionPageControl.isUserInteractionEnabled = false
         photoCollectionView.isPagingEnabled = true

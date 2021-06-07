@@ -105,13 +105,13 @@ final class MainViewController: UIViewController {
         
         contentView.addSubview(descriptionLabel)
         descriptionLabel.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
-        descriptionLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8).isActive = true
+        descriptionLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16).isActive = true
         descriptionLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8).isActive = true
         
         // MARK: sightTitle
         
         contentView.addSubview(sightTitleLabel)
-        sightTitleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8).isActive = true
+        sightTitleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16).isActive = true
         sightTitleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8).isActive = true
         sightTitleLabel.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 16).isActive = true
         
@@ -126,7 +126,7 @@ final class MainViewController: UIViewController {
         // MARK: historicalEventsTitleLabel
         
         contentView.addSubview(historicalEventsTitleLabel)
-        historicalEventsTitleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8).isActive = true
+        historicalEventsTitleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16).isActive = true
         historicalEventsTitleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8).isActive = true
         historicalEventsTitleLabel.topAnchor.constraint(equalTo: sightsCollectionView.bottomAnchor).isActive = true
         
@@ -141,7 +141,7 @@ final class MainViewController: UIViewController {
         // MARK: personTitleLabel
         
         contentView.addSubview(personTitleLabel)
-        personTitleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8).isActive = true
+        personTitleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16).isActive = true
         personTitleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8).isActive = true
         personTitleLabel.topAnchor.constraint(equalTo: historicalEventsCollectionView.bottomAnchor).isActive = true
         
@@ -182,7 +182,6 @@ extension MainViewController: MainViewControllerDelegate {
                 bundle: nil
             ).instantiateViewController(withIdentifier: TabBarMenu.Persons.viewControlerIdentifier) as? PersonVC else { return }
             vc.forcePushItemName = itemName
-//            navigationController.viewControllers = [vc]
             navigationController.setViewControllers([vc], animated: false)
             tabBarController.selectedIndex = TabBarMenu.Persons.rawValue
             
