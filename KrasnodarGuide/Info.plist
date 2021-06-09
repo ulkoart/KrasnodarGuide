@@ -23,13 +23,13 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Application requires user’s location for better user experience.</string>
+	<string>Разрешите использовать геолокацию для определения ближайших достопримечательностей</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Application requires user’s location for better user experience.</string>
+	<string>Разрешите использовать геолокацию для определения ближайших достопримечательностей</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Application requires user’s location for better user experience.</string>
+	<string>Разрешите использовать геолокацию для определения ближайших достопримечательностей</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>$(PRODUCT_NAME) uses photos</string>
+	<string>Разрешите приложению доступ к фото для сохранения фотографий достопримечательнойтей</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
