@@ -23,6 +23,9 @@
 		CE4ACF5426458581009648A9 /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4ACF5326458581009648A9 /* ImageScrollView.swift */; };
 		CE6E6A6C265CE61100438FF7 /* TabBarMenuItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E6A6B265CE61100438FF7 /* TabBarMenuItems.swift */; };
 		CE71E4FC263AD2A4001471CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE71E4FB263AD2A4001471CE /* Main.storyboard */; };
+		CE893692267395E300804750 /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE893691267395E300804750 /* Locations.swift */; };
+		CE893696267398AA00804750 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE893695267398AA00804750 /* Router.swift */; };
+		CE89369926739AEA00804750 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE89369826739AEA00804750 /* ServiceLocator.swift */; };
 		CE9CBC4426283740006B1412 /* ShowPhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9CBC4326283740006B1412 /* ShowPhotoVC.swift */; };
 		CE9E377626566ADA0012FECA /* screenshot2.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9E377026566ADA0012FECA /* screenshot2.png */; };
 		CE9E377726566ADA0012FECA /* screenshot3.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9E377126566ADA0012FECA /* screenshot3.png */; };
@@ -65,6 +68,9 @@
 		CE4ACF5326458581009648A9 /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
 		CE6E6A6B265CE61100438FF7 /* TabBarMenuItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarMenuItems.swift; sourceTree = "<group>"; };
 		CE71E4FB263AD2A4001471CE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		CE893691267395E300804750 /* Locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
+		CE893695267398AA00804750 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		CE89369826739AEA00804750 /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		CE9CBC4326283740006B1412 /* ShowPhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPhotoVC.swift; sourceTree = "<group>"; };
 		CE9E377026566ADA0012FECA /* screenshot2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot2.png; sourceTree = "<group>"; };
 		CE9E377126566ADA0012FECA /* screenshot3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot3.png; sourceTree = "<group>"; };
@@ -125,6 +131,16 @@
 			path = Person;
 			sourceTree = "<group>";
 		};
+		CE893690267395CA00804750 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CE89369826739AEA00804750 /* ServiceLocator.swift */,
+				CE893691267395E300804750 /* Locations.swift */,
+				CE893695267398AA00804750 /* Router.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		CE9CBC42262832E8006B1412 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +183,7 @@
 		CEAC31E1260CBFE0003C9EC2 /* KrasnodarGuide */ = {
 			isa = PBXGroup;
 			children = (
+				CE893690267395CA00804750 /* Services */,
 				CEAC31FB260CC279003C9EC2 /* Model */,
 				CEAC31FC260CC282003C9EC2 /* View */,
 				CEAC31FD260CC289003C9EC2 /* Controller */,
@@ -352,11 +369,14 @@
 				CE9CBC4426283740006B1412 /* ShowPhotoVC.swift in Sources */,
 				CE0B43D72650227B0005C194 /* HistoricalEventsVC.swift in Sources */,
 				CE21B748264D54E000C06DC4 /* PersonDetailCell.swift in Sources */,
+				CE893692267395E300804750 /* Locations.swift in Sources */,
 				CEF81F1D2619049B0084211B /* SightMarkerView.swift in Sources */,
+				CE89369926739AEA00804750 /* ServiceLocator.swift in Sources */,
 				CE34B666265250F700AF2E64 /* Extensions.swift in Sources */,
 				CE6E6A6C265CE61100438FF7 /* TabBarMenuItems.swift in Sources */,
 				CEF81F152618B9410084211B /* Sight.swift in Sources */,
 				CE21B745264D436000C06DC4 /* PersonDetail.swift in Sources */,
+				CE893696267398AA00804750 /* Router.swift in Sources */,
 				CEF8154C265EA91C00F3FE64 /* MainViewController.swift in Sources */,
 				CE2238D7261F2BF40045C287 /* MapDetailVC.swift in Sources */,
 				CE0B43D226501FA20005C194 /* HistoricalEvent.swift in Sources */,
