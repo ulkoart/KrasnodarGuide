@@ -67,7 +67,7 @@ extension HistoricalEventsVC: UITableViewDelegate, UITableViewDataSource  {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard
             let viewController = UIStoryboard(name: "Main", bundle: nil)
-                .instantiateViewController(withIdentifier: "HistoricalEventsDetail") as? HistoricalEventsDetail
+    .instantiateViewController(withIdentifier: "HistoricalEventsDetail") as? HistoricalEventsDetail
         else { return }
         
         viewController.historicalEvent = historicalEvents[indexPath.row]

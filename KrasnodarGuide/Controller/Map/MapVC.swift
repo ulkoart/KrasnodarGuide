@@ -7,13 +7,14 @@
 
 import UIKit
 import MapKit
-import CoreLocation
 
 final class MapVC: UIViewController {
+    
+    private var locations: Locations = ServiceLocator.shared.inject()
+    
     static let identifier = "MapVC"
     @IBOutlet weak var mapView: MKMapView!
     
-    let locationManager: CLLocationManager = .init()
     var forcePushItemName: String?
     
     private var sights: [Sight] = []
@@ -28,14 +29,12 @@ final class MapVC: UIViewController {
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: nil, action: nil)
         
-        locationManager.delegate = self
-        
         mapView.delegate = self
         mapView.register(SightAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         setupMap()
         
         mapView.addAnnotations(sights)
-        checkLocationAuthorization()
+        locations.checkLocationAuthorization(mapView: mapView)
     }
     
     override func viewWillAppear(_ animated: Bool) {
