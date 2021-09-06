@@ -50,9 +50,6 @@ final class MainCollectionView: UICollectionView {
     }
     
     func setup(withItems items: [CollectionViewItemProtocol], typeOf type: ContentType) {
-        
-        
-        
         self.items = items.filter {$0.showOnMainScreen}
         self.type = type
     }

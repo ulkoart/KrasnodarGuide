@@ -30,22 +30,20 @@ class MainCollectionViewCell: UICollectionViewCell {
         image.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 3/4).isActive = true
         
         // MARK: titleLabel
-        
         contentView.addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.numberOfLines = 2
         titleLabel.sizeToFit()
-        titleLabel.font = UIFont(name: "AvenirNext-Regular", size: 14)
+        titleLabel.font = .init(.systemFont(ofSize: 13, weight: .light))
         titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
         titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
         titleLabel.topAnchor.constraint(equalTo: image.bottomAnchor, constant: 2).isActive = true
         
         // MARK: categoryLabel
-        
         contentView.addSubview(categoryLabel)
         categoryLabel.translatesAutoresizingMaskIntoConstraints = false
         categoryLabel.numberOfLines = 1
-        categoryLabel.font = UIFont(name: "AvenirNext-UltraLight", size: 12)
+        categoryLabel.font = .init(.systemFont(ofSize: 12, weight: .semibold))
         categoryLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
         categoryLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
         categoryLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor).isActive = true
@@ -55,10 +53,9 @@ class MainCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setup(_ item:CollectionViewItemProtocol) {
+    func setup(_ item: CollectionViewItemProtocol) {
         self.image.image = UIImage(named: item.image)
         self.titleLabel.text = item.name
-        
         
         if let subName = item.subName {
             self.categoryLabel.text = subName
