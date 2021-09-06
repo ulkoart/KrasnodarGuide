@@ -61,7 +61,7 @@ final class MainViewController: UIViewController {
     private let contentView = UIView()
     
     override func viewDidLoad() {
-        super.viewDidLoad() 
+        super.viewDidLoad()
         self.navigationItem.title = "Гид Краснодара"
         setupScrollView()
         
@@ -182,7 +182,6 @@ extension MainViewController: MainViewControllerDelegate {
                 bundle: nil
             ).instantiateViewController(withIdentifier: TabBarMenu.Persons.viewControlerIdentifier) as? PersonVC else { return }
             vc.forcePushItemName = itemName
-//            navigationController.viewControllers = [vc]
             navigationController.setViewControllers([vc], animated: false)
             tabBarController.selectedIndex = TabBarMenu.Persons.rawValue
             

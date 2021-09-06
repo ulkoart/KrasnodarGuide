@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9AEE3B582AC209B30051C173 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEE3B572AC209B30051C173 /* TabBarController.swift */; };
+		9AEE3B5C2AC20F6D0051C173 /* MainViewControllerV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEE3B5B2AC20F6D0051C173 /* MainViewControllerV2.swift */; };
+		9AEE3B5F2AC210410051C173 /* MapVCV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEE3B5E2AC210410051C173 /* MapVCV2.swift */; };
 		CE0B43D226501FA20005C194 /* HistoricalEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B43D126501FA20005C194 /* HistoricalEvent.swift */; };
 		CE0B43D426501FF40005C194 /* historicalEvents.json in Resources */ = {isa = PBXBuildFile; fileRef = CE0B43D326501FF40005C194 /* historicalEvents.json */; };
 		CE0B43D72650227B0005C194 /* HistoricalEventsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B43D62650227B0005C194 /* HistoricalEventsVC.swift */; };
@@ -21,6 +24,7 @@
 		CE34B66826525AE500AF2E64 /* HistoricalEventsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE34B66726525AE500AF2E64 /* HistoricalEventsDetail.swift */; };
 		CE34B66C26526A8900AF2E64 /* HistoricalEventsDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE34B66B26526A8900AF2E64 /* HistoricalEventsDetailCell.swift */; };
 		CE4ACF5426458581009648A9 /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4ACF5326458581009648A9 /* ImageScrollView.swift */; };
+		CE5CDFAB26E639AC00A46BA8 /* ShowPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CDFAA26E639AC00A46BA8 /* ShowPhotoViewController.swift */; };
 		CE6E6A6C265CE61100438FF7 /* TabBarMenuItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E6A6B265CE61100438FF7 /* TabBarMenuItems.swift */; };
 		CE71E4FC263AD2A4001471CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE71E4FB263AD2A4001471CE /* Main.storyboard */; };
 		CE893692267395E300804750 /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE893691267395E300804750 /* Locations.swift */; };
@@ -52,6 +56,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9AEE3B572AC209B30051C173 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		9AEE3B5B2AC20F6D0051C173 /* MainViewControllerV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerV2.swift; sourceTree = "<group>"; };
+		9AEE3B5E2AC210410051C173 /* MapVCV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVCV2.swift; sourceTree = "<group>"; };
 		CE0B43D126501FA20005C194 /* HistoricalEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalEvent.swift; sourceTree = "<group>"; };
 		CE0B43D326501FF40005C194 /* historicalEvents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = historicalEvents.json; sourceTree = "<group>"; };
 		CE0B43D62650227B0005C194 /* HistoricalEventsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalEventsVC.swift; sourceTree = "<group>"; };
@@ -66,6 +73,7 @@
 		CE34B66726525AE500AF2E64 /* HistoricalEventsDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalEventsDetail.swift; sourceTree = "<group>"; };
 		CE34B66B26526A8900AF2E64 /* HistoricalEventsDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalEventsDetailCell.swift; sourceTree = "<group>"; };
 		CE4ACF5326458581009648A9 /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
+		CE5CDFAA26E639AC00A46BA8 /* ShowPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPhotoViewController.swift; sourceTree = "<group>"; };
 		CE6E6A6B265CE61100438FF7 /* TabBarMenuItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarMenuItems.swift; sourceTree = "<group>"; };
 		CE71E4FB263AD2A4001471CE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CE893691267395E300804750 /* Locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
@@ -109,6 +117,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9AEE3B552AC207A20051C173 /* CodeLayout */ = {
+			isa = PBXGroup;
+			children = (
+				9AEE3B592AC20F3C0051C173 /* Modules */,
+				9AEE3B562AC209AA0051C173 /* Core */,
+			);
+			path = CodeLayout;
+			sourceTree = "<group>";
+		};
+		9AEE3B562AC209AA0051C173 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				9AEE3B572AC209B30051C173 /* TabBarController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		9AEE3B592AC20F3C0051C173 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9AEE3B5D2AC210290051C173 /* Map */,
+				9AEE3B5A2AC20F5A0051C173 /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		9AEE3B5A2AC20F5A0051C173 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				9AEE3B5B2AC20F6D0051C173 /* MainViewControllerV2.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		9AEE3B5D2AC210290051C173 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				9AEE3B5E2AC210410051C173 /* MapVCV2.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		CE0B43D5265022570005C194 /* HistoricalEvents */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +179,14 @@
 				CE21B746264D54E000C06DC4 /* PersonDetailCell.swift */,
 			);
 			path = Person;
+			sourceTree = "<group>";
+		};
+		CE5CDFA926E6396300A46BA8 /* ShowPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				CE5CDFAA26E639AC00A46BA8 /* ShowPhotoViewController.swift */,
+			);
+			path = ShowPhoto;
 			sourceTree = "<group>";
 		};
 		CE893690267395CA00804750 /* Services */ = {
@@ -183,6 +241,7 @@
 		CEAC31E1260CBFE0003C9EC2 /* KrasnodarGuide */ = {
 			isa = PBXGroup;
 			children = (
+				9AEE3B552AC207A20051C173 /* CodeLayout */,
 				CE893690267395CA00804750 /* Services */,
 				CEAC31FB260CC279003C9EC2 /* Model */,
 				CEAC31FC260CC282003C9EC2 /* View */,
@@ -230,6 +289,7 @@
 		CEAC31FD260CC289003C9EC2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CE5CDFA926E6396300A46BA8 /* ShowPhoto */,
 				CEF8154D265EABE300F3FE64 /* Main */,
 				CE0B43D5265022570005C194 /* HistoricalEvents */,
 				CE27C0D4264B167100CC8B98 /* Person */,
@@ -297,8 +357,9 @@
 		CEAC31D7260CBFE0003C9EC2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					CEAC31DE260CBFE0003C9EC2 = {
 						CreatedOnToolsVersion = 12.4;
@@ -352,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE34B66826525AE500AF2E64 /* HistoricalEventsDetail.swift in Sources */,
+				9AEE3B5C2AC20F6D0051C173 /* MainViewControllerV2.swift in Sources */,
 				CE2238DA261F3C2A0045C287 /* PhotoCell.swift in Sources */,
 				CE0B43D9265026FA0005C194 /* HistoricalEventCell.swift in Sources */,
 				CEE8C477262092EC0043FCC9 /* MapDetailVCExtensions.swift in Sources */,
@@ -361,10 +423,13 @@
 				CEAC31E3260CBFE0003C9EC2 /* AppDelegate.swift in Sources */,
 				CE34B66C26526A8900AF2E64 /* HistoricalEventsDetailCell.swift in Sources */,
 				CE27C0D3264B166800CC8B98 /* PersonVC.swift in Sources */,
+				9AEE3B5F2AC210410051C173 /* MapVCV2.swift in Sources */,
 				CE4ACF5426458581009648A9 /* ImageScrollView.swift in Sources */,
 				CEAE8BF1264BD17500A47725 /* PersonCell.swift in Sources */,
+				CE5CDFAB26E639AC00A46BA8 /* ShowPhotoViewController.swift in Sources */,
 				CECBDB70265EBE5F001532D1 /* MainCollectionViewCell.swift in Sources */,
 				CEB0F1CF2660CE2A007F68AF /* Helper.swift in Sources */,
+				9AEE3B582AC209B30051C173 /* TabBarController.swift in Sources */,
 				CEF81F0E261896230084211B /* MapVCExtensions.swift in Sources */,
 				CE9CBC4426283740006B1412 /* ShowPhotoVC.swift in Sources */,
 				CE0B43D72650227B0005C194 /* HistoricalEventsVC.swift in Sources */,
