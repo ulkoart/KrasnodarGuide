@@ -28,18 +28,6 @@ final class HistoricalEventsDetail: UIViewController {
         historicalEventsCollection.showsHorizontalScrollIndicator = false
         historicalEventsCollection.register(HistoricalEventsDetailCell.self, forCellWithReuseIdentifier: cellId)
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showPhoto" {
-            guard
-                let photoVC = segue.destination as? ShowPhotoVC,
-                let photoName = sender as? String,
-                let photoImage = UIImage(named: photoName)
-            else { return }
-            photoVC.image = photoImage
-            photoVC.photoTitle = historicalEvent.title
-        }
-    }
 }
 
 extension HistoricalEventsDetail: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -64,7 +52,13 @@ extension HistoricalEventsDetail: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let index = indexPath.item
         let photoName: String = historicalEvent.photos[index]
-        performSegue(withIdentifier: "showPhoto", sender: photoName)
+        
+        guard let photoImage = UIImage(named: photoName) else { return }
+        
+        let showPhotoViewController: ShowPhotoViewController = ShowPhotoViewController()
+        showPhotoViewController.image = photoImage
+        showPhotoViewController.photoTitle = historicalEvent.title
+        present(showPhotoViewController, animated: true, completion: nil)
     }
 }
 

@@ -507,7 +507,6 @@
                         <outlet property="historicalEventText" destination="Sgc-4u-4nU" id="5ZE-A0-z89"/>
                         <outlet property="historicalEventsCollection" destination="2fP-F5-sf6" id="MfI-9n-Mw3"/>
                         <outlet property="pageControl" destination="y4f-hy-2mo" id="QVG-6W-iHv"/>
-                        <segue destination="9Xo-Sl-bQ6" kind="presentation" identifier="showPhoto" id="HEU-UL-swt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A69-ce-70t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -758,7 +757,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="HEU-UL-swt"/>
+        <segue reference="UVr-AZ-f8x"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="diana" width="32" height="32"/>
